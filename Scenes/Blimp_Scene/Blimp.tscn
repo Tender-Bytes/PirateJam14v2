@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://ccda28bwopeuu"]
+
+[ext_resource type="Texture2D" uid="uid://qqudqjnv5vkx" path="res://World_Obj/Blimp_Obj/Blimp_Obj1.png" id="1_ui0uh"]
+[ext_resource type="Texture2D" uid="uid://b85sgtnbchwnp" path="res://World_Obj/Blimp_Obj/Blimp_Obj2.png" id="2_n1k41"]
+[ext_resource type="Texture2D" uid="uid://cngk1nkh302n8" path="res://World_Obj/Blimp_Obj/Blimp_Obj3.png" id="3_o8tsf"]
+[ext_resource type="Texture2D" uid="uid://dfae5c2rdrni5" path="res://World_Obj/Blimp_Obj/Blimp_Obj4.png" id="4_3xh12"]
+[ext_resource type="Texture2D" uid="uid://cuwxf23ir6yb" path="res://World_Obj/Blimp_Obj/Blimp_Obj5.png" id="5_p22k8"]
+[ext_resource type="Texture2D" uid="uid://bfqh1wev6jon1" path="res://World_Obj/Blimp_Obj/Blimp_Obj6.png" id="6_heumd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lvm8x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ui0uh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_n1k41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_o8tsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3xh12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_p22k8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_heumd")
+}],
+"loop": true,
+"name": &"falling_paper",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(-170, -150)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(170, 150)
+sprite_frames = SubResource("SpriteFrames_lvm8x")
+animation = &"falling_paper"
+frame_progress = 0.603932
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
