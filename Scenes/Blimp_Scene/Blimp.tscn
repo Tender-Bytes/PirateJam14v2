@@ -42,6 +42,6 @@ position = Vector2(-170, -150)
 position = Vector2(170, 150)
 sprite_frames = SubResource("SpriteFrames_lvm8x")
 animation = &"falling_paper"
-frame_progress = 0.603932
+frame_progress = 0.31115
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
