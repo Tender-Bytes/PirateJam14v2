@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1xk8wbnsi2r5"
-path="res://.godot/imported/character.png-9a6d80aff02b8360dae521c7529e7956.ctex"
+uid="uid://dfae5c2rdrni5"
+path="res://.godot/imported/Blimp_Obj4.png-98def605b8733be06467404585d9b2fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entity_Spr/Character_Spr/character.png"
-dest_files=["res://.godot/imported/character.png-9a6d80aff02b8360dae521c7529e7956.ctex"]
+source_file="res://Graphics/World/Blimp_Animation/Blimp_Obj4.png"
+dest_files=["res://.godot/imported/Blimp_Obj4.png-98def605b8733be06467404585d9b2fd.ctex"]
 
 [params]
 

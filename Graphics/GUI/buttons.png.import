@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfqh1wev6jon1"
-path="res://.godot/imported/Blimp_Obj6.png-4e78d6ac7ecce540c812e356c33e1e76.ctex"
+uid="uid://onlcbyhs6688"
+path="res://.godot/imported/buttons.png-d67f236096c9821c52e271688587947d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World_Obj/Blimp_Obj/Blimp_Obj6.png"
-dest_files=["res://.godot/imported/Blimp_Obj6.png-4e78d6ac7ecce540c812e356c33e1e76.ctex"]
+source_file="res://Graphics/GUI/buttons.png"
+dest_files=["res://.godot/imported/buttons.png-d67f236096c9821c52e271688587947d.ctex"]
 
 [params]
 
