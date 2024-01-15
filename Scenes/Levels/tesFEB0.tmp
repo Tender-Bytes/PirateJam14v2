@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4lfu08keqeev"]
+
+[ext_resource type="PackedScene" uid="uid://dm1i5aujxwe7g" path="res://Scenes/Currency/gold_gen.tscn" id="1_f2gaw"]
+[ext_resource type="PackedScene" uid="uid://cf2ptl5nxbxm0" path="res://Scenes/Currency/money.tscn" id="2_ggqnb"]
+[ext_resource type="Script" path="res://Scenes/Currency/money.gd" id="3_lbfjy"]
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="gold gen" parent="." instance=ExtResource("1_f2gaw")]
+
+[node name="Money" parent="." instance=ExtResource("2_ggqnb")]
+position = Vector2(542, 0)
+script = ExtResource("3_lbfjy")
