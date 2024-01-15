@@ -1,8 +1,12 @@
-extends Label
+extends Node2D
+
+@onready var money = get_node("../Money")
+
+var amount: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	set_text("Amount of gold: 0")
+	amount = 1
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -10,5 +14,5 @@ func _process(delta):
 	pass
 
 
-func change_amount(value):
-	set_text("Amount of gold: " + str(value))
+func _on_button_pressed():
+	money.change_value.emit(amount)

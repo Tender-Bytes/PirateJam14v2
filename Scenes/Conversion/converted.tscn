@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4e2diapf7xgy"]
+
+[ext_resource type="Script" path="res://Scenes/Conversion/ConvertedText.gd" id="1_nw657"]
+
+[node name="Converted" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 20
+text = "People Converted: 0"
+script = ExtResource("1_nw657")
