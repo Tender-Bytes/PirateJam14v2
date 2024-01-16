@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c4lfu08keqeev"]
+[gd_scene load_steps=8 format=3 uid="uid://c4lfu08keqeev"]
 
-[ext_resource type="PackedScene" uid="uid://dm1i5aujxwe7g" path="res://Scenes/Currency/Default Gold Generate/gold_gen.tscn" id="1_f2gaw"]
+[ext_resource type="PackedScene" uid="uid://dm1i5aujxwe7g" path="res://Scenes/Currency/Default Gold Generate/default_gold_gen.tscn" id="1_f2gaw"]
 [ext_resource type="PackedScene" uid="uid://d4e2diapf7xgy" path="res://Scenes/Conversion/converted.tscn" id="1_y1twf"]
+[ext_resource type="Script" path="res://Scenes/Conversion/converted.gd" id="2_4vl5k"]
 [ext_resource type="PackedScene" uid="uid://cf2ptl5nxbxm0" path="res://Scenes/Currency/money.tscn" id="2_ggqnb"]
 [ext_resource type="Script" path="res://Scenes/Currency/Default Gold Generate/gold_gen.gd" id="2_gqcio"]
 [ext_resource type="Script" path="res://Scenes/Currency/money.gd" id="3_lbfjy"]
@@ -11,12 +12,13 @@
 
 [node name="Converted" parent="." instance=ExtResource("1_y1twf")]
 position = Vector2(542, 247)
+script = ExtResource("2_4vl5k")
 
 [node name="Money" parent="." instance=ExtResource("2_ggqnb")]
 position = Vector2(542, 0)
 script = ExtResource("3_lbfjy")
 
-[node name="gold gen" parent="." instance=ExtResource("1_f2gaw")]
+[node name="default gold gen" parent="." instance=ExtResource("1_f2gaw")]
 script = ExtResource("2_gqcio")
 
 [node name="propaganda_gen" parent="." instance=ExtResource("5_xw5ny")]

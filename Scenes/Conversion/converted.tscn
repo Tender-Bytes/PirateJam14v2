@@ -10,3 +10,8 @@ offset_bottom = 23.0
 theme_override_font_sizes/font_size = 20
 text = "People Converted: 0"
 script = ExtResource("1_nw657")
+
+[node name="Pamplet_Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="Pamplet_Timer" to="Label" method="_on_pamplet_timer_timeout"]

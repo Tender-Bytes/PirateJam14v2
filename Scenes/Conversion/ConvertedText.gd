@@ -1,5 +1,7 @@
 extends Label
 
+@onready var convert = get_node("..")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -11,3 +13,7 @@ func _process(delta):
 
 func change_amount(value):
 	set_text("People converted: " + str(value))
+
+
+func _on_pamplet_timer_timeout():
+	convert.pamphlet_production.emit()
