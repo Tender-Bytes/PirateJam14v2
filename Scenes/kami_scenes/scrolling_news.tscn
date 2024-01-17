@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8k0d8llapnfh"]
+
+[ext_resource type="Script" path="res://Scenes/kami_scenes/Scrolling news.gd" id="1_2sh62"]
+
+[node name="Scrolling news" type="RichTextLabel"]
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_2sh62")

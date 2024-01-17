@@ -1,0 +1,56 @@
+[gd_scene load_steps=13 format=3 uid="uid://cbg2f0hwnxjl3"]
+
+[ext_resource type="PackedScene" uid="uid://bfh76it3fweiu" path="res://Scenes/UI/progress_bar.tscn" id="1_nhsyw"]
+[ext_resource type="Script" path="res://Scenes/UI/progress_bar.gd" id="2_aek2g"]
+[ext_resource type="PackedScene" uid="uid://d4e2diapf7xgy" path="res://Scenes/Conversion/converted.tscn" id="3_85vgm"]
+[ext_resource type="Script" path="res://Scenes/Conversion/converted.gd" id="4_cxai8"]
+[ext_resource type="PackedScene" uid="uid://cf2ptl5nxbxm0" path="res://Scenes/Currency/money.tscn" id="5_1d1hn"]
+[ext_resource type="Script" path="res://Scenes/Currency/money.gd" id="6_qg3r0"]
+[ext_resource type="PackedScene" uid="uid://dm1i5aujxwe7g" path="res://Scenes/Currency/Default Gold Generate/default_gold_gen.tscn" id="7_42rn5"]
+[ext_resource type="Script" path="res://Scenes/Currency/Default Gold Generate/gold_gen.gd" id="8_hn4re"]
+[ext_resource type="PackedScene" uid="uid://chackx4vt2u06" path="res://Scenes/Conversion/Propaganda/propaganda_gen.tscn" id="9_bn4im"]
+[ext_resource type="PackedScene" uid="uid://cryqojw5q8jxq" path="res://Scenes/Currency/Default Gold Generate/pc_extra.tscn" id="10_sg23m"]
+[ext_resource type="PackedScene" uid="uid://busxrdj0nbjjw" path="res://Scenes/kami_scenes/newscaster.tscn" id="11_g3uef"]
+[ext_resource type="PackedScene" uid="uid://c8k0d8llapnfh" path="res://Scenes/kami_scenes/scrolling_news.tscn" id="12_3ypxw"]
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="ProgressBar" parent="." instance=ExtResource("1_nhsyw")]
+offset_left = 736.0
+offset_top = 28.0
+offset_right = 736.0
+offset_bottom = 28.0
+script = ExtResource("2_aek2g")
+
+[node name="Converted" parent="." instance=ExtResource("3_85vgm")]
+position = Vector2(736, 0)
+script = ExtResource("4_cxai8")
+
+[node name="Money" parent="." instance=ExtResource("5_1d1hn")]
+position = Vector2(136, 28)
+script = ExtResource("6_qg3r0")
+
+[node name="default gold gen" parent="." instance=ExtResource("7_42rn5")]
+position = Vector2(136, 91)
+script = ExtResource("8_hn4re")
+
+[node name="propaganda_gen" parent="." instance=ExtResource("9_bn4im")]
+position = Vector2(736, 91)
+
+[node name="pc_extra" parent="." instance=ExtResource("10_sg23m")]
+position = Vector2(136, 269)
+
+[node name="Newscaster" parent="." instance=ExtResource("11_g3uef")]
+position = Vector2(892, 333)
+
+[node name="Scrolling news" parent="." instance=ExtResource("12_3ypxw")]
+layout_direction = 2
+offset_left = 241.0
+offset_top = 478.0
+offset_right = 2241.0
+offset_bottom = 510.0
+theme_override_font_sizes/normal_font_size = 32
+fit_content = true
+
+[connection signal="converted_pop" from="ProgressBar" to="Newscaster" method="_on_progress_bar_converted_pop"]
+[connection signal="news_change" from="Newscaster" to="Scrolling news" method="_on_newscaster_news_change"]
