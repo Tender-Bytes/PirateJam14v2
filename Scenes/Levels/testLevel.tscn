@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c4lfu08keqeev"]
+[gd_scene load_steps=11 format=3 uid="uid://c4lfu08keqeev"]
 
 [ext_resource type="PackedScene" uid="uid://bfh76it3fweiu" path="res://Scenes/UI/progress_bar.tscn" id="1_1yx0b"]
 [ext_resource type="PackedScene" uid="uid://dm1i5aujxwe7g" path="res://Scenes/Currency/Default Gold Generate/default_gold_gen.tscn" id="1_f2gaw"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://Scenes/Currency/Default Gold Generate/gold_gen.gd" id="2_gqcio"]
 [ext_resource type="Script" path="res://Scenes/Currency/money.gd" id="3_lbfjy"]
 [ext_resource type="PackedScene" uid="uid://chackx4vt2u06" path="res://Scenes/Conversion/Propaganda/propaganda_gen.tscn" id="5_xw5ny"]
+[ext_resource type="PackedScene" uid="uid://busxrdj0nbjjw" path="res://Scenes/kami_scenes/newscaster.tscn" id="10_kfgnj"]
 
 [node name="TestLevel" type="Node2D"]
 
@@ -32,3 +33,8 @@ script = ExtResource("2_gqcio")
 
 [node name="propaganda_gen" parent="." instance=ExtResource("5_xw5ny")]
 position = Vector2(0, 247)
+
+[node name="Newscaster" parent="." instance=ExtResource("10_kfgnj")]
+position = Vector2(845, 144)
+
+[connection signal="converted_pop" from="ProgressBar" to="Newscaster" method="_on_progress_bar_converted_pop"]
