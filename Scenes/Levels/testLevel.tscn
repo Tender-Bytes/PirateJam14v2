@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://Scenes/Currency/Default Gold Generate/gold_gen.gd" id="2_gqcio"]
 [ext_resource type="Script" path="res://Scenes/Currency/money.gd" id="3_lbfjy"]
 [ext_resource type="PackedScene" uid="uid://chackx4vt2u06" path="res://Scenes/Conversion/Propaganda/propaganda_gen.tscn" id="5_xw5ny"]
-[ext_resource type="PackedScene" uid="uid://busxrdj0nbjjw" path="res://Scenes/kami_scenes/newscaster.tscn" id="10_kfgnj"]
+[ext_resource type="PackedScene" uid="uid://cryqojw5q8jxq" path="res://Scenes/Currency/Default Gold Generate/pc_extra.tscn" id="10_uu874"]
 
 [node name="TestLevel" type="Node2D"]
 
@@ -34,3 +34,6 @@ script = ExtResource("2_gqcio")
 
 [node name="propaganda_gen" parent="." instance=ExtResource("5_xw5ny")]
 position = Vector2(736, 91)
+
+[node name="pc_extra" parent="." instance=ExtResource("10_uu874")]
+position = Vector2(136, 269)
