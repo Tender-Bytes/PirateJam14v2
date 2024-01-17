@@ -1,0 +1,90 @@
+[gd_scene load_steps=13 format=3 uid="uid://pgcc6vt87375"]
+
+[ext_resource type="Texture2D" uid="uid://cukj3652i6ca8" path="res://Graphics/Entity_Spr/NPC_Spr/Police/Police_Left_1.png" id="1_lohbx"]
+[ext_resource type="Texture2D" uid="uid://b1c47q1ygb5yk" path="res://Graphics/Entity_Spr/NPC_Spr/Police/Police_Right_2.png" id="2_7emxb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80ot5"]
+atlas = ExtResource("1_lohbx")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4sdp"]
+atlas = ExtResource("1_lohbx")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ftj43"]
+atlas = ExtResource("1_lohbx")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjqcx"]
+atlas = ExtResource("1_lohbx")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8m6e"]
+atlas = ExtResource("2_7emxb")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wm8nd"]
+atlas = ExtResource("2_7emxb")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmmlo"]
+atlas = ExtResource("2_7emxb")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38ic5"]
+atlas = ExtResource("2_7emxb")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_18up7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80ot5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4sdp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ftj43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjqcx")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8m6e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wm8nd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmmlo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38ic5")
+}],
+"loop": true,
+"name": &"Right",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_28k06"]
+size = Vector2(13, 22)
+
+[node name="police_1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+sprite_frames = SubResource("SpriteFrames_18up7")
+animation = &"Left"
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/CharacterBody2D"]
+position = Vector2(-0.5, 5)
+shape = SubResource("RectangleShape2D_28k06")

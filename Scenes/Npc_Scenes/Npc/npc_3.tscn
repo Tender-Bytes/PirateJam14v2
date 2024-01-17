@@ -1,0 +1,90 @@
+[gd_scene load_steps=13 format=3 uid="uid://ndxsdv6o3udh"]
+
+[ext_resource type="Texture2D" uid="uid://ddud3jyatyrbr" path="res://Graphics/Entity_Spr/NPC_Spr/NPC/Npc_Left_3.png" id="1_4s23d"]
+[ext_resource type="Texture2D" uid="uid://bberuyfh01i28" path="res://Graphics/Entity_Spr/NPC_Spr/NPC/Npc_Right_3.png" id="2_k8kho"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o1peu"]
+atlas = ExtResource("1_4s23d")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbo5v"]
+atlas = ExtResource("1_4s23d")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1lmp"]
+atlas = ExtResource("1_4s23d")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7436w"]
+atlas = ExtResource("1_4s23d")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_li0jl"]
+atlas = ExtResource("2_k8kho")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jptc6"]
+atlas = ExtResource("2_k8kho")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7kjb"]
+atlas = ExtResource("2_k8kho")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rt8aa"]
+atlas = ExtResource("2_k8kho")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k50yo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o1peu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbo5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1lmp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7436w")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_li0jl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jptc6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7kjb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rt8aa")
+}],
+"loop": true,
+"name": &"Right",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5l2tp"]
+size = Vector2(20, 23)
+
+[node name="npc_3" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+sprite_frames = SubResource("SpriteFrames_k50yo")
+animation = &"Left"
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/CharacterBody2D"]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_5l2tp")

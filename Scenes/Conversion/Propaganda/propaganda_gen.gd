@@ -19,8 +19,8 @@ func _process(delta):
 
 
 func _on_button_pressed():
-	if money.amount >= 10:
+	if money.amount >= 5:
 		pamphlets += 1
-		propaganda_button.set_text("Propaganda gen $10\npamplets: " + str(pamphlets))
-		money.change_value.emit(-10)
+		propaganda_button.set_text("Propaganda gen $5\npamplets: " + str(pamphlets))
+		money.change_value.emit(-5)
 		total_pamphlets.emit(pamphlets)

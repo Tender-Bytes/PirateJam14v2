@@ -9,7 +9,7 @@ script = ExtResource("1_td3o5")
 offset_right = 300.0
 offset_bottom = 150.0
 focus_mode = 0
-text = "Propaganda gen $10
+text = "Propaganda gen $5
 pamplets: 0"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
