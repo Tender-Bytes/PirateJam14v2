@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://dofg7amok572a"]
+
+[ext_resource type="Script" path="res://Scenes/kami_scenes/Main menu.gd" id="1_33mak"]
+[ext_resource type="Script" path="res://Scenes/kami_scenes/Play.gd" id="2_aly0s"]
+[ext_resource type="Script" path="res://Scenes/kami_scenes/Credits.gd" id="3_11hos"]
+[ext_resource type="Texture2D" uid="uid://7dwc55gegj56" path="res://Scenes/kami_scenes/kami_assetss/mainmenu lmao.png" id="4_dofoe"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_33mak")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 487.0
+offset_top = 313.0
+offset_right = 615.0
+offset_bottom = 377.0
+pivot_offset = Vector2(64, 32)
+text = "Play "
+script = ExtResource("2_aly0s")
+
+[node name="Credits" type="Button" parent="."]
+offset_left = 487.0
+offset_top = 401.0
+offset_right = 615.0
+offset_bottom = 465.0
+pivot_offset = Vector2(64, 32)
+text = "Credits"
+script = ExtResource("3_11hos")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(548, 240)
+texture = ExtResource("4_dofoe")
+
+[connection signal="mouse_entered" from="Play" to="Play" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Play" to="Play" method="_on_mouse_exited"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="mouse_entered" from="Credits" to="Credits" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Credits" to="Credits" method="_on_mouse_exited"]

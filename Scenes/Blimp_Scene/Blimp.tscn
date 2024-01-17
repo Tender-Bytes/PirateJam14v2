@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://ccda28bwopeuu"]
 
-[ext_resource type="Texture2D" uid="uid://qqudqjnv5vkx" path="res://Graphics/World/Blimp_Animation/Blimp_Obj1.png" id="1_ui0uh"]
-[ext_resource type="Texture2D" uid="uid://b85sgtnbchwnp" path="res://Graphics/World/Blimp_Animation/Blimp_Obj2.png" id="2_n1k41"]
-[ext_resource type="Texture2D" uid="uid://cngk1nkh302n8" path="res://Graphics/World/Blimp_Animation/Blimp_Obj3.png" id="3_o8tsf"]
-[ext_resource type="Texture2D" uid="uid://dfae5c2rdrni5" path="res://Graphics/World/Blimp_Animation/Blimp_Obj4.png" id="4_3xh12"]
-[ext_resource type="Texture2D" uid="uid://cuwxf23ir6yb" path="res://Graphics/World/Blimp_Animation/Blimp_Obj5.png" id="5_p22k8"]
-[ext_resource type="Texture2D" uid="uid://bfqh1wev6jon1" path="res://Graphics/World/Blimp_Animation/Blimp_Obj6.png" id="6_heumd"]
+[ext_resource type="Texture2D" uid="uid://cjxkvowdtmwvq" path="res://Graphics/World/Blimp_Animation/Blimp_Obj1.png" id="1_ui0uh"]
+[ext_resource type="Texture2D" uid="uid://7m53vrxaow3u" path="res://Graphics/World/Blimp_Animation/Blimp_Obj2.png" id="2_n1k41"]
+[ext_resource type="Texture2D" uid="uid://5l5sckk30dkj" path="res://Graphics/World/Blimp_Animation/Blimp_Obj3.png" id="3_o8tsf"]
+[ext_resource type="Texture2D" uid="uid://k4gvyd2w6jp1" path="res://Graphics/World/Blimp_Animation/Blimp_Obj4.png" id="4_3xh12"]
+[ext_resource type="Texture2D" uid="uid://ifwqd2shdpdi" path="res://Graphics/World/Blimp_Animation/Blimp_Obj5.png" id="5_p22k8"]
+[ext_resource type="Texture2D" uid="uid://b015615vdunly" path="res://Graphics/World/Blimp_Animation/Blimp_Obj6.png" id="6_heumd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lvm8x"]
 animations = [{
