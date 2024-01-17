@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://Scenes/kami_scenes/newscaster.gd" id="1_435mp"]
 
 [node name="Newscaster" type="Node2D"]
-position = Vector2(169, 87)
 script = ExtResource("1_435mp")
 channel = 1
 
@@ -19,7 +18,7 @@ offset_right = 128.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.627451, 1, 1, 1)
+color = Color(0.313726, 0.596078, 0, 1)
 
 [node name="Button" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)

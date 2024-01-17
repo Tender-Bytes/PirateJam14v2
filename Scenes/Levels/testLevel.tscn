@@ -11,7 +11,7 @@
 [node name="TestLevel" type="Node2D"]
 
 [node name="Converted" parent="." instance=ExtResource("1_y1twf")]
-position = Vector2(542, 247)
+position = Vector2(542, 245)
 script = ExtResource("2_4vl5k")
 
 [node name="Money" parent="." instance=ExtResource("2_ggqnb")]

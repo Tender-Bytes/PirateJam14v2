@@ -6,6 +6,8 @@ extends Node2D
 ["everythign is bad","We hate puppies","leader!?!"]]
 
 @onready var current_messages=0
+
+var produ: float
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -19,8 +21,7 @@ func cycle():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("ui_down"):
-		change_status()
+	pass
 
 
 func change_status():
@@ -29,6 +30,13 @@ func change_status():
 		$ColorRect.color=Color("yellow")
 	elif current_messages ==2:
 		$ColorRect.color= Color("Red")
+
+func change_status_back():
+	current_messages-=1
+	if current_messages ==1:
+		$ColorRect.color=Color("yellow")
+	elif current_messages ==0:
+		$ColorRect.color= Color("green")
 
 func _on_button_pressed():
 	cycle()
