@@ -1,0 +1,91 @@
+[gd_scene load_steps=13 format=3 uid="uid://cgxjtpokqc7wb"]
+
+[ext_resource type="Texture2D" uid="uid://bpa2apnsumkpa" path="res://Graphics/Entity_Spr/NPC_Spr/NPC/Npc_Left_1.png" id="1_ksa1g"]
+[ext_resource type="Texture2D" uid="uid://c8s68ewbnpol5" path="res://Graphics/Entity_Spr/NPC_Spr/NPC/Npc_Right_1.png" id="2_j373l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_om1jc"]
+atlas = ExtResource("1_ksa1g")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3m8k4"]
+atlas = ExtResource("1_ksa1g")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pkqee"]
+atlas = ExtResource("1_ksa1g")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mg63d"]
+atlas = ExtResource("1_ksa1g")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r6xne"]
+atlas = ExtResource("2_j373l")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38jsy"]
+atlas = ExtResource("2_j373l")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hr0l"]
+atlas = ExtResource("2_j373l")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lv7j1"]
+atlas = ExtResource("2_j373l")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ie14m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_om1jc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3m8k4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pkqee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mg63d")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r6xne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38jsy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hr0l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lv7j1")
+}],
+"loop": true,
+"name": &"Right",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_swchw"]
+size = Vector2(14, 23)
+
+[node name="Npc_1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+sprite_frames = SubResource("SpriteFrames_ie14m")
+animation = &"Right"
+frame_progress = 0.262723
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/CharacterBody2D"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_swchw")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ifwqd2shdpdi"
-path="res://.godot/imported/Blimp_Obj5.png-4f09ac56aaf7c475195ee22f149a2cb8.ctex"
+uid="uid://b1c47q1ygb5yk"
+path="res://.godot/imported/Police_Right_2.png-9d33aabefd35a5ac9eb6d6fcc364e983.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/World/Blimp_Animation/Blimp_Obj5.png"
-dest_files=["res://.godot/imported/Blimp_Obj5.png-4f09ac56aaf7c475195ee22f149a2cb8.ctex"]
+source_file="res://Graphics/Entity_Spr/NPC_Spr/Police/Police_Right_2.png"
+dest_files=["res://.godot/imported/Police_Right_2.png-9d33aabefd35a5ac9eb6d6fcc364e983.ctex"]
 
 [params]
 

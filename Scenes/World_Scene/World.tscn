@@ -1,8 +1,83 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3fntu8cl4m4m"]
+[gd_scene load_steps=10 format=3 uid="uid://d3fntu8cl4m4m"]
 
 [ext_resource type="Texture2D" uid="uid://by05wfpsjl3w8" path="res://Graphics/World/World_Test.png" id="1_hy0pp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5h7fp"]
+size = Vector2(15, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjtvq"]
+size = Vector2(15, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lgy62"]
+size = Vector2(15, 15.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6u82m"]
+size = Vector2(442, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3sghd"]
+size = Vector2(482, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_djatq"]
+size = Vector2(20, 147)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bh7pc"]
+size = Vector2(20, 147)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y8pos"]
+size = Vector2(11, 10)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-11, -7)
 texture = ExtResource("1_hy0pp")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+
+[node name="trashcan1" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(254, 80)
+shape = SubResource("RectangleShape2D_5h7fp")
+
+[node name="trashcan2" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(-73.5, 89.5)
+shape = SubResource("RectangleShape2D_rjtvq")
+
+[node name="trashcan3" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(209.5, 120.375)
+shape = SubResource("RectangleShape2D_lgy62")
+
+[node name="top_boundary" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(64, 23)
+shape = SubResource("RectangleShape2D_6u82m")
+
+[node name="bottom_boundary" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(64, 170)
+shape = SubResource("RectangleShape2D_3sghd")
+
+[node name="left_boundary" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(-167, 86.5)
+shape = SubResource("RectangleShape2D_djatq")
+
+[node name="right_boundary" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(295, 86.5)
+shape = SubResource("RectangleShape2D_bh7pc")
+
+[node name="tent_group" type="CollisionPolygon2D" parent="Sprite2D/Area2D"]
+position = Vector2(226, 106)
+polygon = PackedVector2Array(24, 8, 20, 14, 57, 13, 44, -12, 33, -11, 29, -6, 22, -19, 10, -18, -2, 6)
+
+[node name="tent" type="CollisionPolygon2D" parent="Sprite2D/Area2D"]
+position = Vector2(240, 164)
+polygon = PackedVector2Array(3, -10, 16, -34, 29, -34, 40, -10)
+
+[node name="lamp1" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(-128.5, 138)
+shape = SubResource("RectangleShape2D_y8pos")
+
+[node name="lamp2" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(15, 138)
+shape = SubResource("RectangleShape2D_y8pos")
+
+[node name="lamp3" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(42, 81)
+shape = SubResource("RectangleShape2D_y8pos")
