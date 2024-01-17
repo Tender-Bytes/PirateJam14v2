@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://7two56n8yi6c"]
+
+[ext_resource type="Script" path="res://verses bar.gd" id="1_akrj4"]
+[ext_resource type="Texture2D" uid="uid://ba7c5lfagpxfn" path="res://verses bar.png" id="1_dxwkq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fadjm"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vtj7h"]
+bg_color = Color(0, 0.443137, 0.847059, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_akrj4")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = 149.0
+offset_top = 18.0
+offset_right = 430.0
+offset_bottom = 52.0
+theme_override_styles/background = SubResource("StyleBoxFlat_fadjm")
+theme_override_styles/fill = SubResource("StyleBoxFlat_vtj7h")
+value = 50.0
+show_percentage = false
+
+[node name="VersesBar" type="Sprite2D" parent="."]
+position = Vector2(274, 69)
+scale = Vector2(1.75965, 2.31562)
+texture = ExtResource("1_dxwkq")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
