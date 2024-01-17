@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbht2q0g7xl8k"
-path="res://.godot/imported/Blimp_Obj4.png-98def605b8733be06467404585d9b2fd.ctex"
+uid="uid://b4qbnd74rkvwq"
+path="res://.godot/imported/Crypto_PC.png-bf3f6d3e5e24575cf742ad5bd7a7a0ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/World/Blimp_Animation/Blimp_Obj4.png"
-dest_files=["res://.godot/imported/Blimp_Obj4.png-98def605b8733be06467404585d9b2fd.ctex"]
+source_file="res://Graphics/Crypto/Crypto_PC.png"
+dest_files=["res://.godot/imported/Crypto_PC.png-bf3f6d3e5e24575cf742ad5bd7a7a0ea.ctex"]
 
 [params]
 
