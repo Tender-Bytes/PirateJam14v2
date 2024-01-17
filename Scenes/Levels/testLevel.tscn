@@ -14,27 +14,23 @@
 [node name="TestLevel" type="Node2D"]
 
 [node name="ProgressBar" parent="." instance=ExtResource("1_1yx0b")]
-offset_left = 478.0
-offset_top = 282.0
-offset_right = 478.0
-offset_bottom = 282.0
+offset_left = 736.0
+offset_top = 28.0
+offset_right = 736.0
+offset_bottom = 28.0
 script = ExtResource("2_0urtt")
 
 [node name="Converted" parent="." instance=ExtResource("1_y1twf")]
-position = Vector2(542, 245)
+position = Vector2(736, 0)
 script = ExtResource("2_4vl5k")
 
 [node name="Money" parent="." instance=ExtResource("2_ggqnb")]
-position = Vector2(542, 0)
+position = Vector2(136, 28)
 script = ExtResource("3_lbfjy")
 
 [node name="default gold gen" parent="." instance=ExtResource("1_f2gaw")]
+position = Vector2(136, 91)
 script = ExtResource("2_gqcio")
 
 [node name="propaganda_gen" parent="." instance=ExtResource("5_xw5ny")]
-position = Vector2(0, 247)
-
-[node name="Newscaster" parent="." instance=ExtResource("10_kfgnj")]
-position = Vector2(845, 144)
-
-[connection signal="converted_pop" from="ProgressBar" to="Newscaster" method="_on_progress_bar_converted_pop"]
+position = Vector2(736, 91)

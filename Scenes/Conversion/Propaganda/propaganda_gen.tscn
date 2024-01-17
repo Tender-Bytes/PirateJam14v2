@@ -6,8 +6,8 @@
 script = ExtResource("1_td3o5")
 
 [node name="Button" type="Button" parent="."]
-offset_right = 300.0
-offset_bottom = 150.0
+offset_right = 250.0
+offset_bottom = 100.0
 focus_mode = 0
 text = "Propaganda gen $5
 pamplets: 0"
