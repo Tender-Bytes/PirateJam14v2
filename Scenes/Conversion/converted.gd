@@ -2,8 +2,10 @@ extends Node2D
 
 @onready var converted_text = get_node("Label")
 @onready var Pamphlet = get_node("../propaganda_gen")
+@onready var bar = get_node("../ProgressBar")
 
 signal pamphlet_production()
+
 
 var pamphlet_owned: int
 var production_total: float
@@ -23,6 +25,6 @@ func change_pamphlet_owned(owned):
 	pamphlet_owned = owned
 
 func change_pamphlet_production():
-	print("test")
 	production_total += 0.3 * pamphlet_owned
 	converted_text.change_amount(production_total)
+	bar.converted_pop.emit(production_total)
