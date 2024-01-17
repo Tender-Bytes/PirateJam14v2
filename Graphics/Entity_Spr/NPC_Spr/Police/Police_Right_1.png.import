@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k5ukrxcl0v6p"
-path="res://.godot/imported/NPC_List3.png-464c00f04de919100dabc382b2b73122.ctex"
+uid="uid://bofkumulr1wsq"
+path="res://.godot/imported/Police_Right_1.png-73ff23057b551dee060545f10f60d2eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/Entity_Spr/NPC_Spr/NPC_List3.png"
-dest_files=["res://.godot/imported/NPC_List3.png-464c00f04de919100dabc382b2b73122.ctex"]
+source_file="res://Graphics/Entity_Spr/NPC_Spr/Police/Police_Right_1.png"
+dest_files=["res://.godot/imported/Police_Right_1.png-73ff23057b551dee060545f10f60d2eb.ctex"]
 
 [params]
 

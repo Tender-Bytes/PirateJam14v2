@@ -1,0 +1,91 @@
+[gd_scene load_steps=13 format=3 uid="uid://35g6ymxa46np"]
+
+[ext_resource type="Texture2D" uid="uid://ccsjqmvi1jdhh" path="res://Graphics/Entity_Spr/NPC_Spr/NPC/Npc_Left_2.png" id="1_wvhwy"]
+[ext_resource type="Texture2D" uid="uid://vsh02knldiv2" path="res://Graphics/Entity_Spr/NPC_Spr/NPC/Npc_Right_2.png" id="2_gwscs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tujb8"]
+atlas = ExtResource("1_wvhwy")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8sbs1"]
+atlas = ExtResource("1_wvhwy")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hijik"]
+atlas = ExtResource("1_wvhwy")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wivo1"]
+atlas = ExtResource("1_wvhwy")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owak2"]
+atlas = ExtResource("2_gwscs")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icplw"]
+atlas = ExtResource("2_gwscs")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbkeq"]
+atlas = ExtResource("2_gwscs")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1kw2"]
+atlas = ExtResource("2_gwscs")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_75d83"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tujb8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8sbs1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hijik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wivo1")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_owak2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icplw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fbkeq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1kw2")
+}],
+"loop": true,
+"name": &"Right",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ovaqk"]
+size = Vector2(13, 22)
+
+[node name="npc_2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+sprite_frames = SubResource("SpriteFrames_75d83")
+animation = &"Right"
+frame_progress = 0.655257
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/CharacterBody2D"]
+position = Vector2(-0.5, 5)
+shape = SubResource("RectangleShape2D_ovaqk")

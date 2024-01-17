@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ifwqd2shdpdi"
-path="res://.godot/imported/Blimp_Obj5.png-4f09ac56aaf7c475195ee22f149a2cb8.ctex"
+uid="uid://b85fhj3ccrrh3"
+path="res://.godot/imported/Homeless_Right_1.png-e615f26e85392d101a690da873448299.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/World/Blimp_Animation/Blimp_Obj5.png"
-dest_files=["res://.godot/imported/Blimp_Obj5.png-4f09ac56aaf7c475195ee22f149a2cb8.ctex"]
+source_file="res://Graphics/Entity_Spr/NPC_Spr/Homeless/Homeless_Right_1.png"
+dest_files=["res://.godot/imported/Homeless_Right_1.png-e615f26e85392d101a690da873448299.ctex"]
 
 [params]
 
