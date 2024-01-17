@@ -3,7 +3,8 @@ extends Node2D
 @export var channel=0
 @export var messages =[["everythign is ok","We love puppies","leader!!!"],
 ["everythign is somewhat ok","We love puppies that obey our leader","leader!"],
-["everythign is bad","We hate puppies","leader!?!"]]
+["everythign is bad","We hate puppies","leader!?!"],
+["everythign is worse","We ate puppies","leader?????"],]
 
 @onready var current_messages=0
 
@@ -16,7 +17,7 @@ func cycle():
 	var x=messages[current_messages]
 	print(x[channel])
 	channel+=1
-	if channel>2:
+	if channel>3:
 		channel=0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -29,12 +30,16 @@ func change_status():
 	if current_messages ==1:
 		$ColorRect.color=Color("yellow")
 	elif current_messages ==2:
+		$ColorRect.color= Color("orange")
+	elif current_messages ==3:
 		$ColorRect.color= Color("Red")
 
 func change_status_back():
 	current_messages-=1
 	if current_messages ==1:
 		$ColorRect.color=Color("yellow")
+	elif current_messages ==2:
+		$ColorRect.color= Color("orange")
 	elif current_messages ==0:
 		$ColorRect.color= Color("green")
 
