@@ -1,6 +1,39 @@
-[gd_scene load_steps=2 format=3 uid="uid://busxrdj0nbjjw"]
+[gd_scene load_steps=10 format=3 uid="uid://busxrdj0nbjjw"]
 
 [ext_resource type="Script" path="res://Scenes/kami_scenes/newscaster.gd" id="1_435mp"]
+[ext_resource type="Texture2D" uid="uid://hwshj8tk3gqw" path="res://Graphics/GUI/News_Anchor/News_Anchor1.png" id="2_cpdvq"]
+[ext_resource type="Texture2D" uid="uid://sujj1pi2tess" path="res://Graphics/GUI/News_Anchor/News_Anchor2.png" id="3_jn1m3"]
+[ext_resource type="Texture2D" uid="uid://dgrm8a4a5lxaj" path="res://Graphics/GUI/News_Anchor/News_Anchor3.png" id="4_63xg4"]
+[ext_resource type="Texture2D" uid="uid://d06bjnahlo7lx" path="res://Graphics/GUI/News_Anchor/News_Anchor4.png" id="5_hon7r"]
+[ext_resource type="Texture2D" uid="uid://b3gh3v0nlxcnh" path="res://Graphics/GUI/News_Anchor/News_Anchor5.png" id="6_1iqdr"]
+[ext_resource type="Texture2D" uid="uid://d3lp57eowvxoc" path="res://Graphics/GUI/News_Anchor/News_Anchor6.png" id="7_kvvu0"]
+[ext_resource type="Texture2D" uid="uid://b2vex2dm3op7q" path="res://Graphics/GUI/tv_station.png" id="8_k3j4j"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_33kk4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cpdvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jn1m3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_63xg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hon7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1iqdr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kvvu0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}]
 
 [node name="Newscaster" type="Node2D"]
 script = ExtResource("1_435mp")
@@ -12,20 +45,46 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -128.0
-offset_top = -64.0
-offset_right = 128.0
-offset_bottom = 64.0
+offset_left = -20.0
+offset_top = -32.0
+offset_right = 20.0
+offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.313726, 0.596078, 0, 1)
 
 [node name="Button" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = -128.0
-offset_top = -64.0
-offset_right = -120.0
-offset_bottom = -56.0
-scale = Vector2(31.92, 15.9635)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.0
+offset_top = -40.0
+offset_right = 67.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="anchorboy" type="AnimatedSprite2D" parent="."]
+position = Vector2(-47, -14)
+sprite_frames = SubResource("SpriteFrames_33kk4")
+animation = &"idle"
+frame_progress = 0.453985
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.5
+offset_top = -40.0
+offset_right = 66.5
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_k3j4j")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

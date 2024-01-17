@@ -11,6 +11,7 @@ extends Node2D
 var produ: float
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$anchorboy.play("idle")
 	pass # Replace with function body.
 
 func cycle():
