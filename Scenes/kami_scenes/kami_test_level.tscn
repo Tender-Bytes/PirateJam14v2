@@ -42,6 +42,7 @@ position = Vector2(136, 269)
 
 [node name="Newscaster" parent="." instance=ExtResource("11_g3uef")]
 position = Vector2(892, 333)
+scale = Vector2(2, 2)
 
 [node name="Scrolling news" parent="." instance=ExtResource("12_3ypxw")]
 layout_direction = 2

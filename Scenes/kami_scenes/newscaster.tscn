@@ -53,20 +53,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.313726, 0.596078, 0, 1)
 
-[node name="Button" type="Button" parent="."]
-modulate = Color(1, 1, 1, 0)
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -66.0
-offset_top = -40.0
-offset_right = 67.0
-offset_bottom = 13.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="anchorboy" type="AnimatedSprite2D" parent="."]
 position = Vector2(-47, -14)
 sprite_frames = SubResource("SpriteFrames_33kk4")
@@ -86,5 +72,20 @@ offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("8_k3j4j")
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.0
+offset_top = -40.0
+offset_right = 66.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
