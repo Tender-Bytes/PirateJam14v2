@@ -21,3 +21,7 @@ func move():
 
 	move()
 
+
+
+func _on_exit_pressed():
+	get_tree().quit() # Replace with function body.

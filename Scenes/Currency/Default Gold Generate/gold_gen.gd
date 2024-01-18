@@ -26,3 +26,5 @@ func _on_button_pressed():
 func change_pc_owned(value):
 	pc_owned = value
 	gold_button.set_text("Crypto Mining\n# of PC(adds $1 per click): " + str(pc_owned))
+
+

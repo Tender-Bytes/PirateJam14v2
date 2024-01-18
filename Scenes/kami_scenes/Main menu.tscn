@@ -18,10 +18,11 @@ offset_bottom = 648.0
 color = Color(0.192157, 0.192157, 0.192157, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 137.0
-offset_top = 63.0
-offset_right = 1021.0
-offset_bottom = 579.0
+offset_left = 153.0
+offset_top = 62.0
+offset_right = 1037.0
+offset_bottom = 578.0
+pivot_offset = Vector2(442, 258)
 texture = ExtResource("2_6htu4")
 
 [node name="clouds" type="Node2D" parent="."]
@@ -58,29 +59,52 @@ offset_left = -1.0
 offset_top = 1.0
 offset_right = 139.0
 offset_bottom = 649.0
+scale = Vector2(1.12, 1)
 color = Color(0.192157, 0.192157, 0.192157, 1)
 
+[node name="ColorRect3" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 517.0
+offset_right = 1151.0
+offset_bottom = 645.0
+scale = Vector2(1, 0.986164)
+color = Color(0.192157, 0.192157, 0.192157, 0.588235)
+
 [node name="TEXT" type="Sprite2D" parent="."]
-position = Vector2(580.5, 364.5)
+position = Vector2(576, 363)
 texture = ExtResource("4_dofoe")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 62.0
 
 [node name="Play" type="Button" parent="."]
-offset_top = 518.0
+offset_top = 516.0
 offset_right = 1152.0
-offset_bottom = 582.0
-pivot_offset = Vector2(576, 32)
+offset_bottom = 548.0
+pivot_offset = Vector2(576, 16)
 text = "Play "
+flat = true
 script = ExtResource("2_aly0s")
 
 [node name="Credits" type="Button" parent="."]
-offset_top = 584.0
+offset_top = 548.0
 offset_right = 1152.0
-offset_bottom = 648.0
-pivot_offset = Vector2(576, 32)
+offset_bottom = 580.0
+pivot_offset = Vector2(576, 16)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
 text = "Credits"
+flat = true
+script = ExtResource("3_11hos")
+
+[node name="Exit" type="Button" parent="."]
+offset_top = 580.0
+offset_right = 1152.0
+offset_bottom = 612.0
+pivot_offset = Vector2(576, 16)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+text = "Exit"
+flat = true
 script = ExtResource("3_11hos")
 
 [connection signal="mouse_entered" from="Play" to="Play" method="_on_mouse_entered"]
@@ -88,3 +112,6 @@ script = ExtResource("3_11hos")
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="mouse_entered" from="Credits" to="Credits" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Credits" to="Credits" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Exit" to="Exit" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Exit" to="Exit" method="_on_mouse_exited"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
