@@ -7,5 +7,6 @@
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_font_sizes/font_size = 20
 text = "Gold:"
 script = ExtResource("1_xky6o")
