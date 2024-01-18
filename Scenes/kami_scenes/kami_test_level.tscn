@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dm1i5aujxwe7g" path="res://Scenes/Currency/Default Gold Generate/default_gold_gen.tscn" id="7_42rn5"]
 [ext_resource type="Script" path="res://Scenes/Currency/Default Gold Generate/gold_gen.gd" id="8_hn4re"]
 [ext_resource type="PackedScene" uid="uid://chackx4vt2u06" path="res://Scenes/Conversion/Propaganda/propaganda_gen.tscn" id="9_bn4im"]
-[ext_resource type="PackedScene" uid="uid://cryqojw5q8jxq" path="res://Scenes/Currency/Default Gold Generate/pc_extra.tscn" id="10_sg23m"]
+[ext_resource type="PackedScene" uid="uid://d0r4w2dt410pj" path="res://Scenes/Currency/Default Gold Generate/pc_extra.tscn" id="10_sg23m"]
 [ext_resource type="PackedScene" uid="uid://busxrdj0nbjjw" path="res://Scenes/kami_scenes/newscaster.tscn" id="11_g3uef"]
 [ext_resource type="PackedScene" uid="uid://c8k0d8llapnfh" path="res://Scenes/kami_scenes/scrolling_news.tscn" id="12_3ypxw"]
 
@@ -42,7 +42,6 @@ position = Vector2(136, 269)
 
 [node name="Newscaster" parent="." instance=ExtResource("11_g3uef")]
 position = Vector2(892, 333)
-scale = Vector2(2, 2)
 
 [node name="Scrolling news" parent="." instance=ExtResource("12_3ypxw")]
 layout_direction = 2
