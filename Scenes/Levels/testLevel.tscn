@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c4lfu08keqeev"]
+[gd_scene load_steps=12 format=3 uid="uid://c4lfu08keqeev"]
 
 [ext_resource type="PackedScene" uid="uid://bfh76it3fweiu" path="res://Scenes/UI/progress_bar.tscn" id="1_1yx0b"]
 [ext_resource type="PackedScene" uid="uid://dm1i5aujxwe7g" path="res://Scenes/Currency/Default Gold Generate/default_gold_gen.tscn" id="1_f2gaw"]
@@ -6,10 +6,11 @@
 [ext_resource type="Script" path="res://Scenes/UI/progress_bar.gd" id="2_0urtt"]
 [ext_resource type="Script" path="res://Scenes/Conversion/converted.gd" id="2_4vl5k"]
 [ext_resource type="PackedScene" uid="uid://cf2ptl5nxbxm0" path="res://Scenes/Currency/money.tscn" id="2_ggqnb"]
-[ext_resource type="Script" path="res://Scenes/Currency/Default Gold Generate/gold_gen.gd" id="2_gqcio"]
 [ext_resource type="Script" path="res://Scenes/Currency/money.gd" id="3_lbfjy"]
 [ext_resource type="PackedScene" uid="uid://chackx4vt2u06" path="res://Scenes/Conversion/Propaganda/propaganda_gen.tscn" id="5_xw5ny"]
+[ext_resource type="PackedScene" uid="uid://busxrdj0nbjjw" path="res://Scenes/kami_scenes/newscaster.tscn" id="10_otc74"]
 [ext_resource type="PackedScene" uid="uid://d0r4w2dt410pj" path="res://Scenes/Currency/Default Gold Generate/pc_extra.tscn" id="10_uu874"]
+[ext_resource type="PackedScene" uid="uid://c8k0d8llapnfh" path="res://Scenes/kami_scenes/scrolling_news.tscn" id="11_4nw78"]
 
 [node name="TestLevel" type="Node2D"]
 
@@ -30,10 +31,21 @@ script = ExtResource("3_lbfjy")
 
 [node name="default gold gen" parent="." instance=ExtResource("1_f2gaw")]
 position = Vector2(136, 91)
-script = ExtResource("2_gqcio")
 
 [node name="propaganda_gen" parent="." instance=ExtResource("5_xw5ny")]
 position = Vector2(736, 91)
 
 [node name="pc_extra" parent="." instance=ExtResource("10_uu874")]
 position = Vector2(136, 269)
+
+[node name="Newscaster" parent="." instance=ExtResource("10_otc74")]
+position = Vector2(892, 333)
+
+[node name="Scrolling news" parent="." instance=ExtResource("11_4nw78")]
+layout_direction = 2
+offset_left = 241.0
+offset_top = 478.0
+offset_right = 2241.0
+offset_bottom = 510.0
+theme_override_font_sizes/normal_font_size = 32
+fit_content = true

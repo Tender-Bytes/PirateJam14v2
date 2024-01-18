@@ -54,7 +54,7 @@ grow_vertical = 2
 color = Color(0.313726, 0.596078, 0, 1)
 
 [node name="anchorboy" type="AnimatedSprite2D" parent="."]
-position = Vector2(-47, -14)
+position = Vector2(-92, -28)
 sprite_frames = SubResource("SpriteFrames_33kk4")
 animation = &"idle"
 frame_progress = 0.453985

@@ -24,6 +24,7 @@ offset_right = -942.0
 offset_bottom = -558.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(110, 45)
 texture_normal = ExtResource("1_txkj5")
 texture_pressed = ExtResource("4_xsthm")
 script = ExtResource("4_2rivj")
