@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c4lfu08keqeev"]
+[gd_scene load_steps=13 format=3 uid="uid://c4lfu08keqeev"]
 
 [ext_resource type="PackedScene" uid="uid://bfh76it3fweiu" path="res://Scenes/UI/progress_bar.tscn" id="1_1yx0b"]
 [ext_resource type="PackedScene" uid="uid://dm1i5aujxwe7g" path="res://Scenes/Currency/Default Gold Generate/default_gold_gen.tscn" id="1_f2gaw"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cf2ptl5nxbxm0" path="res://Scenes/Currency/money.tscn" id="2_ggqnb"]
 [ext_resource type="Script" path="res://Scenes/Currency/money.gd" id="3_lbfjy"]
 [ext_resource type="PackedScene" uid="uid://chackx4vt2u06" path="res://Scenes/Conversion/Propaganda/propaganda_gen.tscn" id="5_xw5ny"]
+[ext_resource type="PackedScene" uid="uid://dvuafp3ywebug" path="res://Scenes/Currency/Default Gold Generate/pc_upgrade.tscn" id="7_7x5c7"]
 [ext_resource type="PackedScene" uid="uid://busxrdj0nbjjw" path="res://Scenes/kami_scenes/newscaster.tscn" id="10_otc74"]
 [ext_resource type="PackedScene" uid="uid://d0r4w2dt410pj" path="res://Scenes/Currency/Default Gold Generate/pc_extra.tscn" id="10_uu874"]
 [ext_resource type="PackedScene" uid="uid://c8k0d8llapnfh" path="res://Scenes/kami_scenes/scrolling_news.tscn" id="11_4nw78"]
@@ -21,10 +22,6 @@ offset_right = 736.0
 offset_bottom = 28.0
 script = ExtResource("2_0urtt")
 
-[node name="Converted" parent="." instance=ExtResource("1_y1twf")]
-position = Vector2(736, 0)
-script = ExtResource("2_4vl5k")
-
 [node name="Money" parent="." instance=ExtResource("2_ggqnb")]
 position = Vector2(136, 0)
 script = ExtResource("3_lbfjy")
@@ -32,11 +29,18 @@ script = ExtResource("3_lbfjy")
 [node name="default gold gen" parent="." instance=ExtResource("1_f2gaw")]
 position = Vector2(136, 91)
 
-[node name="propaganda_gen" parent="." instance=ExtResource("5_xw5ny")]
-position = Vector2(736, 91)
-
 [node name="pc_extra" parent="." instance=ExtResource("10_uu874")]
 position = Vector2(136, 269)
+
+[node name="pc_upgrade" parent="." instance=ExtResource("7_7x5c7")]
+position = Vector2(136, 398)
+
+[node name="Converted" parent="." instance=ExtResource("1_y1twf")]
+position = Vector2(736, 0)
+script = ExtResource("2_4vl5k")
+
+[node name="propaganda_gen" parent="." instance=ExtResource("5_xw5ny")]
+position = Vector2(736, 91)
 
 [node name="Newscaster" parent="." instance=ExtResource("10_otc74")]
 position = Vector2(892, 333)

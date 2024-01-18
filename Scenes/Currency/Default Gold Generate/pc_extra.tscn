@@ -9,6 +9,7 @@ script = ExtResource("1_fjst7")
 offset_right = 250.0
 offset_bottom = 100.0
 focus_mode = 0
-text = "Buy more computers: $5"
+text = "Buy more computers: $5
+Number of PC Owned: 1"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
