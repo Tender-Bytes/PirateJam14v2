@@ -23,9 +23,8 @@ func _on_mouse_entered():
 
 
 func _on_hover_mouse_exited():
-	if not(disabled):
-		grow_btn(og_size,.1)
-		$hover.hide()
+	grow_btn(og_size,.1)
+	$hover.hide()
 
 func grow_btn(size:Vector2, duration:float):
 	var tween= create_tween().set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
@@ -35,3 +34,4 @@ func grow_btn(size:Vector2, duration:float):
 func _on_pressed():
 	$emitter.position=get_local_mouse_position()
 	$emitter.emitting=true
+	self.disabled = true

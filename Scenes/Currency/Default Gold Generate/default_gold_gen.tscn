@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dm1i5aujxwe7g"]
+[gd_scene load_steps=7 format=3 uid="uid://dm1i5aujxwe7g"]
 
 [ext_resource type="Script" path="res://Scenes/Currency/Default Gold Generate/gold_gen.gd" id="1_18utc"]
 [ext_resource type="PackedScene" uid="uid://3q08rw4x5d0m" path="res://Scenes/kami_scenes/button_scene.tscn" id="1_73ri2"]
+[ext_resource type="Texture2D" uid="uid://bx0pda6mp0rd3" path="res://Scenes/kami_scenes/kami_assetss/button_disabled.png" id="3_avn1x"]
 [ext_resource type="Script" path="res://Scenes/Currency/Default Gold Generate/GoldProgress.gd" id="3_x0lgq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_harts"]
@@ -24,6 +25,7 @@ script = ExtResource("1_18utc")
 [node name="Control" parent="." instance=ExtResource("1_73ri2")]
 offset_right = 210.0
 offset_bottom = 90.0
+texture_disabled = ExtResource("3_avn1x")
 
 [node name="GoldProgress" type="Control" parent="."]
 layout_mode = 3

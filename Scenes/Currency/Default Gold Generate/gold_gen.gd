@@ -20,6 +20,7 @@ func _process(delta):
 
 func _on_timer_timeout():
 	change_money()
+	button.disabled = false
 
 func change_money():
 	amount = 1 * pc_owned
