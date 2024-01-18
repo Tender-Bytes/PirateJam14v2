@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var converted_text = get_node("Label")
 @onready var Pamphlet = get_node("../propaganda_gen")
-@onready var bar = get_node("../ProgressBar")
+@onready var bar = get_node("../Conversion Progress Bar")
 
 signal pamphlet_production()
 

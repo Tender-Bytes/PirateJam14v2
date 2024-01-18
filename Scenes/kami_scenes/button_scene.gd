@@ -33,6 +33,5 @@ func grow_btn(size:Vector2, duration:float):
 
 
 func _on_pressed():
-
 	$emitter.position=get_local_mouse_position()
 	$emitter.emitting=true

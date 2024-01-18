@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var money = get_node("../Money")
+@onready var button = get_node("Control")
 
 signal add_pc(pc_amount: int)
 
@@ -17,12 +18,14 @@ func _ready():
 func _process(delta):
 	pass
 
-func _on_button_pressed():
+func _on_timer_timeout():
+	change_money()
+
+func change_money():
 	amount = 1 * pc_owned
 	money.change_value.emit(amount)
 
 func change_pc_owned(value):
 	pc_owned = value
 	#gold_button.set_text("Crypto Mining\n# of PC(adds $1 per click): " + str(pc_owned))
-
 

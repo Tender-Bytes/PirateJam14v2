@@ -34,6 +34,7 @@ script = ExtResource("3_x0lgq")
 
 [node name="ProgressBar" type="ProgressBar" parent="GoldProgress"]
 custom_minimum_size = Vector2(210, 20)
+layout_mode = 0
 offset_top = 95.0
 offset_right = 210.0
 offset_bottom = 122.0
@@ -42,6 +43,8 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_3kypa")
 show_percentage = false
 
 [node name="Timer" type="Timer" parent="GoldProgress"]
+wait_time = 2.0
+one_shot = true
 
-[connection signal="pressed" from="Control" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control" to="GoldProgress" method="_on_control_pressed"]
+[connection signal="timeout" from="GoldProgress/Timer" to="." method="_on_timer_timeout"]

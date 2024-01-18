@@ -5,13 +5,16 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	bar.max_value = timer.wait_time
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if timer.time_left != 0:
+		bar.value = timer.wait_time - timer.time_left
+	else:
+		bar.value = 0
 
 
 func _on_control_pressed():
-	pass
+	timer.start()
