@@ -43,6 +43,7 @@ func change_status():
 
 
 func _on_button_pressed():
+	print("switch_news")
 	cycle()
 		
 
