@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d4e2diapf7xgy"]
 
-[ext_resource type="Script" path="res://Scenes/Conversion/ConvertedText.gd" id="1_nw657"]
+[ext_resource type="Script" path="res://Scenes/UI/ConvertedText.gd" id="1_nw657"]
 
 [node name="Converted" type="Node2D"]
 

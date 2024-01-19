@@ -12,7 +12,7 @@ func _process(delta):
 
 
 func change_amount(value):
-	set_text("People converted: " + str(value))
+	set_text("People Converted: " + str(value))
 
 
 func _on_pamplet_timer_timeout():

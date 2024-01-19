@@ -54,11 +54,7 @@ frame_progress = 0.0188847
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_exi1n")
 
-[node name="IdleTimer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="."]
 one_shot = true
 
-[node name="WanderTimer" type="Timer" parent="."]
-one_shot = true
-
-[connection signal="timeout" from="IdleTimer" to="." method="_on_idle_timer_timeout"]
-[connection signal="timeout" from="WanderTimer" to="." method="_on_wander_timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://chackx4vt2u06"]
 
-[ext_resource type="Script" path="res://Scenes/Conversion/Propaganda/propaganda_gen.gd" id="1_td3o5"]
+[ext_resource type="Script" path="res://Scenes/Conversion/Pamphlet/convert_Pamphlet.gd" id="1_td3o5"]
 
 [node name="propaganda_gen" type="Node2D"]
 script = ExtResource("1_td3o5")

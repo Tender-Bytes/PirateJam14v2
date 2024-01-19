@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var gold_gen = get_node("../default gold gen")
+@onready var gold_gen = get_node("../Crypto Gen")
 @onready var money = get_node("../Money")
 @onready var button = get_node("Button")
 
