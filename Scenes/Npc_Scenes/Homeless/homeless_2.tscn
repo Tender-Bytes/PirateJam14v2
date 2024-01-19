@@ -1,90 +1,64 @@
-[gd_scene load_steps=13 format=3 uid="uid://bmrp05fu54uux"]
+[gd_scene load_steps=9 format=3 uid="uid://cnju8kvnbcan7"]
 
+[ext_resource type="Script" path="res://Scenes/Npc_Scenes/wander.gd" id="1_enao5"]
 [ext_resource type="Texture2D" uid="uid://cqlapov7tmvm8" path="res://Graphics/Entity_Spr/NPC_Spr/Homeless/Homeless_Left_2.png" id="1_k3el4"]
-[ext_resource type="Texture2D" uid="uid://d3tlw2n5sdnqn" path="res://Graphics/Entity_Spr/NPC_Spr/Homeless/Homeless_Right_2.png" id="2_qlutl"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tgtfb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwdfo"]
 atlas = ExtResource("1_k3el4")
-region = Rect2(0, 0, 16, 32)
+region = Rect2(0, 18, 32, 46)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l7uqx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lln8q"]
 atlas = ExtResource("1_k3el4")
-region = Rect2(16, 0, 16, 32)
+region = Rect2(32, 18, 32, 46)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ex4xo"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrj3k"]
 atlas = ExtResource("1_k3el4")
-region = Rect2(32, 0, 16, 32)
+region = Rect2(64, 18, 32, 46)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2i0si"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbn13"]
 atlas = ExtResource("1_k3el4")
-region = Rect2(48, 0, 16, 32)
+region = Rect2(96, 18, 32, 46)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tudd0"]
-atlas = ExtResource("2_qlutl")
-region = Rect2(0, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3i83s"]
-atlas = ExtResource("2_qlutl")
-region = Rect2(16, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_twlxs"]
-atlas = ExtResource("2_qlutl")
-region = Rect2(32, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p4h4d"]
-atlas = ExtResource("2_qlutl")
-region = Rect2(48, 0, 16, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_6oa85"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_be27b"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tgtfb")
+"texture": SubResource("AtlasTexture_mwdfo")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_l7uqx")
+"texture": SubResource("AtlasTexture_lln8q")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ex4xo")
+"texture": SubResource("AtlasTexture_rrj3k")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2i0si")
+"texture": SubResource("AtlasTexture_lbn13")
 }],
 "loop": true,
-"name": &"Left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tudd0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3i83s")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_twlxs")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p4h4d")
-}],
-"loop": true,
-"name": &"Right",
+"name": &"Walk",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_abm8v"]
-size = Vector2(13, 23)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_exi1n"]
+radius = 14.0
+height = 46.0
 
-[node name="homeless_2" type="Node2D"]
+[node name="homeless_2" type="CharacterBody2D"]
+script = ExtResource("1_enao5")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_be27b")
+animation = &"Walk"
+frame_progress = 0.0188847
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
-sprite_frames = SubResource("SpriteFrames_6oa85")
-animation = &"Left"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_exi1n")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Sprite2D"]
+[node name="IdleTimer" type="Timer" parent="."]
+one_shot = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/CharacterBody2D"]
-position = Vector2(-0.5, 4.5)
-shape = SubResource("RectangleShape2D_abm8v")
+[node name="WanderTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="IdleTimer" to="." method="_on_idle_timer_timeout"]
+[connection signal="timeout" from="WanderTimer" to="." method="_on_wander_timer_timeout"]

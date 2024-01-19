@@ -1,90 +1,64 @@
-[gd_scene load_steps=13 format=3 uid="uid://pgcc6vt87375"]
+[gd_scene load_steps=9 format=3 uid="uid://bqm54p5irb51a"]
 
+[ext_resource type="Script" path="res://Scenes/Npc_Scenes/wander.gd" id="1_61vd8"]
 [ext_resource type="Texture2D" uid="uid://cukj3652i6ca8" path="res://Graphics/Entity_Spr/NPC_Spr/Police/Police_Left_1.png" id="1_lohbx"]
-[ext_resource type="Texture2D" uid="uid://b1c47q1ygb5yk" path="res://Graphics/Entity_Spr/NPC_Spr/Police/Police_Right_2.png" id="2_7emxb"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_80ot5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0y202"]
 atlas = ExtResource("1_lohbx")
-region = Rect2(0, 0, 16, 32)
+region = Rect2(0, 18, 32, 46)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l4sdp"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dofrp"]
 atlas = ExtResource("1_lohbx")
-region = Rect2(16, 0, 16, 32)
+region = Rect2(32, 18, 32, 46)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ftj43"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ude8q"]
 atlas = ExtResource("1_lohbx")
-region = Rect2(32, 0, 16, 32)
+region = Rect2(64, 18, 32, 46)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qjqcx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5cd1"]
 atlas = ExtResource("1_lohbx")
-region = Rect2(48, 0, 16, 32)
+region = Rect2(96, 18, 32, 46)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m8m6e"]
-atlas = ExtResource("2_7emxb")
-region = Rect2(0, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wm8nd"]
-atlas = ExtResource("2_7emxb")
-region = Rect2(16, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nmmlo"]
-atlas = ExtResource("2_7emxb")
-region = Rect2(32, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_38ic5"]
-atlas = ExtResource("2_7emxb")
-region = Rect2(48, 0, 16, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_18up7"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_be27b"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_80ot5")
+"texture": SubResource("AtlasTexture_0y202")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_l4sdp")
+"texture": SubResource("AtlasTexture_dofrp")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ftj43")
+"texture": SubResource("AtlasTexture_ude8q")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qjqcx")
+"texture": SubResource("AtlasTexture_s5cd1")
 }],
 "loop": true,
-"name": &"Left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_m8m6e")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wm8nd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nmmlo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_38ic5")
-}],
-"loop": true,
-"name": &"Right",
+"name": &"Walk",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_28k06"]
-size = Vector2(13, 22)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_exi1n"]
+radius = 14.0
+height = 46.0
 
-[node name="police_1" type="Node2D"]
+[node name="police_2" type="CharacterBody2D"]
+script = ExtResource("1_61vd8")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_be27b")
+animation = &"Walk"
+frame_progress = 0.0188847
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
-sprite_frames = SubResource("SpriteFrames_18up7")
-animation = &"Left"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_exi1n")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Sprite2D"]
+[node name="IdleTimer" type="Timer" parent="."]
+one_shot = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/CharacterBody2D"]
-position = Vector2(-0.5, 5)
-shape = SubResource("RectangleShape2D_28k06")
+[node name="WanderTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="IdleTimer" to="." method="_on_idle_timer_timeout"]
+[connection signal="timeout" from="WanderTimer" to="." method="_on_wander_timer_timeout"]

@@ -1,90 +1,65 @@
-[gd_scene load_steps=13 format=3 uid="uid://ndxsdv6o3udh"]
+[gd_scene load_steps=9 format=3 uid="uid://cpmnpb4tpgxqx"]
 
-[ext_resource type="Texture2D" uid="uid://ddud3jyatyrbr" path="res://Graphics/Entity_Spr/NPC_Spr/NPC/Npc_Left_3.png" id="1_4s23d"]
-[ext_resource type="Texture2D" uid="uid://bberuyfh01i28" path="res://Graphics/Entity_Spr/NPC_Spr/NPC/Npc_Right_3.png" id="2_k8kho"]
+[ext_resource type="Script" path="res://Scenes/Npc_Scenes/wander.gd" id="1_1pb03"]
+[ext_resource type="Texture2D" uid="uid://ddud3jyatyrbr" path="res://Graphics/Entity_Spr/NPC_Spr/NPC/Npc_Left_3.png" id="2_p4h4n"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_o1peu"]
-atlas = ExtResource("1_4s23d")
-region = Rect2(0, 0, 16, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwle7"]
+atlas = ExtResource("2_p4h4n")
+region = Rect2(0, 18, 32, 46)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wbo5v"]
-atlas = ExtResource("1_4s23d")
-region = Rect2(16, 0, 16, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqhp1"]
+atlas = ExtResource("2_p4h4n")
+region = Rect2(32, 18, 32, 46)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_b1lmp"]
-atlas = ExtResource("1_4s23d")
-region = Rect2(32, 0, 16, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvlwr"]
+atlas = ExtResource("2_p4h4n")
+region = Rect2(64, 18, 32, 46)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7436w"]
-atlas = ExtResource("1_4s23d")
-region = Rect2(48, 0, 16, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_1irsc"]
+atlas = ExtResource("2_p4h4n")
+region = Rect2(96, 18, 32, 46)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_li0jl"]
-atlas = ExtResource("2_k8kho")
-region = Rect2(0, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jptc6"]
-atlas = ExtResource("2_k8kho")
-region = Rect2(16, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b7kjb"]
-atlas = ExtResource("2_k8kho")
-region = Rect2(32, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rt8aa"]
-atlas = ExtResource("2_k8kho")
-region = Rect2(48, 0, 16, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_k50yo"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_be27b"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_o1peu")
+"texture": SubResource("AtlasTexture_uwle7")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wbo5v")
+"texture": SubResource("AtlasTexture_rqhp1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_b1lmp")
+"texture": SubResource("AtlasTexture_jvlwr")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7436w")
+"texture": SubResource("AtlasTexture_1irsc")
 }],
 "loop": true,
-"name": &"Left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_li0jl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jptc6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b7kjb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rt8aa")
-}],
-"loop": true,
-"name": &"Right",
+"name": &"Walk",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5l2tp"]
-size = Vector2(20, 23)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_exi1n"]
+radius = 14.0
+height = 46.0
 
-[node name="npc_3" type="Node2D"]
+[node name="npc_3" type="CharacterBody2D"]
+script = ExtResource("1_1pb03")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_be27b")
+animation = &"Walk"
+frame = 1
+frame_progress = 0.462613
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
-sprite_frames = SubResource("SpriteFrames_k50yo")
-animation = &"Left"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_exi1n")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Sprite2D"]
+[node name="IdleTimer" type="Timer" parent="."]
+one_shot = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/CharacterBody2D"]
-position = Vector2(0, 4.5)
-shape = SubResource("RectangleShape2D_5l2tp")
+[node name="WanderTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="IdleTimer" to="." method="_on_idle_timer_timeout"]
+[connection signal="timeout" from="WanderTimer" to="." method="_on_wander_timer_timeout"]

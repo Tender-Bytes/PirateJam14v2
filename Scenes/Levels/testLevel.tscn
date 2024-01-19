@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c4lfu08keqeev"]
+[gd_scene load_steps=20 format=3 uid="uid://c4lfu08keqeev"]
 
 [ext_resource type="PackedScene" uid="uid://bfh76it3fweiu" path="res://Scenes/UI/progress_bar.tscn" id="1_1yx0b"]
 [ext_resource type="PackedScene" uid="uid://dm1i5aujxwe7g" path="res://Scenes/Currency/Default Gold Generate/default_gold_gen.tscn" id="1_f2gaw"]
@@ -13,6 +13,12 @@
 [ext_resource type="PackedScene" uid="uid://busxrdj0nbjjw" path="res://Scenes/kami_scenes/newscaster.tscn" id="10_otc74"]
 [ext_resource type="PackedScene" uid="uid://d0r4w2dt410pj" path="res://Scenes/Currency/Default Gold Generate/pc_extra.tscn" id="10_uu874"]
 [ext_resource type="PackedScene" uid="uid://c8k0d8llapnfh" path="res://Scenes/kami_scenes/scrolling_news.tscn" id="11_4nw78"]
+[ext_resource type="PackedScene" uid="uid://8gjc0i07wr5j" path="res://Scenes/Npc_Scenes/Npc/npc_2.tscn" id="14_vkwru"]
+[ext_resource type="PackedScene" uid="uid://cpmnpb4tpgxqx" path="res://Scenes/Npc_Scenes/Npc/npc_3.tscn" id="15_alpfa"]
+[ext_resource type="PackedScene" uid="uid://bp723ry6nhhri" path="res://Scenes/Npc_Scenes/Homeless/homeless_1.tscn" id="16_0m3ni"]
+[ext_resource type="PackedScene" uid="uid://cnju8kvnbcan7" path="res://Scenes/Npc_Scenes/Homeless/homeless_2.tscn" id="17_avnqw"]
+[ext_resource type="PackedScene" uid="uid://bqm54p5irb51a" path="res://Scenes/Npc_Scenes/Police/police_1.tscn" id="18_kvhkj"]
+[ext_resource type="PackedScene" uid="uid://rshh6lifvqam" path="res://Scenes/Npc_Scenes/Police/police_2.tscn" id="19_5g2ef"]
 
 [node name="TestLevel" type="Node2D"]
 
@@ -57,3 +63,21 @@ fit_content = true
 
 [node name="npc_1" parent="." instance=ExtResource("5_fsber")]
 position = Vector2(572, 319)
+
+[node name="npc_2" parent="." instance=ExtResource("14_vkwru")]
+position = Vector2(606, 358)
+
+[node name="npc_3" parent="." instance=ExtResource("15_alpfa")]
+position = Vector2(534, 370)
+
+[node name="homeless_1" parent="." instance=ExtResource("16_0m3ni")]
+position = Vector2(525, 303)
+
+[node name="homeless_2" parent="." instance=ExtResource("17_avnqw")]
+position = Vector2(630, 299)
+
+[node name="police_2" parent="." instance=ExtResource("18_kvhkj")]
+position = Vector2(570, 405)
+
+[node name="npc_4" parent="." instance=ExtResource("19_5g2ef")]
+position = Vector2(656, 392)

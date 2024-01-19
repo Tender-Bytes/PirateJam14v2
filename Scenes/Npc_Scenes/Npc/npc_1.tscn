@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://diq4srsps7jvx"]
 
+[ext_resource type="Script" path="res://Scenes/Npc_Scenes/wander.gd" id="1_bhfhg"]
 [ext_resource type="Texture2D" uid="uid://bpa2apnsumkpa" path="res://Graphics/Entity_Spr/NPC_Spr/NPC/Npc_Left_1.png" id="1_ksa1g"]
-[ext_resource type="Script" path="res://Scenes/Npc_Scenes/Npc/npc_1.gd" id="1_lhdxs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2e1rq"]
 atlas = ExtResource("1_ksa1g")
@@ -44,7 +44,7 @@ radius = 14.0
 height = 46.0
 
 [node name="npc_1" type="CharacterBody2D"]
-script = ExtResource("1_lhdxs")
+script = ExtResource("1_bhfhg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_be27b")
