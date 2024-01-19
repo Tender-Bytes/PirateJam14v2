@@ -1,47 +1,58 @@
-[gd_scene load_steps=12 format=3 uid="uid://cbg2f0hwnxjl3"]
+[gd_scene load_steps=20 format=3 uid="uid://sgqarcaflhvt"]
 
-[ext_resource type="PackedScene" uid="uid://bfh76it3fweiu" path="res://Scenes/UI/progress_bar.tscn" id="1_nhsyw"]
-[ext_resource type="Script" path="res://Scenes/UI/progress_bar.gd" id="2_aek2g"]
-[ext_resource type="PackedScene" uid="uid://d4e2diapf7xgy" path="res://Scenes/UI/converted.tscn" id="3_85vgm"]
-[ext_resource type="Script" path="res://Scenes/UI/converted.gd" id="4_cxai8"]
-[ext_resource type="PackedScene" uid="uid://cf2ptl5nxbxm0" path="res://Scenes/Currency/money.tscn" id="5_1d1hn"]
-[ext_resource type="Script" path="res://Scenes/Currency/money.gd" id="6_qg3r0"]
-[ext_resource type="PackedScene" uid="uid://dm1i5aujxwe7g" path="res://Scenes/Currency/Default Gold Generate/default_gold_gen.tscn" id="7_42rn5"]
-[ext_resource type="PackedScene" uid="uid://chackx4vt2u06" path="res://Scenes/Conversion/Pamphlet/convert_Pamphlet.tscn" id="9_bn4im"]
-[ext_resource type="PackedScene" uid="uid://d0r4w2dt410pj" path="res://Scenes/Currency/Default Gold Generate/pc_extra.tscn" id="10_sg23m"]
-[ext_resource type="PackedScene" uid="uid://busxrdj0nbjjw" path="res://Scenes/kami_scenes/newscaster.tscn" id="11_g3uef"]
-[ext_resource type="PackedScene" uid="uid://c8k0d8llapnfh" path="res://Scenes/kami_scenes/scrolling_news.tscn" id="12_3ypxw"]
+[ext_resource type="PackedScene" uid="uid://bfh76it3fweiu" path="res://Scenes/UI/progress_bar.tscn" id="1_qlyf6"]
+[ext_resource type="Script" path="res://Scenes/UI/progress_bar.gd" id="2_n6tky"]
+[ext_resource type="PackedScene" uid="uid://cf2ptl5nxbxm0" path="res://Scenes/Currency/money.tscn" id="3_xinn3"]
+[ext_resource type="Script" path="res://Scenes/Currency/money.gd" id="4_5ilou"]
+[ext_resource type="PackedScene" uid="uid://dm1i5aujxwe7g" path="res://Scenes/Currency/Default Gold Generate/default_gold_gen.tscn" id="5_v6x6t"]
+[ext_resource type="PackedScene" uid="uid://d0r4w2dt410pj" path="res://Scenes/Currency/Default Gold Generate/pc_extra.tscn" id="6_84gw0"]
+[ext_resource type="PackedScene" uid="uid://dvuafp3ywebug" path="res://Scenes/Currency/Default Gold Generate/pc_upgrade.tscn" id="7_5f5w7"]
+[ext_resource type="PackedScene" uid="uid://d4e2diapf7xgy" path="res://Scenes/UI/converted.tscn" id="8_6xif6"]
+[ext_resource type="Script" path="res://Scenes/UI/converted.gd" id="9_hcbi7"]
+[ext_resource type="PackedScene" uid="uid://chackx4vt2u06" path="res://Scenes/Conversion/Pamphlet/convert_Pamphlet.tscn" id="10_b1ofx"]
+[ext_resource type="PackedScene" uid="uid://busxrdj0nbjjw" path="res://Scenes/kami_scenes/newscaster.tscn" id="11_kqtl8"]
+[ext_resource type="PackedScene" uid="uid://c8k0d8llapnfh" path="res://Scenes/kami_scenes/scrolling_news.tscn" id="12_7ghfb"]
+[ext_resource type="PackedScene" uid="uid://diq4srsps7jvx" path="res://Scenes/Npc_Scenes/Npc/npc_1.tscn" id="13_ddbwo"]
+[ext_resource type="PackedScene" uid="uid://8gjc0i07wr5j" path="res://Scenes/Npc_Scenes/Npc/npc_2.tscn" id="14_228sr"]
+[ext_resource type="PackedScene" uid="uid://cpmnpb4tpgxqx" path="res://Scenes/Npc_Scenes/Npc/npc_3.tscn" id="15_mvq45"]
+[ext_resource type="PackedScene" uid="uid://bp723ry6nhhri" path="res://Scenes/Npc_Scenes/Homeless/homeless_1.tscn" id="16_a2s4r"]
+[ext_resource type="PackedScene" uid="uid://cnju8kvnbcan7" path="res://Scenes/Npc_Scenes/Homeless/homeless_2.tscn" id="17_pxhdt"]
+[ext_resource type="PackedScene" uid="uid://bqm54p5irb51a" path="res://Scenes/Npc_Scenes/Police/police_1.tscn" id="18_qirj0"]
+[ext_resource type="PackedScene" uid="uid://rshh6lifvqam" path="res://Scenes/Npc_Scenes/Police/police_2.tscn" id="19_8ca0k"]
 
 [node name="TestLevel" type="Node2D"]
 
-[node name="ProgressBar" parent="." instance=ExtResource("1_nhsyw")]
+[node name="Conversion Progress Bar" parent="." instance=ExtResource("1_qlyf6")]
 offset_left = 736.0
 offset_top = 28.0
 offset_right = 736.0
 offset_bottom = 28.0
-script = ExtResource("2_aek2g")
+script = ExtResource("2_n6tky")
 
-[node name="Converted" parent="." instance=ExtResource("3_85vgm")]
-position = Vector2(736, 0)
-script = ExtResource("4_cxai8")
+[node name="Money" parent="." instance=ExtResource("3_xinn3")]
+position = Vector2(136, 0)
+script = ExtResource("4_5ilou")
 
-[node name="Money" parent="." instance=ExtResource("5_1d1hn")]
-position = Vector2(136, 28)
-script = ExtResource("6_qg3r0")
-
-[node name="default gold gen" parent="." instance=ExtResource("7_42rn5")]
+[node name="Crypto Gen" parent="." instance=ExtResource("5_v6x6t")]
 position = Vector2(136, 91)
 
-[node name="propaganda_gen" parent="." instance=ExtResource("9_bn4im")]
-position = Vector2(736, 91)
-
-[node name="pc_extra" parent="." instance=ExtResource("10_sg23m")]
+[node name="pc_extra" parent="." instance=ExtResource("6_84gw0")]
 position = Vector2(136, 269)
 
-[node name="Newscaster" parent="." instance=ExtResource("11_g3uef")]
-position = Vector2(892, 333)
+[node name="pc_upgrade" parent="." instance=ExtResource("7_5f5w7")]
+position = Vector2(136, 398)
 
-[node name="Scrolling news" parent="." instance=ExtResource("12_3ypxw")]
+[node name="Converted" parent="." instance=ExtResource("8_6xif6")]
+position = Vector2(736, 0)
+script = ExtResource("9_hcbi7")
+
+[node name="Convert_Pamphlet" parent="." instance=ExtResource("10_b1ofx")]
+position = Vector2(736, 91)
+
+[node name="Newscaster" parent="." instance=ExtResource("11_kqtl8")]
+position = Vector2(1007, 563)
+
+[node name="Scrolling news" parent="." instance=ExtResource("12_7ghfb")]
 layout_direction = 2
 offset_left = 241.0
 offset_top = 478.0
@@ -50,5 +61,23 @@ offset_bottom = 510.0
 theme_override_font_sizes/normal_font_size = 32
 fit_content = true
 
-[connection signal="converted_pop" from="ProgressBar" to="Newscaster" method="_on_progress_bar_converted_pop"]
-[connection signal="news_change" from="Newscaster" to="Scrolling news" method="_on_newscaster_news_change"]
+[node name="npc_1" parent="." instance=ExtResource("13_ddbwo")]
+position = Vector2(572, 319)
+
+[node name="npc_2" parent="." instance=ExtResource("14_228sr")]
+position = Vector2(606, 358)
+
+[node name="npc_3" parent="." instance=ExtResource("15_mvq45")]
+position = Vector2(534, 370)
+
+[node name="homeless_1" parent="." instance=ExtResource("16_a2s4r")]
+position = Vector2(525, 303)
+
+[node name="homeless_2" parent="." instance=ExtResource("17_pxhdt")]
+position = Vector2(630, 299)
+
+[node name="police_2" parent="." instance=ExtResource("18_qirj0")]
+position = Vector2(570, 405)
+
+[node name="npc_4" parent="." instance=ExtResource("19_8ca0k")]
+position = Vector2(656, 392)

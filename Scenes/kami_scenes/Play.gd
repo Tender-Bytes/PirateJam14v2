@@ -16,6 +16,7 @@ func _process(delta):
 
 func _on_mouse_entered():
 	grow_btn(g_size,.1)
+	get_parent().get_child(get_child_count()-1).play(0.0)
 	
 	
 	
