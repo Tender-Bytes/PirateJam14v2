@@ -25,3 +25,7 @@ func move():
 
 func _on_exit_pressed():
 	get_tree().quit() # Replace with function body.
+
+
+func _on_play_pressed():
+	print("start") # Replace with function body.

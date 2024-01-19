@@ -1,12 +1,19 @@
 extends TextureButton
 @export var parti:Texture2D
+@export var infographic:Texture2D
+@export var timed=true
+
+
 var og_size=scale 
 var g_size=Vector2(1.06,1.06)
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if parti:
 		$emitter.texture=parti
+	else:
+		$emitter.hide()
+	if infographic:
+		$Info.texture=infographic
 	pass # Replace with function body.
 
 
@@ -34,4 +41,6 @@ func grow_btn(size:Vector2, duration:float):
 func _on_pressed():
 	$emitter.position=get_local_mouse_position()
 	$emitter.emitting=true
-	self.disabled = true
+	if timed:
+		self.disabled = true
+
