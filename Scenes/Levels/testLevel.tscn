@@ -43,7 +43,7 @@ position = Vector2(136, 269)
 position = Vector2(136, 398)
 
 [node name="Converted" parent="." instance=ExtResource("1_y1twf")]
-position = Vector2(736, 0)
+position = Vector2(736, 1)
 script = ExtResource("2_4vl5k")
 
 [node name="Convert_Pamphlet" parent="." instance=ExtResource("5_xw5ny")]

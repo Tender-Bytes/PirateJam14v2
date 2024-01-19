@@ -98,9 +98,10 @@ flat = true
 script = ExtResource("2_aly0s")
 
 [node name="Exit" type="Button" parent="."]
-offset_top = 580.0
-offset_right = 1152.0
-offset_bottom = 612.0
+offset_left = 1.0
+offset_top = 579.0
+offset_right = 1153.0
+offset_bottom = 611.0
 pivot_offset = Vector2(576, 16)
 theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
 text = "Exit"
