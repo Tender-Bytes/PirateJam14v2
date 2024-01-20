@@ -15,7 +15,6 @@ func _ready():
 	var tween= create_tween().set_trans(Tween.TRANS_LINEAR).set_parallel()
 	tween.tween_property($Menu_art_1,"self_modulate",Color("193051"),1)
 	tween.tween_property($Menu_art_2,"self_modulate",Color("193051"),1)
-
 	print(lines)
 	play_cutscene(0)
 	 # Replace with function body.

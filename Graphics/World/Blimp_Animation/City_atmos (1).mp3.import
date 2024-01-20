@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cd5r0cl8srjci"
+path="res://.godot/imported/City_atmos (1).mp3-fff672cf3d7faa49a9260a850d010f7a.mp3str"
+
+[deps]
+
+source_file="res://Graphics/World/Blimp_Animation/City_atmos (1).mp3"
+dest_files=["res://.godot/imported/City_atmos (1).mp3-fff672cf3d7faa49a9260a850d010f7a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

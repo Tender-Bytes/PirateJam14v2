@@ -62,6 +62,8 @@ damping_max = 100.0
 damping_curve = SubResource("Curve_wvbxm")
 color_ramp = SubResource("Gradient_7vtm0")
 
+[node name="sound" type="AudioStreamPlayer2D" parent="."]
+
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="." to="." method="_on_pressed"]
 [connection signal="mouse_exited" from="hover" to="." method="_on_hover_mouse_exited"]

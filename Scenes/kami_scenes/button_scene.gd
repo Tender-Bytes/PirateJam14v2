@@ -2,6 +2,7 @@ extends TextureButton
 @export var parti:Texture2D
 @export var infographic:Texture2D
 @export var timed=true
+@export var audio=AudioStreamWAV
 
 
 var og_size=scale 
@@ -14,7 +15,9 @@ func _ready():
 		$emitter.hide()
 	if infographic:
 		$Info.texture=infographic
-	pass # Replace with function body.
+	if audio:
+		$sound.stream=audio
+	 # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -41,6 +44,7 @@ func grow_btn(size:Vector2, duration:float):
 func _on_pressed():
 	$emitter.position=get_local_mouse_position()
 	$emitter.emitting=true
+	$sound.play()
 	if timed:
 		self.disabled = true
 
