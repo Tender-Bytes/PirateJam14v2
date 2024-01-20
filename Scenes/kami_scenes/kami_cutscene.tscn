@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckq1h803qp0h8"]
+
+[ext_resource type="Script" path="res://cut_scene.gd" id="1_xm0yy"]
+[ext_resource type="Texture2D" uid="uid://ct8r3sah256qr" path="res://Scenes/kami_scenes/kami_assetss/story box.png" id="2_wo14h"]
+
+[node name="cut_scene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xm0yy")
+
+[node name="Image" type="TextureRect" parent="."]
+self_modulate = Color(0.203922, 0.203922, 0.203922, 0)
+layout_mode = 0
+offset_right = 442.0
+offset_bottom = 215.0
+expand_mode = 1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -205.0
+offset_top = 239.0
+offset_right = 681.0
+offset_bottom = 367.0
+texture_normal = ExtResource("2_wo14h")
+stretch_mode = 0
+
+[node name="story" type="Label" parent="."]
+layout_mode = 0
+offset_left = -162.0
+offset_top = 253.0
+offset_right = 638.0
+offset_bottom = 353.0
+autowrap_mode = 2
+text_overrun_behavior = 2
+visible_characters = 0
+visible_ratio = 0.0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

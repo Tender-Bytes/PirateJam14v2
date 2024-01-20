@@ -39,12 +39,12 @@ func _on_play_pressed():
 	#tween.tween_property($clouds,'position',Vector2(0,-220),transition_time)
 	
 	tween.tween_property($Menu_art_1,'scale',Vector2(grow_size,grow_size),transition_time)
-	tween.tween_property($Menu_art_1,'self_modulate',Color("white",255),transition_time)
+	#tween.tween_property($Menu_art_1,'self_modulate',Color("cececed5"),transition_time)
 	tween.tween_property($Menu_art_1,'position',Vector2(153,-262),transition_time)
 	
 	#tween.tween_property($background_gray,'position',Vector2(0,-661),transition_time)
 	tween.tween_property($Menu_art_2,'scale',Vector2(grow_size,grow_size),transition_time)
-	tween.tween_property($Menu_art_2,'self_modulate',Color("white",255),transition_time)
+	tween.tween_property($Menu_art_2,'self_modulate',Color("cececed5"),transition_time)
 	tween.tween_property($Menu_art_2,'position',Vector2(153,399),transition_time)
 	
 	tween.tween_property($borders,'scale',Vector2(grow_size,grow_size),transition_time)
@@ -58,4 +58,10 @@ func _on_play_pressed():
 	$clouds.hide()
 
 	tween.chain().tween_property($TEXT,'self_modulate',Color("white",0),transition_time-0.4)
-	print("start") # Replace with function body.
+
+	await tween.finished
+	
+	print("we gucci?")
+	$load.start()
+	await $load.timeout
+	get_tree().change_scene_to_file("res://Scenes/kami_scenes/kami_backstory.tscn") # Replace with function body.
