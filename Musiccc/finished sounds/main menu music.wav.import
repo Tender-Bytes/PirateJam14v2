@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://kd688kkb1lbo"
+path="res://.godot/imported/main menu music.wav-7e27394f0d973cae3cbb42fb8446bfc8.sample"
+
+[deps]
+
+source_file="res://Musiccc/finished sounds/main menu music.wav"
+dest_files=["res://.godot/imported/main menu music.wav-7e27394f0d973cae3cbb42fb8446bfc8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

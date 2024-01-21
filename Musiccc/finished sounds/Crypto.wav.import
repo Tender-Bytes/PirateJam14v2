@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://3ynpvab3h15"
+path="res://.godot/imported/Crypto.wav-d286cd89a2c0f7fe14f907aeb1617583.sample"
+
+[deps]
+
+source_file="res://Musiccc/finished sounds/Crypto.wav"
+dest_files=["res://.godot/imported/Crypto.wav-d286cd89a2c0f7fe14f907aeb1617583.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://idqj6fm163n0"]
+
+[ext_resource type="Script" path="res://Room.gd" id="1_3a53b"]
+[ext_resource type="Texture2D" uid="uid://b67l8jjda6ysl" path="res://Scenes/kami_scenes/kami_assetss/orange_stuff.png" id="2_0a14d"]
+
+[node name="Room" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3a53b")
+texture = ExtResource("2_0a14d")
+
+[node name="TextureRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 600.0
+offset_bottom = 100.0
+
+[node name="stacks" type="HBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 15.0
+offset_top = 16.0
+offset_right = 415.0
+offset_bottom = 16.0

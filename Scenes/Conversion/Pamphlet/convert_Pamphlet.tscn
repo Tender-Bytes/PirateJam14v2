@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://chackx4vt2u06"]
+[gd_scene load_steps=5 format=3 uid="uid://chackx4vt2u06"]
 
 [ext_resource type="Script" path="res://Scenes/Conversion/Pamphlet/convert_Pamphlet.gd" id="1_td3o5"]
 [ext_resource type="PackedScene" uid="uid://3q08rw4x5d0m" path="res://Scenes/kami_scenes/button_scene.tscn" id="2_v0y5x"]
 [ext_resource type="Texture2D" uid="uid://ckh85l3238t5a" path="res://Scenes/kami_scenes/kami_assetss/propoganda_button.png" id="3_51r54"]
+[ext_resource type="AudioStream" uid="uid://7iaanp5ungl4" path="res://Musiccc/finished sounds/Propaganda pamphlet.wav" id="4_a8o6o"]
 
 [node name="propaganda_gen" type="Node2D"]
 script = ExtResource("1_td3o5")
@@ -12,6 +13,7 @@ offset_right = 210.0
 offset_bottom = 90.0
 infographic = ExtResource("3_51r54")
 timed = false
+audio = ExtResource("4_a8o6o")
 
 [node name="Text" type="Label" parent="."]
 offset_left = 33.0

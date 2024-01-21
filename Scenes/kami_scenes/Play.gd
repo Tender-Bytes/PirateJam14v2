@@ -2,9 +2,10 @@ extends Button
 
 var og_size=scale 
 var g_size=Vector2(1.1,1.1)
+@onready var y
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	y=get_parent().get_node("menu Sound Ui")
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -16,7 +17,8 @@ func _process(delta):
 
 func _on_mouse_entered():
 	grow_btn(g_size,.1)
-	get_parent().get_child(get_child_count()-1).play(0.0)
+	y.play()
+
 	
 	
 	

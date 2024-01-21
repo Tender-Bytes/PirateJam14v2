@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://d1kqwcavk31fj"]
+
+[ext_resource type="Script" path="res://pc.gd" id="1_eoajx"]
+[ext_resource type="Texture2D" uid="uid://b4qbnd74rkvwq" path="res://Graphics/Crypto/Crypto_PC.png" id="2_587gw"]
+[ext_resource type="Texture2D" uid="uid://eete4alku8ia" path="res://Scenes/kami_scenes/kami_assetss/pc_stuff.png" id="2_bsjtt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idgkg"]
+atlas = ExtResource("2_587gw")
+region = Rect2(0, 0, 103, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hkym5"]
+atlas = ExtResource("2_587gw")
+region = Rect2(103, 0, 103, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwi3v"]
+atlas = ExtResource("2_587gw")
+region = Rect2(206, 0, 103, 56)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_38emp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idgkg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hkym5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwi3v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="pc" type="Control"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 0
+script = ExtResource("1_eoajx")
+texture = ExtResource("2_bsjtt")
+
+[node name="computer_1" type="AnimatedSprite2D" parent="."]
+position = Vector2(14.5, 20)
+sprite_frames = SubResource("SpriteFrames_38emp")
+
+[node name="computer_2" type="AnimatedSprite2D" parent="."]
+position = Vector2(14.5, 20)
+sprite_frames = SubResource("SpriteFrames_38emp")
+offset = Vector2(10, 10)
+
+[node name="computer_3" type="AnimatedSprite2D" parent="."]
+position = Vector2(14.5, 20)
+sprite_frames = SubResource("SpriteFrames_38emp")
+offset = Vector2(20, 20)
