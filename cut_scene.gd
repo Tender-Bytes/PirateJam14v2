@@ -7,11 +7,16 @@ signal next
 func _ready():
 	$story.text=words
 	$Image.texture=img
+	var x
+	var y
 	#$Image.self_modulate=Color("white",0)
 	pivot_offset=size/2
 	tween= create_tween().set_trans(Tween.TRANS_LINEAR).set_parallel()
+	x= words.length()
+
 	tween.tween_property($Image,"self_modulate",Color("white",255.0),1)
-	tween.tween_property($story,"visible_ratio",1,3)
+	tween.tween_property($story,"visible_ratio",1,x*0.07)
+	
 	pass # Replace with function body.
 
 

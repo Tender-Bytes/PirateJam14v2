@@ -10,7 +10,7 @@
 [node name="Backstory exposition" type="Node2D"]
 script = ExtResource("1_jkqc3")
 imgs = Array[Texture2D]([ExtResource("6_whvgf"), ExtResource("6_whvgf")])
-lines = Array[String](["dgfhuyfdsfgg", "sefryuytre"])
+lines = Array[String](["sdfgghjkjhgfdsaxsvfbgnmbfdsasdsfgjhjkkuhygftrdsdfghjbn", "sefryuytre"])
 number_of_slides = 2
 
 [node name="Menu_art_1" type="TextureRect" parent="."]
@@ -41,7 +41,6 @@ offset_left = 357.0
 offset_top = 197.0
 offset_right = 357.0
 offset_bottom = 197.0
-words = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non nibh gravida quam feugiat accumsan. Nunc id elit sit amet erat vestibulum pellentesque sed ac nibh. Pellentesque scelerisque augue lacinia tempor faucibus. Donec efficitur commodo odio eget feugiat. "
 img = ExtResource("6_whvgf")
 
 [node name="scenesss" type="Control" parent="."]
