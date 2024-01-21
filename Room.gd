@@ -1,6 +1,6 @@
 extends Control
 @export var number_of_pc=0
-@export var texture:Texture2D
+@export var texture:Array[Texture2D]
 @export var upgrade_lvele_num:int=0
 @onready var p_stack=preload("res://Scenes/kami_scenes/kami_pc_stack.tscn")
 # Called when the node enters the scene tree for the first time.
