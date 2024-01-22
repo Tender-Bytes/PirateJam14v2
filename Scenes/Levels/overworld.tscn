@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://o74mvfbtc24e"]
+
+[ext_resource type="Texture2D" uid="uid://by05wfpsjl3w8" path="res://Graphics/World/World_Test.png" id="1_bjb2e"]
+[ext_resource type="PackedScene" uid="uid://dm1i5aujxwe7g" path="res://Scenes/Currency/Default Gold Generate/default_gold_gen.tscn" id="2_neb7x"]
+[ext_resource type="Texture2D" uid="uid://d3uv0j0p4hbta" path="res://Scenes/Assets/converted_progress_overlay.png" id="2_q2f8s"]
+[ext_resource type="PackedScene" uid="uid://cf2ptl5nxbxm0" path="res://Scenes/Currency/money.tscn" id="3_tpt4i"]
+[ext_resource type="PackedScene" uid="uid://bfh76it3fweiu" path="res://Scenes/UI/progress_bar.tscn" id="3_ts8ki"]
+[ext_resource type="PackedScene" uid="uid://1d562p5g1c0c" path="res://Scenes/Conversion/Word of Mouth/convert_WOM.tscn" id="6_pdihs"]
+[ext_resource type="PackedScene" uid="uid://chackx4vt2u06" path="res://Scenes/Conversion/Pamphlet/convert_Pamphlet.tscn" id="7_fuv0t"]
+[ext_resource type="PackedScene" uid="uid://imblf4d3qtye" path="res://Scenes/Conversion/Blimp/convert_Blimp.tscn" id="8_3yur1"]
+[ext_resource type="PackedScene" uid="uid://busxrdj0nbjjw" path="res://Scenes/kami_scenes/newscaster.tscn" id="9_235cd"]
+
+[node name="Overworld" type="Node2D"]
+
+[node name="World Sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(576.5, 324.5)
+scale = Vector2(2.0193, 2.02813)
+texture = ExtResource("1_bjb2e")
+
+[node name="Progress Bar UI" type="Control" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 614.0
+offset_top = 312.0
+offset_right = 664.0
+offset_bottom = 362.0
+
+[node name="Progress Overlay Sprite" type="Sprite2D" parent="Progress Bar UI"]
+texture_filter = 1
+position = Vector2(47.5, -269.5)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_q2f8s")
+
+[node name="ProgressBar" parent="Progress Bar UI" instance=ExtResource("3_ts8ki")]
+layout_mode = 1
+offset_left = -177.0
+offset_top = -291.0
+offset_right = 182.0
+offset_bottom = -291.0
+scale = Vector2(1.1, 1.1)
+
+[node name="Money" parent="." instance=ExtResource("3_tpt4i")]
+position = Vector2(13, 146)
+
+[node name="default gold gen" parent="." instance=ExtResource("2_neb7x")]
+scale = Vector2(1.2, 1.2)
+
+[node name="convert_WOM" parent="." instance=ExtResource("6_pdihs")]
+position = Vector2(0, 174)
+scale = Vector2(1.2, 1.2)
+
+[node name="convert_pamphlet" parent="." instance=ExtResource("7_fuv0t")]
+position = Vector2(0, 341)
+scale = Vector2(1.2, 1.2)
+
+[node name="convert_Blimp" parent="." instance=ExtResource("8_3yur1")]
+position = Vector2(1, 507)
+scale = Vector2(1.2, 1.2)
+
+[node name="Newscaster" parent="." instance=ExtResource("9_235cd")]
+position = Vector2(713, 299)
+scale = Vector2(1.2, 1.2)

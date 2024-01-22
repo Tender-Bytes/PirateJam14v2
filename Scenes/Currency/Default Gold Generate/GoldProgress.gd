@@ -13,7 +13,7 @@ func _process(delta):
 	if timer.time_left != 0:
 		bar.value = timer.wait_time - timer.time_left
 	else:
-		bar.value = 0
+		bar.value = bar.max_value
 
 
 func _on_control_pressed():

@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cf2ptl5nxbxm0"]
+[gd_scene load_steps=3 format=3 uid="uid://cf2ptl5nxbxm0"]
 
 [ext_resource type="Script" path="res://Scenes/Currency/MoneyText.gd" id="1_xky6o"]
+[ext_resource type="Script" path="res://Scenes/Currency/money.gd" id="1_yj7ta"]
 
 [node name="Money" type="Node2D"]
+script = ExtResource("1_yj7ta")
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0

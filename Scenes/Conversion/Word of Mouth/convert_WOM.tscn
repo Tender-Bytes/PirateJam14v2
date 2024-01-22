@@ -14,10 +14,9 @@ infographic = ExtResource("3_n5bb3")
 timed = false
 
 [node name="Text" type="Label" parent="."]
-offset_left = 33.0
-offset_top = 89.0
-offset_right = 182.0
-offset_bottom = 138.0
+offset_top = 90.0
+offset_right = 191.0
+offset_bottom = 139.0
 text = "Word of Mouth cost: $2
 Word of Mouth owned: 0"
 horizontal_alignment = 1

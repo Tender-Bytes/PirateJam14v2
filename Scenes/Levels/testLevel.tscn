@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c4lfu08keqeev"]
+[gd_scene load_steps=21 format=3 uid="uid://c4lfu08keqeev"]
 
 [ext_resource type="PackedScene" uid="uid://bfh76it3fweiu" path="res://Scenes/UI/progress_bar.tscn" id="1_1yx0b"]
 [ext_resource type="PackedScene" uid="uid://dm1i5aujxwe7g" path="res://Scenes/Currency/Default Gold Generate/default_gold_gen.tscn" id="1_f2gaw"]
@@ -6,7 +6,6 @@
 [ext_resource type="Script" path="res://Scenes/UI/progress_bar.gd" id="2_0urtt"]
 [ext_resource type="Script" path="res://Scenes/UI/converted.gd" id="2_4vl5k"]
 [ext_resource type="PackedScene" uid="uid://cf2ptl5nxbxm0" path="res://Scenes/Currency/money.tscn" id="2_ggqnb"]
-[ext_resource type="Script" path="res://Scenes/Currency/money.gd" id="3_lbfjy"]
 [ext_resource type="PackedScene" uid="uid://diq4srsps7jvx" path="res://Scenes/Npc_Scenes/Npc/npc_1.tscn" id="5_fsber"]
 [ext_resource type="PackedScene" uid="uid://chackx4vt2u06" path="res://Scenes/Conversion/Pamphlet/convert_Pamphlet.tscn" id="5_xw5ny"]
 [ext_resource type="PackedScene" uid="uid://dvuafp3ywebug" path="res://Scenes/Currency/Default Gold Generate/pc_upgrade.tscn" id="7_7x5c7"]
@@ -33,7 +32,6 @@ script = ExtResource("2_0urtt")
 
 [node name="Money" parent="." instance=ExtResource("2_ggqnb")]
 position = Vector2(136, 0)
-script = ExtResource("3_lbfjy")
 
 [node name="Crypto Gen" parent="." instance=ExtResource("1_f2gaw")]
 position = Vector2(136, 91)

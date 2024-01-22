@@ -15,7 +15,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-custom_minimum_size = Vector2(400, 25)
+custom_minimum_size = Vector2(408, 39)
 layout_mode = 0
 offset_bottom = 23.0
 theme_override_styles/background = SubResource("StyleBoxFlat_vk70t")
