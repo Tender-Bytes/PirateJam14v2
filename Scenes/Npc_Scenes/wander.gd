@@ -24,14 +24,19 @@ func _ready():
 	
 	
 func _physics_process(delta):
-	if x > 0:
+	if direction.x > 0:
 		sprite.flip_h = true
 	else:
 		sprite.flip_h = false
-
+	
 	velocity = direction * SPEED
 	move_and_slide()
-
+	
+func to_center(pos):
+	idleTimer.stop()
+	wanderTimer.stop()
+	self.direction = (pos - self.position).normalized()
+	wanderTimer.start()
 
 func _on_wander_timer_timeout():
 	direction = Vector2.ZERO

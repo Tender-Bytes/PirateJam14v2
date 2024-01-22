@@ -44,6 +44,7 @@ radius = 14.0
 height = 46.0
 
 [node name="homeless_1" type="CharacterBody2D"]
+position = Vector2(0, -1)
 script = ExtResource("1_fqcda")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -59,6 +60,8 @@ one_shot = true
 
 [node name="WanderTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
 [connection signal="timeout" from="IdleTimer" to="." method="_on_idle_timer_timeout"]
 [connection signal="timeout" from="WanderTimer" to="." method="_on_wander_timer_timeout"]
