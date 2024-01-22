@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://o74mvfbtc24e"]
+[gd_scene load_steps=11 format=3 uid="uid://o74mvfbtc24e"]
 
 [ext_resource type="Texture2D" uid="uid://by05wfpsjl3w8" path="res://Graphics/World/World_Test.png" id="1_bjb2e"]
 [ext_resource type="PackedScene" uid="uid://dm1i5aujxwe7g" path="res://Scenes/Currency/Default Gold Generate/default_gold_gen.tscn" id="2_neb7x"]
 [ext_resource type="Texture2D" uid="uid://d3uv0j0p4hbta" path="res://Scenes/Assets/converted_progress_overlay.png" id="2_q2f8s"]
 [ext_resource type="PackedScene" uid="uid://cf2ptl5nxbxm0" path="res://Scenes/Currency/money.tscn" id="3_tpt4i"]
 [ext_resource type="PackedScene" uid="uid://bfh76it3fweiu" path="res://Scenes/UI/progress_bar.tscn" id="3_ts8ki"]
+[ext_resource type="PackedScene" uid="uid://d3gc1b3cwx47x" path="res://Scenes/kami_scenes/car_line.tscn" id="3_xwy7y"]
 [ext_resource type="PackedScene" uid="uid://1d562p5g1c0c" path="res://Scenes/Conversion/Word of Mouth/convert_WOM.tscn" id="6_pdihs"]
 [ext_resource type="PackedScene" uid="uid://chackx4vt2u06" path="res://Scenes/Conversion/Pamphlet/convert_Pamphlet.tscn" id="7_fuv0t"]
 [ext_resource type="PackedScene" uid="uid://imblf4d3qtye" path="res://Scenes/Conversion/Blimp/convert_Blimp.tscn" id="8_3yur1"]
@@ -17,6 +18,19 @@ texture_filter = 1
 position = Vector2(576.5, 324.5)
 scale = Vector2(2.0193, 2.02813)
 texture = ExtResource("1_bjb2e")
+
+[node name="Newscaster" parent="." instance=ExtResource("9_235cd")]
+position = Vector2(713, 299)
+scale = Vector2(1.2, 1.2)
+
+[node name="car_line_left" parent="." instance=ExtResource("3_xwy7y")]
+position = Vector2(65, 393)
+time = 20
+
+[node name="car_line_left2" parent="." instance=ExtResource("3_xwy7y")]
+visible = false
+position = Vector2(794, 375)
+time = 20
 
 [node name="Progress Bar UI" type="Control" parent="."]
 custom_minimum_size = Vector2(50, 50)
@@ -57,8 +71,4 @@ scale = Vector2(1.2, 1.2)
 
 [node name="convert_Blimp" parent="." instance=ExtResource("8_3yur1")]
 position = Vector2(1, 507)
-scale = Vector2(1.2, 1.2)
-
-[node name="Newscaster" parent="." instance=ExtResource("9_235cd")]
-position = Vector2(713, 299)
 scale = Vector2(1.2, 1.2)

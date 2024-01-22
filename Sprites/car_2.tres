@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://d21bd136dp8km"]
+
+[ext_resource type="Texture2D" uid="uid://ygo3ikcrxy6q" path="res://Graphics/Vehicles/Taxi-Sheet.png" id="1_i5afj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0eo1"]
+atlas = ExtResource("1_i5afj")
+region = Rect2(0, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wq0w5"]
+atlas = ExtResource("1_i5afj")
+region = Rect2(128, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxbab"]
+atlas = ExtResource("1_i5afj")
+region = Rect2(256, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4et8"]
+atlas = ExtResource("1_i5afj")
+region = Rect2(384, 0, 128, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0eo1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wq0w5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxbab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4et8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

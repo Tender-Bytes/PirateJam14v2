@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://y4o66m4cl6lp"]
+
+[ext_resource type="Texture2D" uid="uid://d2sm5qs3yopww" path="res://Graphics/Vehicles/car-Sheet.png" id="1_qi2ff"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2l3ur"]
+atlas = ExtResource("1_qi2ff")
+region = Rect2(0, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0kbt"]
+atlas = ExtResource("1_qi2ff")
+region = Rect2(128, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dm4qu"]
+atlas = ExtResource("1_qi2ff")
+region = Rect2(256, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8li4"]
+atlas = ExtResource("1_qi2ff")
+region = Rect2(384, 0, 128, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2l3ur")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0kbt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dm4qu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x8li4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
