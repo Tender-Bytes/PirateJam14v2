@@ -11,7 +11,15 @@ theme_override_font_sizes/font_size = 20
 text = "People Converted: 0"
 script = ExtResource("1_nw657")
 
+[node name="WOM_Timer" type="Timer" parent="."]
+wait_time = 2.0
+
 [node name="Pamplet_Timer" type="Timer" parent="."]
 wait_time = 2.0
 
+[node name="Blimp_Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="WOM_Timer" to="Label" method="_on_wom_timer_timeout"]
 [connection signal="timeout" from="Pamplet_Timer" to="Label" method="_on_pamplet_timer_timeout"]
+[connection signal="timeout" from="Blimp_Timer" to="Label" method="_on_blimp_timer_timeout"]
