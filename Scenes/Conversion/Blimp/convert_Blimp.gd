@@ -1,16 +1,16 @@
 extends Node2D
 
-@onready var pamphlet_text = get_node("Text")
+@onready var blimp_text = get_node("Text")
 @onready var money = get_node("../Money")
 
-signal total_pamphlets(owned: int)
+signal total_blimps(owned: int)
 
-const cost = 10
-var pamphlets: int
+const cost = 50
+var blimps: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pamphlets = 0
+	blimps = 0
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -21,10 +21,10 @@ func _process(delta):
 
 func _on_button_pressed():
 	if money.amount >= cost:
-		pamphlets += 1
-		pamphlet_text.set_text("Pamphlet cost: $" + str(cost) +"\npamplets owned: " + str(pamphlets))
+		blimps += 1
+		blimp_text.set_text("Blimp cost: $" + str(cost) +"\nBlimps owned: " + str(blimps))
 		money.change_value.emit(-cost)
-		total_pamphlets.emit(pamphlets)
+		total_blimps.emit(blimps)
 
 
 

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://imblf4d3qtye"]
+
+[ext_resource type="Script" path="res://Scenes/Conversion/Blimp/convert_Blimp.gd" id="1_jqwfb"]
+[ext_resource type="PackedScene" uid="uid://3q08rw4x5d0m" path="res://Scenes/kami_scenes/button_scene.tscn" id="2_vs72q"]
+[ext_resource type="Texture2D" uid="uid://b3pv8k376rt13" path="res://Scenes/Assets/blimp.png" id="3_o3n5s"]
+
+[node name="convert_Blimp" type="Node2D"]
+script = ExtResource("1_jqwfb")
+
+[node name="Button2" parent="." instance=ExtResource("2_vs72q")]
+offset_right = 210.0
+offset_bottom = 90.0
+infographic = ExtResource("3_o3n5s")
+timed = false
+
+[node name="Text" type="Label" parent="."]
+offset_left = 33.0
+offset_top = 89.0
+offset_right = 182.0
+offset_bottom = 138.0
+text = "Blimp cost: $50
+Blimps owned: 0"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Button2" to="." method="_on_button_pressed"]

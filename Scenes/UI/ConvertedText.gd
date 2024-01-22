@@ -15,5 +15,12 @@ func change_amount(value):
 	set_text("People Converted: " + str(value))
 
 
+func _on_wom_timer_timeout():
+	convert.WOM_production.emit()
+
 func _on_pamplet_timer_timeout():
 	convert.pamphlet_production.emit()
+
+
+func _on_blimp_timer_timeout():
+	convert.blimp_production.emit()

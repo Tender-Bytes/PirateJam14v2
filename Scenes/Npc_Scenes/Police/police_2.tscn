@@ -43,7 +43,7 @@ animations = [{
 radius = 14.0
 height = 46.0
 
-[node name="npc_1" type="CharacterBody2D"]
+[node name="police_2" type="CharacterBody2D"]
 script = ExtResource("1_edrpi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
