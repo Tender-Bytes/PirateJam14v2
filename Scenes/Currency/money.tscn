@@ -1,14 +1,85 @@
-[gd_scene load_steps=3 format=3 uid="uid://cf2ptl5nxbxm0"]
+[gd_scene load_steps=13 format=3 uid="uid://cf2ptl5nxbxm0"]
 
 [ext_resource type="Script" path="res://Scenes/Currency/MoneyText.gd" id="1_xky6o"]
 [ext_resource type="Script" path="res://Scenes/Currency/money.gd" id="1_yj7ta"]
+[ext_resource type="Texture2D" uid="uid://xdjy40j64ihp" path="res://Graphics/Crypto/Crypto_coin.png" id="2_oolgw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qvjo3"]
+atlas = ExtResource("2_oolgw")
+region = Rect2(0, 0, 22, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btn0t"]
+atlas = ExtResource("2_oolgw")
+region = Rect2(22, 0, 22, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qijxe"]
+atlas = ExtResource("2_oolgw")
+region = Rect2(44, 0, 22, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3lel"]
+atlas = ExtResource("2_oolgw")
+region = Rect2(66, 0, 22, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjqg0"]
+atlas = ExtResource("2_oolgw")
+region = Rect2(88, 0, 22, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tg8wp"]
+atlas = ExtResource("2_oolgw")
+region = Rect2(110, 0, 22, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4gxw"]
+atlas = ExtResource("2_oolgw")
+region = Rect2(132, 0, 22, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wp44d"]
+atlas = ExtResource("2_oolgw")
+region = Rect2(154, 0, 22, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_828wo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qvjo3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btn0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qijxe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3lel")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjqg0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tg8wp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4gxw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wp44d")
+}],
+"loop": true,
+"name": &"coin_spin",
+"speed": 10.0
+}]
 
 [node name="Money" type="Node2D"]
 script = ExtResource("1_yj7ta")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(13, 15)
+sprite_frames = SubResource("SpriteFrames_828wo")
+animation = &"coin_spin"
+
 [node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 24.0
+offset_right = 75.0
+offset_bottom = 28.0
 theme_override_font_sizes/font_size = 20
 text = "Gold:"
 script = ExtResource("1_xky6o")
