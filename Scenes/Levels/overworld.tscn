@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://d3uv0j0p4hbta" path="res://Scenes/Assets/converted_progress_overlay.png" id="2_q2f8s"]
 [ext_resource type="PackedScene" uid="uid://cf2ptl5nxbxm0" path="res://Scenes/Currency/money.tscn" id="3_tpt4i"]
 [ext_resource type="PackedScene" uid="uid://bfh76it3fweiu" path="res://Scenes/UI/progress_bar.tscn" id="3_ts8ki"]
-[ext_resource type="PackedScene" path="res://Scenes/kami_scenes/car_line.tscn" id="3_xwy7y"]
+[ext_resource type="PackedScene" uid="uid://d3gc1b3cwx47x" path="res://Scenes/kami_scenes/car_line.tscn" id="3_xwy7y"]
 [ext_resource type="PackedScene" uid="uid://1d562p5g1c0c" path="res://Scenes/Conversion/Word of Mouth/convert_WOM.tscn" id="6_pdihs"]
 [ext_resource type="PackedScene" uid="uid://chackx4vt2u06" path="res://Scenes/Conversion/Pamphlet/convert_Pamphlet.tscn" id="7_fuv0t"]
 [ext_resource type="PackedScene" uid="uid://imblf4d3qtye" path="res://Scenes/Conversion/Blimp/convert_Blimp.tscn" id="8_3yur1"]
@@ -101,5 +101,11 @@ position = Vector2(907, 532)
 
 [node name="homeless_4" parent="NPCs/homeless" instance=ExtResource("12_j1vch")]
 position = Vector2(901, 583)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="body_exited" from="NPCs/homeless/Area2D" to="NPCs/homeless" method="_on_area_2d_body_exited"]

@@ -5,7 +5,8 @@ extends Control
 @onready var p_stack=preload("res://Scenes/kami_scenes/kami_pc_stack.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	add_pc() # Replace with function body.
+	pivot_offset=Vector2(size/2)
+	 # Replace with function body.
 
 func add_pc():
 	number_of_pc+=1
@@ -25,7 +26,4 @@ func upgrade():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("ui_down"):
-		add_pc()
-	if Input.is_action_just_pressed("ui_up"):
-		upgrade()
+	pass

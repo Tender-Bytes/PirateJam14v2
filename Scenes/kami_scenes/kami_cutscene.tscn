@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ckq1h803qp0h8"]
 
-[ext_resource type="Script" path="res://cut_scene.gd" id="1_xm0yy"]
+[ext_resource type="Script" path="res://Scenes/kami_scenes/cut_scene.gd" id="1_xm0yy"]
 [ext_resource type="Texture2D" uid="uid://ct8r3sah256qr" path="res://Scenes/kami_scenes/kami_assetss/story box.png" id="2_wo14h"]
 [ext_resource type="AudioStream" uid="uid://kd688kkb1lbo" path="res://Musiccc/finished sounds/main menu music.wav" id="3_00dx0"]
 
