@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bfh76it3fweiu"]
+[gd_scene load_steps=4 format=3 uid="uid://bfh76it3fweiu"]
+
+[ext_resource type="Script" path="res://Scenes/UI/progress_bar.gd" id="1_rnvf2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vk70t"]
 bg_color = Color(0.909804, 0.305882, 0.25098, 1)
@@ -13,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_rnvf2")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 custom_minimum_size = Vector2(408, 39)

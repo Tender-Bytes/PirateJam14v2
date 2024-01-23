@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var converted_text = get_node("Label")
-@onready var bar = get_node("../Conversion Progress Bar")
+@onready var bar = get_node("../Progress Bar UI/ProgressBar")
 @onready var WOM = get_node("../Convert_WOM")
 @onready var Pamphlet = get_node("../Convert_Pamphlet")
 @onready var Blimp = get_node("../Convert_Blimp")
