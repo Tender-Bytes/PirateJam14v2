@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://c1knqs3gtdlau"]
+
+[ext_resource type="Texture2D" uid="uid://bp01hyxn4lsyw" path="res://Graphics/Blimp/blimp-Sheet.png" id="1_4tclb"]
+[ext_resource type="Script" path="res://Scenes/Conversion/Blimp/blimp.gd" id="1_w86vn"]
+[ext_resource type="Script" path="res://Scenes/Conversion/Blimp/blimp text.gd" id="3_fna17"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujxuv"]
+atlas = ExtResource("1_4tclb")
+region = Rect2(0, 0, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgm5a"]
+atlas = ExtResource("1_4tclb")
+region = Rect2(33, 0, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ltyvn"]
+atlas = ExtResource("1_4tclb")
+region = Rect2(66, 0, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8cqi"]
+atlas = ExtResource("1_4tclb")
+region = Rect2(99, 0, 33, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i6a6e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujxuv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tgm5a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ltyvn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r8cqi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="blimp" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w86vn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(18, 16)
+sprite_frames = SubResource("SpriteFrames_i6a6e")
+frame = 2
+frame_progress = 0.512163
+
+[node name="blimp text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_right = 75.0
+offset_bottom = 28.0
+theme_override_font_sizes/font_size = 20
+text = ":"
+script = ExtResource("3_fna17")

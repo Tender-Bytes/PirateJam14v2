@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://dgji6h4lb8s6j"]
+
+[ext_resource type="Texture2D" uid="uid://co6v2bfvqvygt" path="res://Graphics/Word of Mouth/word_of_mouth.png" id="1_2hcud"]
+[ext_resource type="Script" path="res://Scenes/Conversion/Word of Mouth/wom.gd" id="1_nn3vl"]
+[ext_resource type="Script" path="res://Scenes/Conversion/Word of Mouth/womText.gd" id="3_yeo7h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmb02"]
+atlas = ExtResource("1_2hcud")
+region = Rect2(0, 0, 26, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmsd4"]
+atlas = ExtResource("1_2hcud")
+region = Rect2(26, 0, 26, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4k0f"]
+atlas = ExtResource("1_2hcud")
+region = Rect2(52, 0, 26, 33)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dor2d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmb02")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmsd4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t4k0f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="WOM" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nn3vl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(17, 16)
+sprite_frames = SubResource("SpriteFrames_dor2d")
+frame_progress = 0.396507
+
+[node name="WOM text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 36.0
+offset_right = 76.0
+offset_bottom = 28.0
+theme_override_font_sizes/font_size = 20
+text = ":"
+script = ExtResource("3_yeo7h")

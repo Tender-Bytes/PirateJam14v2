@@ -12,7 +12,7 @@ func _process(delta):
 
 
 func change_amount(value):
-	set_text("People Converted: " + str(value))
+	set_text(": " + str(value))
 
 
 func _on_wom_timer_timeout():

@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @onready var anim = get_node("AnimatedSprite2D")
 @onready var money_text = get_node("Label")
@@ -14,9 +14,6 @@ func _ready():
 	#set default amount to 100 for testing
 	money_text.change_amount(amount)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 func change_money(value):
 	amount += value

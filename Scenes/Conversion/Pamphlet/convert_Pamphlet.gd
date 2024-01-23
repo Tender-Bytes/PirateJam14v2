@@ -1,7 +1,8 @@
 extends Node2D
 
-@onready var pamphlet_text = get_node("Text")
-@onready var money = get_node("../Money")
+#@onready var pamphlet_text = get_node("Text")
+@onready var pamphlet_UI = get_node("../ColorRect/MarginContainer/HBoxContainer/pamphlet")
+@onready var money = get_node("../ColorRect/MarginContainer/HBoxContainer/Money")
 
 signal total_pamphlets(owned: int)
 
@@ -22,7 +23,8 @@ func _process(delta):
 func _on_button_pressed():
 	if money.amount >= cost:
 		pamphlets += 1
-		pamphlet_text.set_text("Pamphlet cost: $" + str(cost) +"\npamplets owned: " + str(pamphlets))
+		#pamphlet_text.set_text("Pamphlet cost: $" + str(cost) +"\npamplets owned: " + str(pamphlets))
+		pamphlet_UI.change_pamphlet(pamphlets)
 		money.change_value.emit(-cost)
 		total_pamphlets.emit(pamphlets)
 

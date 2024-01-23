@@ -5,10 +5,5 @@ func _ready():
 	set_text(": $0")
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
 func change_amount(value):
 	set_text(": $" + str(value))

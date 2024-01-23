@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var money = get_node("../Money")
+@onready var money = get_node("../ColorRect/MarginContainer/HBoxContainer/Money")
 @onready var button = get_node("Control")
 @onready var timer = get_node("GoldProgress/Timer")
 @onready var bar = get_node("GoldProgress/ProgressBar")

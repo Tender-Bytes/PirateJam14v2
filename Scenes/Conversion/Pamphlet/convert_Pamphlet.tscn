@@ -11,11 +11,13 @@ script = ExtResource("1_td3o5")
 [node name="Button2" parent="." instance=ExtResource("2_v0y5x")]
 offset_right = 210.0
 offset_bottom = 90.0
+tooltip_text = "Pamphlet cost: $10"
 infographic = ExtResource("3_51r54")
 timed = false
 audio = ExtResource("4_a8o6o")
 
 [node name="Text" type="Label" parent="."]
+visible = false
 offset_left = 33.0
 offset_top = 89.0
 offset_right = 182.0

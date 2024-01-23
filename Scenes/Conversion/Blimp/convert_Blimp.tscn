@@ -10,10 +10,12 @@ script = ExtResource("1_jqwfb")
 [node name="Button2" parent="." instance=ExtResource("2_vs72q")]
 offset_right = 210.0
 offset_bottom = 90.0
+tooltip_text = "Blimp cost: $50"
 infographic = ExtResource("3_o3n5s")
 timed = false
 
 [node name="Text" type="Label" parent="."]
+visible = false
 offset_left = 33.0
 offset_top = 89.0
 offset_right = 182.0

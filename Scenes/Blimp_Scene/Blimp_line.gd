@@ -1,7 +1,7 @@
 extends Node2D
 @export var dir:int = -1
 @export var time:int = 15
-var blimp_scene = preload("res://Scenes/Blimp_Scene/Blimp.tscn")
+var blimp_scene = preload("res://Scenes/Blimp_Scene/Blimp_sprite.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

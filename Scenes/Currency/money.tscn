@@ -68,7 +68,9 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Money" type="Node2D"]
+[node name="Money" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_yj7ta")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

@@ -1,16 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://d4e2diapf7xgy"]
+[gd_scene load_steps=4 format=3 uid="uid://d4e2diapf7xgy"]
 
 [ext_resource type="Script" path="res://Scenes/UI/converted.gd" id="1_2cn44"]
 [ext_resource type="Script" path="res://Scenes/UI/ConvertedText.gd" id="1_nw657"]
+[ext_resource type="Texture2D" uid="uid://dkjkbgy3nabwf" path="res://Graphics/Population/population_icon.png" id="2_4q74j"]
 
-[node name="Converted" type="Node2D"]
+[node name="Converted" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_2cn44")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(11, 15)
+texture = ExtResource("2_4q74j")
+
 [node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 27.0
+offset_right = 67.0
+offset_bottom = 28.0
 theme_override_font_sizes/font_size = 20
-text = "People Converted: 0"
+text = ": 0"
 script = ExtResource("1_nw657")
 
 [node name="WOM_Timer" type="Timer" parent="."]
