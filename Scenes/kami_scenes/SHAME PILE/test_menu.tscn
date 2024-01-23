@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8yfxxw7mvst"]
+
+[ext_resource type="PackedScene" uid="uid://kaqe8d7np2rw" path="res://Scenes/kami_scenes/SHAME PILE/kami_upgrade_menu.tscn" id="1_vcag4"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="upgrade_menu" parent="." instance=ExtResource("1_vcag4")]
+offset_left = 535.0
+offset_top = 378.0
+offset_right = 535.0
+offset_bottom = 378.0

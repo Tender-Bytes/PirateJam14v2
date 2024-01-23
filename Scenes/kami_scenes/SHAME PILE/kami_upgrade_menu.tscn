@@ -1,0 +1,98 @@
+[gd_scene load_steps=6 format=3 uid="uid://kaqe8d7np2rw"]
+
+[ext_resource type="Script" path="res://Scenes/kami_scenes/SHAME PILE/kami_upgrade_menu.gd" id="1_6hdbd"]
+[ext_resource type="Texture2D" uid="uid://c8a30o7nhnqs1" path="res://Graphics/Company_Menu/Buttons/expand _button.png" id="1_yft7j"]
+[ext_resource type="Texture2D" uid="uid://cj8unfw227bs" path="res://Graphics/Company_Menu/Buttons/background.png" id="2_sahqa"]
+[ext_resource type="PackedScene" uid="uid://idqj6fm163n0" path="res://Scenes/kami_scenes/kami_bar.tscn" id="4_4jfi3"]
+[ext_resource type="PackedScene" uid="uid://3q08rw4x5d0m" path="res://Scenes/kami_scenes/button_scene.tscn" id="4_ct126"]
+
+[node name="upgrade_menu" type="Control"]
+layout_mode = 3
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.85
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_6hdbd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -72.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(170, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_yft7j")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="NinePatchRect" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_sahqa")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 4.0
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="buttons" type="VBoxContainer" parent="VBoxContainer/NinePatchRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 11
+size_flags_vertical = 0
+
+[node name="Button" parent="VBoxContainer/NinePatchRect/HBoxContainer/buttons" instance=ExtResource("4_ct126")]
+layout_mode = 2
+
+[node name="Button2" parent="VBoxContainer/NinePatchRect/HBoxContainer/buttons" instance=ExtResource("4_ct126")]
+layout_mode = 2
+
+[node name="Button3" parent="VBoxContainer/NinePatchRect/HBoxContainer/buttons" instance=ExtResource("4_ct126")]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/NinePatchRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 11
+size_flags_vertical = 0
+
+[node name="Room" parent="VBoxContainer/NinePatchRect/HBoxContainer/VBoxContainer2" instance=ExtResource("4_4jfi3")]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Room2" parent="VBoxContainer/NinePatchRect/HBoxContainer/VBoxContainer2" instance=ExtResource("4_4jfi3")]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Room3" parent="VBoxContainer/NinePatchRect/HBoxContainer/VBoxContainer2" instance=ExtResource("4_4jfi3")]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Upgrades" type="VBoxContainer" parent="VBoxContainer/NinePatchRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 11
+
+[node name="Room" parent="VBoxContainer/NinePatchRect/HBoxContainer/Upgrades" instance=ExtResource("4_4jfi3")]
+visible = false
+layout_mode = 2
+
+[node name="Room2" parent="VBoxContainer/NinePatchRect/HBoxContainer/Upgrades" instance=ExtResource("4_4jfi3")]
+visible = false
+layout_mode = 2
+
+[node name="Room3" parent="VBoxContainer/NinePatchRect/HBoxContainer/Upgrades" instance=ExtResource("4_4jfi3")]
+visible = false
+layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

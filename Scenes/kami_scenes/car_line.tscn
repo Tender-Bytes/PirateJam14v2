@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d3gc1b3cwx47x"]
 
-[ext_resource type="Script" path="res://car line.gd" id="1_txxue"]
+[ext_resource type="Script" path="res://Scenes/kami_scenes/car line.gd" id="1_txxue"]
 
 [node name="car line" type="Node2D"]
 script = ExtResource("1_txxue")

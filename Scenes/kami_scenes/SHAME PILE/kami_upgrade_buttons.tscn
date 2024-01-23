@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://dh68jp0tubfnl"]
+
+[ext_resource type="Script" path="res://Scenes/kami_scenes/SHAME PILE/kami_upgrade_buttons.gd" id="1_cxuv3"]
+[ext_resource type="Texture2D" uid="uid://c8a30o7nhnqs1" path="res://Graphics/Company_Menu/Buttons/expand _button.png" id="2_kin5j"]
+[ext_resource type="PackedScene" uid="uid://3q08rw4x5d0m" path="res://Scenes/kami_scenes/button_scene.tscn" id="3_jwh7d"]
+[ext_resource type="Texture2D" uid="uid://cj8unfw227bs" path="res://Graphics/Company_Menu/Buttons/background.png" id="3_k3icr"]
+
+[node name="upgrade_buttons" type="Control"]
+layout_mode = 3
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cxuv3")
+
+[node name="hbox" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_k3icr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="hbox/NinePatchRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" parent="hbox/NinePatchRect/VBoxContainer" instance=ExtResource("3_jwh7d")]
+layout_mode = 2
+
+[node name="Button2" parent="hbox/NinePatchRect/VBoxContainer" instance=ExtResource("3_jwh7d")]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="hbox"]
+custom_minimum_size = Vector2(170, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("2_kin5j")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="hbox/TextureButton" to="." method="_on_texture_button_pressed"]
