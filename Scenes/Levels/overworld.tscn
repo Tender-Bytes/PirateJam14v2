@@ -102,10 +102,4 @@ position = Vector2(907, 532)
 [node name="homeless_4" parent="NPCs/homeless" instance=ExtResource("12_j1vch")]
 position = Vector2(901, 583)
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
 [connection signal="body_exited" from="NPCs/homeless/Area2D" to="NPCs/homeless" method="_on_area_2d_body_exited"]

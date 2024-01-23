@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://kaqe8d7np2rw"]
 
-[ext_resource type="Script" path="res://Scenes/kami_scenes/kami_upgrade_menu.gd" id="1_6hdbd"]
+[ext_resource type="Script" path="res://Scenes/kami_scenes/SHAME PILE/kami_upgrade_menu.gd" id="1_6hdbd"]
 [ext_resource type="Texture2D" uid="uid://c8a30o7nhnqs1" path="res://Graphics/Company_Menu/Buttons/expand _button.png" id="1_yft7j"]
 [ext_resource type="Texture2D" uid="uid://cj8unfw227bs" path="res://Graphics/Company_Menu/Buttons/background.png" id="2_sahqa"]
 [ext_resource type="PackedScene" uid="uid://idqj6fm163n0" path="res://Scenes/kami_scenes/kami_bar.tscn" id="4_4jfi3"]
