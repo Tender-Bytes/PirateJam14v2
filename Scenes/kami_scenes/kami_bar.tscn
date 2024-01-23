@@ -6,8 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://bwo17wuuaadjv" path="res://Scenes/kami_scenes/kami_assetss/orange_[c_stuff_3.png" id="4_gxn8y"]
 
 [node name="Room" type="Control"]
+custom_minimum_size = Vector2(600, 100)
 layout_mode = 3
 anchors_preset = 0
+offset_right = 600.0
+offset_bottom = 100.0
+size_flags_horizontal = 4
+size_flags_vertical = 2
 script = ExtResource("1_3a53b")
 texture = Array[Texture2D]([ExtResource("2_kc1fu"), ExtResource("3_rnyld"), ExtResource("4_gxn8y")])
 

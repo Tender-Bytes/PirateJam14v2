@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvns53l54b143"
-path="res://.godot/imported/company_menu.png-48d5293db40b4cad3e4c22d960db0f06.ctex"
+uid="uid://c8a30o7nhnqs1"
+path="res://.godot/imported/expand _button.png-c4891e76997f7b93844be0656731b7a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/Company_Menu/Buttons/company_menu.png"
-dest_files=["res://.godot/imported/company_menu.png-48d5293db40b4cad3e4c22d960db0f06.ctex"]
+source_file="res://Graphics/Company_Menu/Buttons/expand _button.png"
+dest_files=["res://.godot/imported/expand _button.png-c4891e76997f7b93844be0656731b7a7.ctex"]
 
 [params]
 

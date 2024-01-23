@@ -44,5 +44,6 @@ func _on_cut_scene_next():
 	t.queue_free()
 	if current>=number_of_slides:
 		print("onto game")
+		get_tree().change_scene_to_file("res://Scenes/Levels/overworld.tscn")
 	else:
 		play_cutscene(current)

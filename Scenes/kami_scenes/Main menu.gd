@@ -37,7 +37,6 @@ func _on_play_pressed():
 	
 	#tween.tween_property($clouds,'scale',Vector2(grow_size,grow_size),transition_time)
 	#tween.tween_property($clouds,'position',Vector2(0,-220),transition_time)
-	
 	tween.tween_property($Menu_art_1,'scale',Vector2(grow_size,grow_size),transition_time)
 	#tween.tween_property($Menu_art_1,'self_modulate',Color("cececed5"),transition_time)
 	tween.tween_property($Menu_art_1,'position',Vector2(153,-262),transition_time)

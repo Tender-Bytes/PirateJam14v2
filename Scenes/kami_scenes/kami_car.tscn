@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cww83nhxrtcr0"]
 
-[ext_resource type="Script" path="res://car.gd" id="1_ubu0d"]
+[ext_resource type="Script" path="res://Scenes/kami_scenes/car.gd" id="1_ubu0d"]
 [ext_resource type="SpriteFrames" uid="uid://b484v70smbutf" path="res://Sprites/car_3.tres" id="2_krtlg"]
 
 [node name="car" type="Node2D"]
