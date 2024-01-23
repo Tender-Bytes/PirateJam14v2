@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://idqj6fm163n0"]
+[gd_scene load_steps=5 format=3 uid="uid://dy01y2q64ljg6"]
 
 [ext_resource type="Script" path="res://Room.gd" id="1_3a53b"]
 [ext_resource type="Texture2D" uid="uid://dfhf4y34xg8nn" path="res://Scenes/kami_scenes/kami_assetss/orange_pc_stuff.png" id="2_kc1fu"]

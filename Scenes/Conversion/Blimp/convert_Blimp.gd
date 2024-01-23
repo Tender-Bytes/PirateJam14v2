@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var blimp_line = get_node("../Blimp line")
 @onready var blimp_text = get_node("Text")
 @onready var money = get_node("../Money")
 
@@ -25,6 +26,8 @@ func _on_button_pressed():
 		blimp_text.set_text("Blimp cost: $" + str(cost) +"\nBlimps owned: " + str(blimps))
 		money.change_value.emit(-cost)
 		total_blimps.emit(blimps)
+	if blimps == 1:
+		blimp_line.start_blimp()
 
 
 
