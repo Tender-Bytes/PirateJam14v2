@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var scroll_time:int =0.17
-@export var max_length: int =200
+@export var max_length: int = 1000
 @export var popped_up=false
 
 @export var max_width:int=300
@@ -14,7 +14,6 @@ signal closed
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Rooms.pivot_offset.x=$Rooms.size.x/2
 	#$Rooms.position=Vector2(0,0)
 	pass # Replace with function body.
 
