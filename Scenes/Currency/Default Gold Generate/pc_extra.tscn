@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/Currency/Default Gold Generate/pc_extra.gd" id="1_fjst7"]
 [ext_resource type="PackedScene" uid="uid://bhk03lbx4w278" path="res://Scenes/Company/Company Upgrades/company_button.tscn" id="2_4aihy"]
-[ext_resource type="Texture2D" uid="uid://bejff0oorp06p" path="res://Scenes/Assets/company-addpc.png" id="3_8pxoi"]
+[ext_resource type="Texture2D" uid="uid://dl0h0mrncdbty" path="res://Scenes/Assets/company-buypc.png" id="3_wuddm"]
 
 [node name="pc_extra" type="Node2D"]
 script = ExtResource("1_fjst7")
@@ -10,6 +10,6 @@ script = ExtResource("1_fjst7")
 [node name="TextureButton" parent="." instance=ExtResource("2_4aihy")]
 offset_left = 1.0
 offset_right = 314.0
-art = ExtResource("3_8pxoi")
+art = ExtResource("3_wuddm")
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_button_pressed"]

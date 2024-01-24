@@ -9,7 +9,7 @@ var crypto: int
 func _ready():
 	anim.play()
 	#set default amount to 100 for testing
-	crypto = 10
+	crypto = 200
 	money_text.change_amount(crypto)
 	Money.amount = crypto
 

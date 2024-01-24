@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bejff0oorp06p"
-path="res://.godot/imported/company-addpc.png-83d2c01dd0737cf40a726265a6514737.ctex"
+uid="uid://dl0h0mrncdbty"
+path="res://.godot/imported/company-buypc.png-31fe77a22f78c8613b559220c35067d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Assets/company-addpc.png"
-dest_files=["res://.godot/imported/company-addpc.png-83d2c01dd0737cf40a726265a6514737.ctex"]
+source_file="res://Scenes/Assets/company-buypc.png"
+dest_files=["res://.godot/imported/company-buypc.png-31fe77a22f78c8613b559220c35067d0.ctex"]
 
 [params]
 

@@ -15,6 +15,7 @@ func _ready():
 	self.upgrade_pc.connect(upgrade_pc_owned)
 	amount = 1
 	pc_owned = 1
+	button.set_tooltip_text("$" + str(pc_owned) + " per click")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -30,6 +31,7 @@ func change_money():
 
 func change_pc_owned(value):
 	pc_owned = value
+	button.set_tooltip_text("$" + str(pc_owned) + " per click")
 
 func upgrade_pc_owned(value):
 	timer.wait_time /= value

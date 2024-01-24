@@ -31,6 +31,7 @@ position = Vector2(156, 64)
 texture = ExtResource("6_0mrsp")
 
 [node name="emitter" type="CPUParticles2D" parent="."]
+emitting = false
 
 [node name="sound" type="AudioStreamPlayer2D" parent="."]
 

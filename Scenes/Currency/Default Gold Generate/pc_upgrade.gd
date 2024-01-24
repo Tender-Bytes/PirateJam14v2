@@ -1,24 +1,33 @@
 extends Node2D
 
-@onready var gold_gen = get_node("../Crypto Gen")
-@onready var money = get_node("../Money")
-@onready var button = get_node("Button")
+signal upgrade_pc(cost, multiplier)
 
-const BASE_COST = 50
-var cost
-var upgrade_multiplier: int
+@onready var button = $TextureButton
+
+
+var cost = [50, 150]
+var type = ["CPU Based", "GPU Based", "ASIC Based"]
+var iteration : int = 0
+var upgrade_multiplier: int = 2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	cost = BASE_COST
-	upgrade_multiplier = 2
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+	button.set_tooltip_text("Upgrade computers for faster mining!\n" 
+	+ "Upgrade computers: $" + str(cost[iteration])
+	+ "\nCurrent mining rig: "+ str(type[iteration]))
 
 
 func _on_button_pressed():
-	if money.amount >= cost:
-		money.change_value.emit(-cost)
-		gold_gen.upgrade_pc.emit(upgrade_multiplier)
+	if Money.amount >= cost[iteration] and iteration < 2:
+		upgrade_pc.emit(-cost[iteration], upgrade_multiplier)
+		iteration += 1
+	
+	if iteration < 2:
+		button.set_tooltip_text("Upgrade computers for faster mining!\n" 
+		+ "Upgrade computers: $" + str(cost[iteration])
+		+ "\nCurrent mining rig: "+ str(type[iteration]))
+	else:
+		button.set_tooltip_text("Max Upgrade reached!" 
+		+ "\nCurrent mining rig: "+ str(type[iteration]))
+		button.disabled = true
+

@@ -19,6 +19,7 @@ signal closed
 func _ready():
 	company_upgrade.side_menu_button.connect(_on_side_button_pressed)
 	company_upgrade.add_pc.connect(_on_add_pc)
+	company_upgrade.upgrade_pc.connect(_on_upgrade_pc)
 
 
 func _on_texture_button_pressed():
@@ -40,6 +41,11 @@ func _on_side_button_pressed():
 func _on_add_pc(cost, pc_owned):
 	money.change_money(cost)
 	gold_gen.change_pc_owned(pc_owned)
+
+
+func _on_upgrade_pc(cost, multiplier):
+	money.change_money(cost)
+	gold_gen.upgrade_pc_owned(multiplier)
 
 
 func move_company(length):
