@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://o74mvfbtc24e"]
+[gd_scene load_steps=31 format=3 uid="uid://o74mvfbtc24e"]
 
 [ext_resource type="Texture2D" uid="uid://by05wfpsjl3w8" path="res://Graphics/World/World_Test.png" id="1_bjb2e"]
 [ext_resource type="PackedScene" uid="uid://dm1i5aujxwe7g" path="res://Scenes/Currency/Default Gold Generate/default_gold_gen.tscn" id="2_neb7x"]
@@ -27,7 +27,6 @@
 [ext_resource type="PackedScene" uid="uid://bqm54p5irb51a" path="res://Scenes/Npc_Scenes/Police/police_1.tscn" id="22_6txvt"]
 [ext_resource type="PackedScene" uid="uid://rshh6lifvqam" path="res://Scenes/Npc_Scenes/Police/police_2.tscn" id="23_3otfl"]
 [ext_resource type="Texture2D" uid="uid://bq4ykeniq03ub" path="res://Graphics/Entity_Spr/Character_Spr/character.png" id="27_0db0t"]
-[ext_resource type="PackedScene" uid="uid://dmiy076xowe62" path="res://Scenes/kami_scenes/menu_real.tscn" id="28_55y2u"]
 
 [sub_resource type="Theme" id="Theme_jt47a"]
 
@@ -193,8 +192,6 @@ position = Vector2(1097, 563)
 
 [node name="police_2" parent="NPCs/police+npcs" instance=ExtResource("23_3otfl")]
 position = Vector2(1064, 503)
-
-[node name="menu real" parent="." instance=ExtResource("28_55y2u")]
 
 [connection signal="body_exited" from="NPCs/homeless/Area2D" to="NPCs/homeless" method="_on_homeless_area_2d_body_exited"]
 [connection signal="body_exited" from="NPCs/police+npcs/Area2D" to="NPCs/police+npcs" method="_on_police_npc_area_2d_body_exited"]
