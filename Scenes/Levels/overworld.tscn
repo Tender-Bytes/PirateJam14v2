@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://o74mvfbtc24e"]
+[gd_scene load_steps=31 format=3 uid="uid://o74mvfbtc24e"]
 
 [ext_resource type="Texture2D" uid="uid://by05wfpsjl3w8" path="res://Graphics/World/World_Test.png" id="1_bjb2e"]
 [ext_resource type="PackedScene" uid="uid://dm1i5aujxwe7g" path="res://Scenes/Currency/Default Gold Generate/default_gold_gen.tscn" id="2_neb7x"]
@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://cpmnpb4tpgxqx" path="res://Scenes/Npc_Scenes/Npc/npc_3.tscn" id="21_iik4h"]
 [ext_resource type="PackedScene" uid="uid://bqm54p5irb51a" path="res://Scenes/Npc_Scenes/Police/police_1.tscn" id="22_6txvt"]
 [ext_resource type="PackedScene" uid="uid://rshh6lifvqam" path="res://Scenes/Npc_Scenes/Police/police_2.tscn" id="23_3otfl"]
+[ext_resource type="Texture2D" uid="uid://bq4ykeniq03ub" path="res://Graphics/Entity_Spr/Character_Spr/character.png" id="27_0db0t"]
 
 [sub_resource type="Theme" id="Theme_jt47a"]
 
@@ -81,6 +82,10 @@ layout_mode = 2
 [node name="blimp" parent="ColorRect/MarginContainer/HBoxContainer" instance=ExtResource("6_5xews")]
 layout_mode = 2
 
+[node name="Character" type="Sprite2D" parent="."]
+position = Vector2(129, 563)
+texture = ExtResource("27_0db0t")
+
 [node name="buildings" type="Node2D" parent="."]
 position = Vector2(575.5, 324.5)
 scale = Vector2(1.00965, 1.01406)
@@ -126,7 +131,7 @@ offset_bottom = -291.0
 scale = Vector2(1.1, 1.1)
 
 [node name="default gold gen" parent="." instance=ExtResource("2_neb7x")]
-position = Vector2(-2, 37)
+position = Vector2(-2, 30)
 scale = Vector2(1.2, 1.2)
 
 [node name="car_line_left" parent="." instance=ExtResource("3_xwy7y")]
@@ -134,15 +139,15 @@ position = Vector2(65, 393)
 time = 20
 
 [node name="Convert_WOM" parent="." instance=ExtResource("6_pdihs")]
-position = Vector2(-2, 183)
+position = Vector2(-2, 170)
 scale = Vector2(1.2, 1.2)
 
 [node name="Convert_Pamphlet" parent="." instance=ExtResource("7_fuv0t")]
-position = Vector2(0, 291)
+position = Vector2(0, 278)
 scale = Vector2(1.2, 1.2)
 
 [node name="Convert_Blimp" parent="." instance=ExtResource("8_3yur1")]
-position = Vector2(0, 398)
+position = Vector2(0, 383)
 scale = Vector2(1.2, 1.2)
 
 [node name="NPCs" type="Node2D" parent="."]
