@@ -25,7 +25,7 @@ func _on_button_pressed():
 		pamphlets += 1
 		#pamphlet_text.set_text("Pamphlet cost: $" + str(cost) +"\npamplets owned: " + str(pamphlets))
 		pamphlet_UI.change_pamphlet(pamphlets)
-		money.change_value.emit(-cost)
+		money.change_money(-cost)
 		total_pamphlets.emit(pamphlets)
 
 

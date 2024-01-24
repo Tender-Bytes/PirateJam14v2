@@ -26,7 +26,7 @@ func _on_button_pressed():
 		blimps += 1
 		#blimp_text.set_text("Blimp cost: $" + str(cost) +"\nBlimps owned: " + str(blimps))
 		blimp_UI.change_blimp(blimps)
-		money.change_value.emit(-cost)
+		money.change_money(-cost)
 		total_blimps.emit(blimps)
 	if blimps == 1:
 		blimp_line.start_blimp()

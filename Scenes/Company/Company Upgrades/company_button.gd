@@ -1,6 +1,6 @@
 extends TextureButton
 @export var particles : Texture2D
-@export var infographic : Texture2D
+@export var art : Texture2D
 @export var timed = true
 @export var audio=AudioStreamWAV
 
@@ -14,8 +14,8 @@ func _ready():
 		$emitter.texture = particles
 	else:
 		$emitter.hide()
-	if infographic:
-		$Info.texture=infographic
+	if art:
+		$picture.texture = art
 	if audio:
 		$sound.stream=audio
 	 # Replace with function body.

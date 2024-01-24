@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dqyl2o6b40rqr"
+path="res://.godot/imported/Dialogue.wav-171fa44477fbe6944eb2033fcef3c30c.sample"
+
+[deps]
+
+source_file="res://Musiccc/finished sounds/Dialogue.wav"
+dest_files=["res://.godot/imported/Dialogue.wav-171fa44477fbe6944eb2033fcef3c30c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

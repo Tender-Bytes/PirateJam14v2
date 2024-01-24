@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/kami_scenes/Main menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Money="*res://Scenes/Money.gd"
+
 [display]
 
 window/stretch/mode="viewport"
@@ -22,6 +26,10 @@ window/stretch/mode="viewport"
 [dotnet]
 
 project/assembly_name="pirate jam 14"
+
+[gui]
+
+timers/tooltip_delay_sec=0.1
 
 [rendering]
 

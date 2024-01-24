@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqki2hinaj5f"]
+[gd_scene load_steps=5 format=3 uid="uid://dqki2hinaj5f"]
 
 [ext_resource type="Texture2D" uid="uid://c8a30o7nhnqs1" path="res://Graphics/Company_Menu/Buttons/expand _button.png" id="1_0udl3"]
 [ext_resource type="Script" path="res://Scenes/Company/Company Upgrades/company_upgrades.gd" id="1_4idgg"]
+[ext_resource type="PackedScene" uid="uid://d0r4w2dt410pj" path="res://Scenes/Currency/Default Gold Generate/pc_extra.tscn" id="2_6tpsv"]
 [ext_resource type="PackedScene" uid="uid://bhk03lbx4w278" path="res://Scenes/Company/Company Upgrades/company_button.tscn" id="3_t1o46"]
 
 [node name="company_upgrades" type="Node2D"]
@@ -14,9 +15,8 @@ offset_right = -588.0
 offset_bottom = 602.0
 color = Color(0.160784, 0.160784, 0.160784, 1)
 
-[node name="TextureButton" parent="." instance=ExtResource("3_t1o46")]
-offset_left = -874.0
-offset_right = -561.0
+[node name="pc_extra" parent="." instance=ExtResource("2_6tpsv")]
+position = Vector2(-875, 0)
 
 [node name="TextureButton2" parent="." instance=ExtResource("3_t1o46")]
 offset_left = -874.0

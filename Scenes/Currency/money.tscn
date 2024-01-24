@@ -77,8 +77,10 @@ script = ExtResource("1_yj7ta")
 position = Vector2(13, 15)
 sprite_frames = SubResource("SpriteFrames_828wo")
 animation = &"coin_spin"
+frame_progress = 0.941806
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 24.0
 offset_right = 75.0
 offset_bottom = 28.0
