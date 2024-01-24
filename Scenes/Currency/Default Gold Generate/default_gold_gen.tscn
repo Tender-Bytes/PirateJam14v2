@@ -41,9 +41,9 @@ script = ExtResource("3_x0lgq")
 [node name="ProgressBar" type="ProgressBar" parent="GoldProgress"]
 custom_minimum_size = Vector2(210, 20)
 layout_mode = 0
-offset_top = 95.0
+offset_top = 90.0
 offset_right = 210.0
-offset_bottom = 122.0
+offset_bottom = 117.0
 theme_override_styles/background = SubResource("StyleBoxFlat_harts")
 theme_override_styles/fill = SubResource("StyleBoxFlat_3kypa")
 show_percentage = false
