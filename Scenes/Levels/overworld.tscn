@@ -27,7 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://bqm54p5irb51a" path="res://Scenes/Npc_Scenes/Police/police_1.tscn" id="22_6txvt"]
 [ext_resource type="PackedScene" uid="uid://rshh6lifvqam" path="res://Scenes/Npc_Scenes/Police/police_2.tscn" id="23_3otfl"]
 [ext_resource type="Texture2D" uid="uid://bq4ykeniq03ub" path="res://Graphics/Entity_Spr/Character_Spr/character.png" id="27_0db0t"]
-[ext_resource type="PackedScene" uid="uid://dmiy076xowe62" path="res://Scenes/kami_scenes/menu_real.tscn" id="28_rimdq"]
+[ext_resource type="PackedScene" uid="uid://dgcgdk2lyfhc3" path="res://Scenes/Company/Company.tscn" id="28_rimdq"]
 
 [sub_resource type="Theme" id="Theme_jt47a"]
 
@@ -194,7 +194,7 @@ position = Vector2(1097, 563)
 [node name="police_2" parent="NPCs/police+npcs" instance=ExtResource("23_3otfl")]
 position = Vector2(1064, 503)
 
-[node name="menu real" parent="." instance=ExtResource("28_rimdq")]
+[node name="Company" parent="." instance=ExtResource("28_rimdq")]
 
 [connection signal="body_exited" from="NPCs/homeless/Area2D" to="NPCs/homeless" method="_on_homeless_area_2d_body_exited"]
 [connection signal="body_exited" from="NPCs/police+npcs/Area2D" to="NPCs/police+npcs" method="_on_police_npc_area_2d_body_exited"]

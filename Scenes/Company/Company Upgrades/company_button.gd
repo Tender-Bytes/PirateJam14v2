@@ -6,7 +6,7 @@ extends TextureButton
 
 
 var original_size = scale 
-var grow_size = Vector2(1.06,1.06)
+var grow_size = scale * 1.06
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,7 +24,7 @@ func _ready():
 func _on_mouse_entered():
 	if not(disabled):
 		change_button_size(grow_size,.1)
-		$hover.show()
+		#$hover.show()
 
 #WHEN HOVER ASSET FIXED UNCOMMENT THIS
 #func _on_hover_mouse_exited():
