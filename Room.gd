@@ -7,7 +7,6 @@ extends Control
 signal change_row
 func _ready():
 	pivot_offset=Vector2(size/2)
-	add_pc()
 	 # Replace with function body.
 
 func add_pc():
