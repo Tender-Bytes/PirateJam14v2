@@ -1,17 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0siqlfh6jlfb"]
+[gd_scene load_steps=8 format=3 uid="uid://b0siqlfh6jlfb"]
 
 [ext_resource type="Texture2D" uid="uid://qp41340bxwj7" path="res://Scenes/kami_scenes/kami_assetss/menu_art_background_2.png" id="1_f8lnt"]
 [ext_resource type="Script" path="res://Scenes/kami_scenes/kami_backstory.gd" id="1_jkqc3"]
 [ext_resource type="Texture2D" uid="uid://bmlebe1c6ap3h" path="res://Scenes/kami_scenes/kami_assetss/menu_art_background_bottom.png" id="2_eg2di"]
+[ext_resource type="Texture2D" uid="uid://bq4ykeniq03ub" path="res://Graphics/Entity_Spr/Character_Spr/character.png" id="3_ioewp"]
 [ext_resource type="PackedScene" uid="uid://b7lubwtb4ys3c" path="res://Scenes/kami_scenes/skip.tscn" id="4_fhvpq"]
 [ext_resource type="PackedScene" uid="uid://ckq1h803qp0h8" path="res://Scenes/kami_scenes/kami_cutscene.tscn" id="5_4awpo"]
 [ext_resource type="Texture2D" uid="uid://iq8k84jie0bx" path="res://Graphics/Menu/menu_art.png" id="6_whvgf"]
 
 [node name="Backstory exposition" type="Node2D"]
 script = ExtResource("1_jkqc3")
-imgs = Array[Texture2D]([ExtResource("6_whvgf"), ExtResource("6_whvgf")])
-lines = Array[String](["sdfgghjkjhgfdsaxsvfbgnmbfdsasdsfgjhjkkuhygftrdsdfghjbn", "sefryuytre"])
-number_of_slides = 2
+imgs = Array[Texture2D]([ExtResource("6_whvgf"), ExtResource("6_whvgf"), ExtResource("3_ioewp"), ExtResource("3_ioewp")])
+lines = Array[String](["The names Dupli, and until not long ago I was just another credulous lamb in the herd of Insurgent City.", "Fallen from the favor of the fat cats in this once great civilization. like many before me, I sat in the slums wallowing in self pity and contraband of which there was much to go around.", "Then it hit me! Looking around I saw the young and old that lay in the filthy streets while onlookers moved on like they were blind. I saw how even those that crawled their way from these streets of solitude, still settled for being ottomans to the rich.", " Only one outlier stood from this miserable bunch, Perdy Bale, a man that I once knew as the high school bully that dropped out a year early. Yet, here he was, the tactics that destroyed his reputation and placed him as a selfish stain on everyone's high school record, made him prosper in the world now. The irony nearly killed, me but looking at Perdy's accomplishments I noticed a flaw. For all his success he was still disliked by the majority, which brought his progress to a screeching halt, and the only thing that the money flowing was the attention he received from the press. Now listen, I'm a nice guy and all I've ever wanted is to see myself and all my companions prosper. That being said, for our dream to be realized the government has got to go, and I think I know a way to getting us there, a few might have to suffer, but those few would do so for the benefit of all. So that settles it, the governments got to go! No matter what."])
+number_of_slides = 4
 
 [node name="Menu_art_1" type="TextureRect" parent="."]
 offset_left = 152.8
