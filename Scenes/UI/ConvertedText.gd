@@ -13,7 +13,7 @@ func _process(delta):
 
 func change_amount(value):
 	Global.pop_amount = value
-	set_text(": " + str(round(value)))
+	set_text("Population Converted: " + str(round(value)))
 
 
 func _on_wom_timer_timeout():

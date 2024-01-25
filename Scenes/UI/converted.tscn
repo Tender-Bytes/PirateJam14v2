@@ -20,7 +20,7 @@ offset_left = 27.0
 offset_right = 67.0
 offset_bottom = 28.0
 theme_override_font_sizes/font_size = 20
-text = ": 0"
+text = "Population Converted: 0"
 script = ExtResource("1_nw657")
 
 [node name="WOM_Timer" type="Timer" parent="."]
