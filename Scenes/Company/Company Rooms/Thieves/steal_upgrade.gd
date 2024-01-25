@@ -19,13 +19,13 @@ func _ready():
 
 func _on_button_pressed():
 	if Global.pop_amount >= pop_requirement:
-		button.set_tooltip_text("Employ thieves to steal for you!"
-		+ "\nPopulation Requirement: " + str(pop_requirement)
-		+ "\nEmployment Cost: $" + str(cost)
-		+ "\nPassive Income: $" + str(value)
-		+ " per second")
-		
-		add_thieves.emit(cost, value)
+		add_thieves.emit(-cost, value)
 		cost += cost
 		pop_requirement += pop_requirement
 		value += 1
+		
+		button.set_tooltip_text("Employ thieves to steal for you!"
+		+ "\nPopulation Requirement: " + str(pop_requirement)
+		+ "\nEmployment Cost: $" + str(cost)
+		+ "\nPassive Income: $" + str(value-1)
+		+ " per second")
