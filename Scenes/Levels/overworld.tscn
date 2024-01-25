@@ -72,6 +72,7 @@ theme_override_constants/separation = 150
 
 [node name="Money" parent="ColorRect/MarginContainer/HBoxContainer" instance=ExtResource("3_tpt4i")]
 layout_mode = 2
+crypto = 100000
 
 [node name="Converted" parent="ColorRect/MarginContainer/HBoxContainer" instance=ExtResource("7_6eumd")]
 layout_mode = 2
