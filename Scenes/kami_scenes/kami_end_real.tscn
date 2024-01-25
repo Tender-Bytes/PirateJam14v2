@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://b630k5tkem8w"]
+
+[ext_resource type="Script" path="res://Scenes/kami_scenes/kami_end_real.gd" id="1_drigm"]
+[ext_resource type="Texture2D" uid="uid://iq8k84jie0bx" path="res://Graphics/Menu/menu_art.png" id="2_52sfa"]
+[ext_resource type="Texture2D" uid="uid://2c4070qjg4x2" path="res://Graphics/image.png" id="4_n5u18"]
+[ext_resource type="Texture2D" uid="uid://qp41340bxwj7" path="res://Scenes/kami_scenes/kami_assetss/menu_art_background_2.png" id="5_pi4ib"]
+[ext_resource type="Texture2D" uid="uid://bmlebe1c6ap3h" path="res://Scenes/kami_scenes/kami_assetss/menu_art_background_bottom.png" id="6_ovboc"]
+[ext_resource type="PackedScene" uid="uid://ckq1h803qp0h8" path="res://Scenes/kami_scenes/kami_cutscene.tscn" id="8_jn3q7"]
+
+[node name="Backstory exposition" type="Node2D"]
+script = ExtResource("1_drigm")
+imgs = Array[Texture2D]([ExtResource("4_n5u18"), ExtResource("4_n5u18")])
+lines = Array[String](["Finally, the corruption of the old government and those that supported it is gone. Now, to the future we go. Though it was unfortunate that John and the others chose the wrong side, I couldn't make them see that this was the best, no, the only choice for progression! And sure the people are now in worse poverty than ever, starving or wasting away in the Reeducation centers but they do it together! ", "No longer are the people separated by class or wealth. The country may suffer but it is better to suffer as one than to have a few suffer while the rest profit from their misery. And yes me and a few others are very wealthy but we worked our buts off fixing this place! So of course we should have that privilege, right? Yes, of course, we earned it after all"])
+number_of_slides = 2
+
+[node name="Menu_art_1" type="TextureRect" parent="."]
+offset_left = 152.8
+offset_top = -262.0
+offset_right = 1036.8
+offset_bottom = 254.0
+scale = Vector2(1.4, 1.4)
+pivot_offset = Vector2(442, 258)
+texture = ExtResource("5_pi4ib")
+
+[node name="Menu_art_2" type="TextureRect" parent="."]
+offset_left = 152.8
+offset_top = 399.0
+offset_right = 1036.8
+offset_bottom = 607.0
+scale = Vector2(1.4, 1.4)
+pivot_offset = Vector2(442, 104)
+texture = ExtResource("6_ovboc")
+
+[node name="cut_scene" parent="." instance=ExtResource("8_jn3q7")]
+visible = false
+offset_left = 357.0
+offset_top = 197.0
+offset_right = 357.0
+offset_bottom = 197.0
+img = ExtResource("2_52sfa")
+
+[node name="scenesss" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="next" from="cut_scene" to="." method="_on_cut_scene_next"]
