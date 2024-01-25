@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dy01y2q64ljg6"]
+[gd_scene load_steps=6 format=3 uid="uid://dy01y2q64ljg6"]
 
 [ext_resource type="Script" path="res://Room.gd" id="1_3a53b"]
 [ext_resource type="Texture2D" uid="uid://dfhf4y34xg8nn" path="res://Scenes/kami_scenes/kami_assetss/orange_pc_stuff.png" id="2_kc1fu"]
 [ext_resource type="Texture2D" uid="uid://cgup8slalcvl8" path="res://Scenes/kami_scenes/kami_assetss/orange_[c_stuff_2.png" id="3_rnyld"]
 [ext_resource type="Texture2D" uid="uid://bwo17wuuaadjv" path="res://Scenes/kami_scenes/kami_assetss/orange_[c_stuff_3.png" id="4_gxn8y"]
+[ext_resource type="Texture2D" uid="uid://dnvtpjcmb1too" path="res://Graphics/UI/rooms.png" id="5_o741p"]
 
 [node name="Room" type="Control"]
 custom_minimum_size = Vector2(600, 100)
@@ -17,9 +18,16 @@ script = ExtResource("1_3a53b")
 texture = Array[Texture2D]([ExtResource("2_kc1fu"), ExtResource("3_rnyld"), ExtResource("4_gxn8y")])
 
 [node name="TextureRect" type="ColorRect" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 600.0
 offset_bottom = 100.0
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 600.0
+offset_bottom = 100.0
+texture = ExtResource("5_o741p")
 
 [node name="stacks" type="HBoxContainer" parent="."]
 layout_mode = 1

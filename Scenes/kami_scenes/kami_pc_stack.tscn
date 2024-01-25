@@ -15,7 +15,3 @@ position = Vector2(14.5, 20)
 [node name="computer_2" type="Sprite2D" parent="."]
 position = Vector2(14.5, 20)
 offset = Vector2(10, 10)
-
-[node name="computer_3" type="Sprite2D" parent="."]
-position = Vector2(14.5, 20)
-offset = Vector2(20, 20)

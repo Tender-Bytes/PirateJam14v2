@@ -37,13 +37,13 @@ func _process(delta):
 
 
 func _on_skip_skip():
-	get_tree().change_scene_to_file("res://Scenes/Levels/overworld.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://Scenes/kami_scenes/kami_end_screen.tscn") # Replace with function body.
 
 
 func _on_cut_scene_next():
 	t.queue_free()
 	if current>=number_of_slides:
 		print("onto game")
-		get_tree().change_scene_to_file("res://Scenes/Levels/overworld.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Levels/end_screen.tscn")
 	else:
 		play_cutscene(current)

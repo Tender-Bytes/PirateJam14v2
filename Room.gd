@@ -11,7 +11,7 @@ func _ready():
 
 func add_pc():
 	number_of_pc+=1
-	if number_of_pc%3==1:
+	if number_of_pc%2==1:
 		var j = p_stack.instantiate()
 		j.texture=texture
 		j.upgrade_level=upgrade_lvele_num
@@ -19,7 +19,7 @@ func add_pc():
 		print("added")
 	else:
 		$stacks.get_child($stacks.get_child_count()-1).add_pc()
-	if number_of_pc%21==0:
+	if number_of_pc%15==0:
 		emit_signal("change_row")
 
 func upgrade():

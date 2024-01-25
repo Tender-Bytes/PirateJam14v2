@@ -26,6 +26,7 @@ func _ready():
 	company_upgrade.add_thieves.connect(_on_add_thieves)
 	
 	thief_room.visible = false
+	$VBoxContainer/HBoxContainer/Control/alex.play()
 
 
 func _on_texture_button_pressed():
