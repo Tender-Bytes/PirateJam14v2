@@ -52,5 +52,8 @@ show_percentage = false
 wait_time = 2.0
 one_shot = true
 
+[node name="thief_timer" type="Timer" parent="."]
+
 [connection signal="pressed" from="Control" to="GoldProgress" method="_on_control_pressed"]
 [connection signal="timeout" from="GoldProgress/Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="thief_timer" to="." method="_on_thief_timer_timeout"]

@@ -18,6 +18,7 @@ config/icon="res://Graphics/image.png"
 [autoload]
 
 Money="*res://Scenes/Money.gd"
+Global="*res://Scenes/Global.gd"
 
 [display]
 

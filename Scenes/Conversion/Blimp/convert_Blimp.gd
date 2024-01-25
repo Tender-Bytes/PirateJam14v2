@@ -14,7 +14,7 @@ var blimps: int
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	cost = BASE_COST
-	blimps = 1
+	blimps = 0
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -24,12 +24,12 @@ func _process(delta):
 
 
 func _on_button_pressed():
-	if Money.amount >= cost:
+	if Global.money_amount >= cost:
 		blimps += 1
 		money.change_money(-cost)
-		cost = round(BASE_COST * pow(1.2, blimps))
 		blimp_UI.change_blimp(blimps)
 		total_blimps.emit(blimps)
+		cost = round(BASE_COST * pow(1.2, blimps + 1))
 		button.set_tooltip_text("Blimp cost: $" + str(cost))
 	if blimps == 1:
 		blimp_line.start_blimp()

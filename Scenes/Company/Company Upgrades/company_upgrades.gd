@@ -6,6 +6,7 @@ extends Node2D
 signal side_menu_button
 signal add_pc(cost, pc_owned)
 signal upgrade_pc(cost, multiplier)
+signal add_thieves(cost, value)
 
 func _ready():
 	pc_extra.add_pc.connect(_on_add_pc)
