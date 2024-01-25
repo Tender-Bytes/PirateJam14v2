@@ -1,6 +1,7 @@
 extends Control
 
 @onready var bar = get_node("ProgressBar")
+@export var max_population : int = 100
 
 signal converted_pop(value: float)
 signal victory

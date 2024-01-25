@@ -49,11 +49,11 @@ func change_WOM_production():
 	bar.converted_pop.emit(production_total)
 
 func change_pamphlet_production():
-	production_total += 10 * pamphlet_owned
+	production_total += 6 * pamphlet_owned
 	converted_text.change_amount(production_total)
 	bar.converted_pop.emit(production_total)
 
 func change_blimp_production():
-	production_total += 113 * blimp_owned
+	production_total += 37 * blimp_owned
 	converted_text.change_amount(production_total)
 	bar.converted_pop.emit(production_total)

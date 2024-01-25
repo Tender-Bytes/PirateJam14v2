@@ -27,10 +27,9 @@ script = ExtResource("1_nw657")
 wait_time = 2.0
 
 [node name="Pamplet_Timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 1.5
 
 [node name="Blimp_Timer" type="Timer" parent="."]
-wait_time = 2.0
 
 [connection signal="timeout" from="WOM_Timer" to="Label" method="_on_wom_timer_timeout"]
 [connection signal="timeout" from="Pamplet_Timer" to="Label" method="_on_pamplet_timer_timeout"]

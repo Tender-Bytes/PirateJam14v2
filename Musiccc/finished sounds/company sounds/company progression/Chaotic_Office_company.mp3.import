@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://vuk2g0w5h22y"
+path="res://.godot/imported/Chaotic_Office_company.mp3-d5dfd9b9ff340eaf7f427dfc2cd63b17.mp3str"
+
+[deps]
+
+source_file="res://Musiccc/finished sounds/company sounds/company progression/Chaotic_Office_company.mp3"
+dest_files=["res://.godot/imported/Chaotic_Office_company.mp3-d5dfd9b9ff340eaf7f427dfc2cd63b17.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

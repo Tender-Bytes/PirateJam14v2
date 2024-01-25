@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b6f0uuwe5er1m"
-path="res://.godot/imported/More PC.wav-86596fc17645d2c7ed67d6d3bbbfd976.sample"
+path="res://.godot/imported/More PC.wav-39709fadcb0c2e65f46bf99cdfef1139.sample"
 
 [deps]
 
-source_file="res://Musiccc/finished sounds/More PC.wav"
-dest_files=["res://.godot/imported/More PC.wav-86596fc17645d2c7ed67d6d3bbbfd976.sample"]
+source_file="res://Musiccc/finished sounds/company sounds/More PC.wav"
+dest_files=["res://.godot/imported/More PC.wav-39709fadcb0c2e65f46bf99cdfef1139.sample"]
 
 [params]
 

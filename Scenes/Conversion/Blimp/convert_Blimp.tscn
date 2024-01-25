@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://imblf4d3qtye"]
+[gd_scene load_steps=5 format=3 uid="uid://imblf4d3qtye"]
 
 [ext_resource type="Script" path="res://Scenes/Conversion/Blimp/convert_Blimp.gd" id="1_jqwfb"]
 [ext_resource type="PackedScene" uid="uid://3q08rw4x5d0m" path="res://Scenes/kami_scenes/button_scene.tscn" id="2_vs72q"]
 [ext_resource type="Texture2D" uid="uid://b3pv8k376rt13" path="res://Scenes/Assets/blimp.png" id="3_o3n5s"]
+[ext_resource type="AudioStream" uid="uid://ykgt1c3yuh6y" path="res://Musiccc/finished sounds/conversion upgrades/Blimp.wav" id="4_0hvcj"]
 
 [node name="convert_Blimp" type="Node2D"]
 script = ExtResource("1_jqwfb")
@@ -13,5 +14,6 @@ offset_bottom = 90.0
 tooltip_text = "Blimp cost: $75"
 infographic = ExtResource("3_o3n5s")
 timed = false
+audio = ExtResource("4_0hvcj")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

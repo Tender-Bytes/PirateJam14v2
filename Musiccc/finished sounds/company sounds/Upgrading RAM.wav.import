@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://db13x0al74jhs"
-path="res://.godot/imported/Upgrading RAM.wav-2e048fd1f7c61fdd48d20f7e36a07d8a.sample"
+path="res://.godot/imported/Upgrading RAM.wav-d741cef44b446d17ada50b1b9d45061f.sample"
 
 [deps]
 
-source_file="res://Musiccc/finished sounds/Upgrading RAM.wav"
-dest_files=["res://.godot/imported/Upgrading RAM.wav-2e048fd1f7c61fdd48d20f7e36a07d8a.sample"]
+source_file="res://Musiccc/finished sounds/company sounds/Upgrading RAM.wav"
+dest_files=["res://.godot/imported/Upgrading RAM.wav-d741cef44b446d17ada50b1b9d45061f.sample"]
 
 [params]
 

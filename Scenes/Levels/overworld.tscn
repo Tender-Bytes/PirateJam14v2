@@ -105,6 +105,7 @@ offset_top = -291.0
 offset_right = 182.0
 offset_bottom = -291.0
 scale = Vector2(1.1, 1.1)
+max_population = 20000
 
 [node name="Character" type="Sprite2D" parent="."]
 position = Vector2(129, 563)

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://gscs6reg67mt"
+path="res://.godot/imported/Gun_shooting.wav-03fddfe67a98439316a341d39e54bc26.sample"
+
+[deps]
+
+source_file="res://Musiccc/finished sounds/Gun_shooting.wav"
+dest_files=["res://.godot/imported/Gun_shooting.wav-03fddfe67a98439316a341d39e54bc26.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
