@@ -64,3 +64,18 @@ func _on_play_pressed():
 	$load.start()
 	await $load.timeout
 	get_tree().change_scene_to_file("res://Scenes/kami_scenes/kami_backstory.tscn") # Replace with function body.
+
+
+func _on_button_pressed():
+	$credits.hide() 
+	$Play.show()
+	$Credits.show()
+	$Exit.show()
+# Replace with function body.
+
+
+func _on_credits_pressed():
+	$credits.show()
+	$Play.hide()
+	$Credits.hide()
+	$Exit.hide() # Replace with function body.

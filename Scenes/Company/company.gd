@@ -91,3 +91,5 @@ func _on_company_upgrades_add_pc(cost, pc_owned):
 func _on_company_upgrades_upgrade_pc(cost, multiplier):
 	for i in $VBoxContainer/Rooms.get_children():
 		i.upgrade()
+
+

@@ -7,6 +7,7 @@ extends Control
 signal change_row
 func _ready():
 	pivot_offset=Vector2(size/2)
+	add_pc()
 	 # Replace with function body.
 
 func add_pc():
@@ -19,7 +20,7 @@ func add_pc():
 		print("added")
 	else:
 		$stacks.get_child($stacks.get_child_count()-1).add_pc()
-	if number_of_pc%15==0:
+	if number_of_pc%14==0:
 		emit_signal("change_row")
 
 func upgrade():
