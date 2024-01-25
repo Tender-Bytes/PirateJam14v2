@@ -27,6 +27,7 @@ func _ready():
 	
 	thief_room.visible = false
 	$VBoxContainer/HBoxContainer/Control/alex.play()
+	$VBoxContainer/Rooms/Room.add_pc()
 
 
 func _on_texture_button_pressed():
