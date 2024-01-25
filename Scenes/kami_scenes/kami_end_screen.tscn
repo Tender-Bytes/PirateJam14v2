@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dheg4moh5o1ln"]
+[gd_scene load_steps=8 format=3 uid="uid://dheg4moh5o1ln"]
 
 [ext_resource type="Script" path="res://Endscreen.gd" id="1_sksr0"]
-[ext_resource type="Texture2D" uid="uid://bq4ykeniq03ub" path="res://Graphics/Entity_Spr/Character_Spr/character.png" id="2_elb1h"]
+[ext_resource type="Texture2D" uid="uid://bsrwq4ji0xom6" path="res://Graphics/Entity_Spr/President_Spr/pres.png" id="2_cgq51"]
 [ext_resource type="Texture2D" uid="uid://42eyv3n78qef" path="res://Graphics/GUI/Dialouge/Dialogue_box.png" id="3_1388b"]
+[ext_resource type="AudioStream" uid="uid://gscs6reg67mt" path="res://Musiccc/finished sounds/Gun_shooting.wav" id="4_syibs"]
 
 [sub_resource type="Animation" id="Animation_73ob8"]
 resource_name = "RESET"
@@ -43,6 +44,7 @@ _data = {
 [node name="Endscreen" type="Node2D"]
 modulate = Color(1, 1, 1, 0)
 script = ExtResource("1_sksr0")
+beg = Array[String](["sdffg", "sdfrtg"])
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1156.0
@@ -57,31 +59,46 @@ offset_bottom = 452.0
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_elb1h")
+texture = ExtResource("2_cgq51")
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-disabled = true
 text = "kill"
 
 [node name="TextureButton" type="TextureButton" parent="."]
+visible = false
 offset_left = 161.0
 offset_top = 461.0
 offset_right = 1047.0
 offset_bottom = 557.0
 texture_normal = ExtResource("3_1388b")
 
-[node name="story" type="RichTextLabel" parent="."]
+[node name="story" type="Label" parent="."]
+visible = false
 offset_left = 192.0
 offset_top = 474.0
 offset_right = 1019.0
 offset_bottom = 543.0
-text = "\"Finally, the corruption of the old government and those that supported it is gone. Now, to the future we go. Though it was unfortunate that John and the others chose the wrong side, I couldn't make them see that this was the best, no, the only choice for progression! And sure the people are now in worse poverty than ever, starving or wasting away in the Reeducation centers but they do it together! No longer are the people separated by class or wealth. The country may suffer but it is better to suffer as one than to have a few suffer while the rest profit from their misery. And yes me and a few others are very wealthy but we worked our buts off fixing this place! So of course we should have that privilege, right? Yes, of course, we earned it after all\""
-scroll_following = true
-visible_characters = 0
-visible_ratio = 0.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_v50xd")
 }
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1.0
+offset_top = -4.0
+offset_right = 1143.0
+offset_bottom = 633.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(100, 81)
+stream = ExtResource("4_syibs")
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
