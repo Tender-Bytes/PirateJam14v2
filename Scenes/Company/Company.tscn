@@ -171,3 +171,8 @@ sprite_frames = SubResource("SpriteFrames_t3tdu")
 frame_progress = 0.0140053
 
 [connection signal="pressed" from="top_button" to="." method="_on_texture_button_pressed"]
+[connection signal="change_row" from="VBoxContainer/Rooms/Room" to="." method="_on_room_change_row"]
+[connection signal="change_row" from="VBoxContainer/Rooms/Room3" to="." method="_on_room_change_row"]
+[connection signal="change_row" from="VBoxContainer/Rooms/Room2" to="." method="_on_room_change_row"]
+[connection signal="add_pc" from="company_upgrades" to="." method="_on_company_upgrades_add_pc"]
+[connection signal="upgrade_pc" from="company_upgrades" to="." method="_on_company_upgrades_upgrade_pc"]

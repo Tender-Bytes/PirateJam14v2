@@ -11,9 +11,11 @@ extends Node2D
 @onready var og_pos= self.position
 @onready var company_upgrade = $company_upgrades
 @onready var thief_room = $thief_room
+@onready var current_room=0
 
 signal opened
 signal closed
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -75,3 +77,16 @@ func move_upgrades(width):
 	Vector2($company_upgrades.position.x + width,
 	$company_upgrades.position.y),
 	scroll_time)
+
+
+func _on_room_change_row():
+	current_room+=1 # Replace with function body.
+
+
+func _on_company_upgrades_add_pc(cost, pc_owned):
+	$VBoxContainer/Rooms.get_child(current_room).add_pc()
+
+
+func _on_company_upgrades_upgrade_pc(cost, multiplier):
+	for i in $VBoxContainer/Rooms.get_children():
+		i.upgrade()
