@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dofg7amok572a"]
+[gd_scene load_steps=12 format=3 uid="uid://dofg7amok572a"]
 
 [ext_resource type="Script" path="res://Scenes/kami_scenes/Main menu.gd" id="1_33mak"]
 [ext_resource type="Script" path="res://Scenes/kami_scenes/Play.gd" id="2_aly0s"]
@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://ctdu8bykx485q" path="res://Musiccc/Moe's UI/Ui_opening.wav" id="9_6r3g8"]
 [ext_resource type="Texture2D" uid="uid://bmlebe1c6ap3h" path="res://Scenes/kami_scenes/kami_assetss/menu_art_background_bottom.png" id="9_v8hfi"]
 [ext_resource type="AudioStream" uid="uid://cwerrsp42w1sa" path="res://Musiccc/City_atmos (1).mp3" id="10_fgyrd"]
+[ext_resource type="Texture2D" uid="uid://bo7elmbj1o50v" path="res://Graphics/credits.png" id="11_4drtd"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_33mak")
@@ -143,11 +144,29 @@ wait_time = 0.1
 stream = ExtResource("10_fgyrd")
 autoplay = true
 
+[node name="credits" type="TextureRect" parent="."]
+visible = false
+offset_left = 153.0
+offset_top = 60.0
+offset_right = 1037.0
+offset_bottom = 576.0
+texture = ExtResource("11_4drtd")
+
+[node name="Button" type="Button" parent="credits"]
+layout_mode = 0
+offset_left = 837.0
+offset_top = 4.0
+offset_right = 882.0
+offset_bottom = 35.0
+text = "Back"
+
 [connection signal="mouse_entered" from="Play" to="Play" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Play" to="Play" method="_on_mouse_exited"]
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="mouse_entered" from="Credits" to="Credits" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Credits" to="Credits" method="_on_mouse_exited"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
 [connection signal="mouse_entered" from="Exit" to="Exit" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Exit" to="Exit" method="_on_mouse_exited"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="credits/Button" to="." method="_on_button_pressed"]
