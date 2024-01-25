@@ -18,7 +18,7 @@ func _ready():
 
 
 func _on_button_pressed():
-	if Money.amount >= cost:
+	if Global.money_amount >= cost:
 		pc_owned += 1
 		add_pc.emit(-cost, pc_owned)
 		cost = round(BASE_COST * pow(1.2, pc_owned))

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dqki2hinaj5f"]
+[gd_scene load_steps=7 format=3 uid="uid://dqki2hinaj5f"]
 
 [ext_resource type="Texture2D" uid="uid://c8a30o7nhnqs1" path="res://Graphics/Company_Menu/Buttons/expand _button.png" id="1_0udl3"]
 [ext_resource type="Script" path="res://Scenes/Company/Company Upgrades/company_upgrades.gd" id="1_4idgg"]
 [ext_resource type="PackedScene" uid="uid://d0r4w2dt410pj" path="res://Scenes/Currency/Default Gold Generate/pc_extra.tscn" id="2_6tpsv"]
 [ext_resource type="PackedScene" uid="uid://dvuafp3ywebug" path="res://Scenes/Currency/Default Gold Generate/pc_upgrade.tscn" id="3_0dxon"]
 [ext_resource type="PackedScene" uid="uid://bhk03lbx4w278" path="res://Scenes/Company/Company Upgrades/company_button.tscn" id="3_t1o46"]
+[ext_resource type="PackedScene" uid="uid://csdbjf0jdjiiw" path="res://Scenes/Company/Company Rooms/Thieves/steal_upgrade.tscn" id="4_22yi0"]
 
 [node name="company_upgrades" type="Node2D"]
 script = ExtResource("1_4idgg")
@@ -22,11 +23,8 @@ position = Vector2(-875, 0)
 [node name="pc_upgrade" parent="." instance=ExtResource("3_0dxon")]
 position = Vector2(-874, 105)
 
-[node name="TextureButton3" parent="." instance=ExtResource("3_t1o46")]
-offset_left = -874.0
-offset_top = 210.0
-offset_right = -561.0
-offset_bottom = 337.0
+[node name="steal_upgrade" parent="." instance=ExtResource("4_22yi0")]
+position = Vector2(-874, 210)
 
 [node name="TextureButton4" parent="." instance=ExtResource("3_t1o46")]
 offset_left = -874.0

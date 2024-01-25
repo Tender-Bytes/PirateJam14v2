@@ -18,7 +18,7 @@ func _ready():
 
 
 func _on_button_pressed():
-	if Money.amount >= cost[iteration] and iteration < 2:
+	if Global.money_amount >= cost[iteration] and iteration < 2:
 		upgrade_pc.emit(-cost[iteration], upgrade_multiplier)
 		iteration += 1
 	

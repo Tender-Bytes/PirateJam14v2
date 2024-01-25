@@ -13,7 +13,7 @@ var pamphlets: int
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	cost = BASE_COST
-	pamphlets = 1
+	pamphlets = 0
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -23,12 +23,12 @@ func _process(delta):
 
 
 func _on_button_pressed():
-	if Money.amount >= cost:
+	if Global.money_amount >= cost:
 		pamphlets += 1
 		money.change_money(-cost)
-		cost = round(BASE_COST * pow(1.2, pamphlets))
 		pamphlet_UI.change_pamphlet(pamphlets)
 		total_pamphlets.emit(pamphlets)
+		cost = round(BASE_COST * pow(1.2, pamphlets + 1))
 		button.set_tooltip_text("Pamphlet cost: $" + str(cost))
 
 

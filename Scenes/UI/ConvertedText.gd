@@ -12,7 +12,8 @@ func _process(delta):
 
 
 func change_amount(value):
-	set_text(": " + str(snapped(value, 1)))
+	Global.pop_amount = value
+	set_text(": " + str(round(value)))
 
 
 func _on_wom_timer_timeout():

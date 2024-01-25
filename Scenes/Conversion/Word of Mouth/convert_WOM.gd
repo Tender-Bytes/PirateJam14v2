@@ -12,7 +12,7 @@ var WOMs: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	WOMs = 1
+	WOMs = 0
 	cost = BASE_COST
 
 
@@ -23,10 +23,10 @@ func _process(delta):
 
 
 func _on_button_pressed():
-	if Money.amount >= cost:
+	if Global.money_amount >= cost:
 		WOMs += 1
 		money.change_money(-cost)
-		cost = round(BASE_COST * pow(1.2, WOMs))
 		WOM_UI.change_WOM(WOMs)
 		total_WOM.emit(WOMs)
+		cost = round(BASE_COST * pow(1.2, WOMs + 1))
 		button.set_tooltip_text("Word of Mouth cost: $" + str(cost))

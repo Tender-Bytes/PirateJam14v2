@@ -10,6 +10,7 @@ extends Node2D
 @onready var gold_gen = get_node("../default gold gen")
 @onready var og_pos= self.position
 @onready var company_upgrade = $company_upgrades
+@onready var thief_room = $thief_room
 
 signal opened
 signal closed
@@ -20,6 +21,9 @@ func _ready():
 	company_upgrade.side_menu_button.connect(_on_side_button_pressed)
 	company_upgrade.add_pc.connect(_on_add_pc)
 	company_upgrade.upgrade_pc.connect(_on_upgrade_pc)
+	company_upgrade.add_thieves.connect(_on_add_thieves)
+	
+	thief_room.visible = false
 
 
 func _on_texture_button_pressed():
@@ -47,6 +51,14 @@ func _on_upgrade_pc(cost, multiplier):
 	money.change_money(cost)
 	gold_gen.upgrade_pc_owned(multiplier)
 
+
+func _on_add_thieves(cost, value):
+	if not thief_room.visible:
+		thief_room.visible = true
+		thief_room.play()
+	
+	money.change_money(cost)
+	gold_gen.start_steal_upgrade(value)
 
 func move_company(length):
 	var tween=create_tween().set_trans(Tween.TRANS_LINEAR)
