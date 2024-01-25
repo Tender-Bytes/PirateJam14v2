@@ -18,9 +18,11 @@ script = ExtResource("1_xm0yy")
 [node name="Image" type="TextureRect" parent="."]
 self_modulate = Color(0.203922, 0.203922, 0.203922, 0)
 layout_mode = 0
-offset_right = 442.0
-offset_bottom = 215.0
-expand_mode = 1
+offset_left = 22.0
+offset_top = 10.0
+offset_right = 464.0
+offset_bottom = 225.0
+stretch_mode = 5
 
 [node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 0

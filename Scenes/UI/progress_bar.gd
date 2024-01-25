@@ -18,4 +18,4 @@ func _process(delta):
 func charge_progress_bar(pop):
 	bar.value = pop
 	if((pop>9900)):
-		get_tree().change_scene_to_file("res://Scenes/kami_scenes/kami_end_screen.tscn")
+		get_tree().change_scene_to_file("res://Scenes/kami_scenes/kami_end_real.tscn")

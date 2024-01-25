@@ -18,15 +18,12 @@ func add_pc():
 		1:
 			$computer_1.show()
 			$computer_2.hide()
-			$computer_3.hide()
+
 		2:
 			$computer_1.show()
 			$computer_2.show()
-			$computer_3.hide()
-		3:
-			$computer_1.show()
-			$computer_2.show()
-			$computer_3.show()
+
+
 
 func upgrade():
 	upgrade_level+=1
