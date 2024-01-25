@@ -48,4 +48,6 @@ func _on_pressed():
 	$sound.play()
 	if timed:
 		self.disabled = true
+		
+
 

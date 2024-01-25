@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvuafp3ywebug"]
+[gd_scene load_steps=5 format=3 uid="uid://dvuafp3ywebug"]
 
 [ext_resource type="Script" path="res://Scenes/Currency/Default Gold Generate/pc_upgrade.gd" id="1_2por0"]
 [ext_resource type="PackedScene" uid="uid://bhk03lbx4w278" path="res://Scenes/Company/Company Upgrades/company_button.tscn" id="2_eyexo"]
 [ext_resource type="Texture2D" uid="uid://e1ancm8pwhuy" path="res://Scenes/Assets/company-upgradepc.png" id="3_7i4go"]
+[ext_resource type="AudioStream" uid="uid://db13x0al74jhs" path="res://Musiccc/finished sounds/Upgrading RAM.wav" id="4_jh0hr"]
 
 [node name="pc_upgrade" type="Node2D"]
 script = ExtResource("1_2por0")
 
 [node name="TextureButton" parent="." instance=ExtResource("2_eyexo")]
 art = ExtResource("3_7i4go")
+audio = ExtResource("4_jh0hr")
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_button_pressed"]

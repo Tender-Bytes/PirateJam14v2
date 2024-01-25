@@ -12,7 +12,7 @@ func _process(delta):
 
 
 func change_amount(value):
-	set_text(": " + str(value))
+	set_text(": " + str(snapped(value, 1)))
 
 
 func _on_wom_timer_timeout():

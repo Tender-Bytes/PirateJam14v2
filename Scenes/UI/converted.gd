@@ -44,16 +44,16 @@ func change_blimp_owned(owned):
 	blimp_owned = owned
 
 func change_WOM_production():
-	production_total += 0.1 * WOM_owned
+	production_total += 1 * WOM_owned
 	converted_text.change_amount(production_total)
 	bar.converted_pop.emit(production_total)
 
 func change_pamphlet_production():
-	production_total += 1 * pamphlet_owned
+	production_total += 10 * pamphlet_owned
 	converted_text.change_amount(production_total)
 	bar.converted_pop.emit(production_total)
 
 func change_blimp_production():
-	production_total += 3.3 * blimp_owned
+	production_total += 113 * blimp_owned
 	converted_text.change_amount(production_total)
 	bar.converted_pop.emit(production_total)

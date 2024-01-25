@@ -7,21 +7,11 @@
 [node name="convert_Blimp" type="Node2D"]
 script = ExtResource("1_jqwfb")
 
-[node name="Button2" parent="." instance=ExtResource("2_vs72q")]
+[node name="Button" parent="." instance=ExtResource("2_vs72q")]
 offset_right = 210.0
 offset_bottom = 90.0
-tooltip_text = "Blimp cost: $50"
+tooltip_text = "Blimp cost: $75"
 infographic = ExtResource("3_o3n5s")
 timed = false
 
-[node name="Text" type="Label" parent="."]
-visible = false
-offset_left = 33.0
-offset_top = 89.0
-offset_right = 182.0
-offset_bottom = 138.0
-text = "Blimp cost: $50
-Blimps owned: 0"
-horizontal_alignment = 1
-
-[connection signal="pressed" from="Button2" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
