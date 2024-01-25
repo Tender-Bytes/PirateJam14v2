@@ -14,6 +14,7 @@ extends Node2D
 signal opened
 signal closed
 
+var row_check:int =0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -63,3 +64,17 @@ func move_upgrades(width):
 	Vector2($company_upgrades.position.x + width,
 	$company_upgrades.position.y),
 	scroll_time)
+
+
+func _on_company_upgrades_add_pc(cost, pc_owned):
+	$VBoxContainer/Rooms.get_child(row_check).add_pc() # Replace with function body.
+
+
+func _on_room_switch_row():
+	row_check+=1 # Replace with function body.
+
+
+
+func _on_company_upgrades_upgrade_pc(cost, multiplier):
+	for i in $VBoxContainer/Rooms.get_children():
+		i.upgrade() # Replace with function body.

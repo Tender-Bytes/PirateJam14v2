@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://busxrdj0nbjjw"]
+[gd_scene load_steps=12 format=3 uid="uid://busxrdj0nbjjw"]
 
 [ext_resource type="Script" path="res://Scenes/kami_scenes/newscaster.gd" id="1_435mp"]
 [ext_resource type="Texture2D" uid="uid://hwshj8tk3gqw" path="res://Graphics/GUI/News_Anchor/News_Anchor1.png" id="2_cpdvq"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://b3gh3v0nlxcnh" path="res://Graphics/GUI/News_Anchor/News_Anchor5.png" id="6_1iqdr"]
 [ext_resource type="Texture2D" uid="uid://d3lp57eowvxoc" path="res://Graphics/GUI/News_Anchor/News_Anchor6.png" id="7_kvvu0"]
 [ext_resource type="Texture2D" uid="uid://b2vex2dm3op7q" path="res://Graphics/GUI/tv_station.png" id="8_k3j4j"]
+[ext_resource type="Texture2D" uid="uid://hai0lt4fwryl" path="res://Graphics/GUI/board.png" id="9_p7icd"]
+[ext_resource type="FontFile" uid="uid://ctdhx3egln87c" path="res://fonts/m5x7.ttf" id="10_sni4y"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_33kk4"]
 animations = [{
@@ -36,10 +38,26 @@ animations = [{
 }]
 
 [node name="Newscaster" type="Node2D"]
+position = Vector2(422, 193)
 script = ExtResource("1_435mp")
 channel = 1
 
+[node name="Small_background" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -133.0
+offset_top = -80.0
+offset_right = 133.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_k3j4j")
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -54,24 +72,10 @@ grow_vertical = 2
 color = Color(0.313726, 0.596078, 0, 1)
 
 [node name="anchorboy" type="AnimatedSprite2D" parent="."]
-position = Vector2(-92, -28)
+position = Vector2(-93, -28)
 sprite_frames = SubResource("SpriteFrames_33kk4")
 animation = &"idle"
 frame_progress = 0.453985
-
-[node name="TextureRect" type="TextureRect" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -66.5
-offset_top = -40.0
-offset_right = 66.5
-offset_bottom = 40.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("8_k3j4j")
 
 [node name="Button" type="Button" parent="."]
 self_modulate = Color(1, 1, 1, 0)
@@ -80,12 +84,57 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -67.0
-offset_top = -40.0
-offset_right = 66.0
-offset_bottom = 13.0
+offset_left = -131.0
+offset_top = -79.0
+offset_right = 130.0
+offset_bottom = 23.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = -34.0
+offset_top = -73.0
+offset_right = 297.0
+offset_bottom = 36.0
+theme_override_fonts/font = ExtResource("10_sni4y")
+text = "\"Good morning Insurgent City! This is Alexander Solzhenitsyn with the Clap of Revolution news, and today we have just received word that president Culmin has signed the long awaited Comp Bill. This new act on the government's part will see the uprising of our future businesses, and the the overall future, of this great country! Today we take our first look at a new comer that is one of the first to make an appearance, (Insert company/campaign name here) and its founder Dupli! Once a lowly street dweller, now a man with resources provided by our government and a plan, and lets hope that he has a really good plan\"."
+autowrap_mode = 2
+clip_text = true
+uppercase = true
+
+[node name="news_zoom" type="Node2D" parent="."]
+visible = false
+
+[node name="TextureRect2" type="TextureRect" parent="news_zoom"]
+offset_left = -302.0
+offset_top = -140.0
+offset_right = 17.0
+offset_bottom = -13.0
+scale = Vector2(2, 2)
+texture = ExtResource("9_p7icd")
+
+[node name="anchorboy2" type="AnimatedSprite2D" parent="news_zoom"]
+position = Vector2(-202, -14)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_33kk4")
+animation = &"idle"
+frame_progress = 0.453985
+
+[node name="news" type="RichTextLabel" parent="news_zoom"]
+offset_left = -271.0
+offset_top = 48.0
+offset_right = 309.0
+offset_bottom = 80.0
+theme_override_fonts/normal_font = ExtResource("10_sni4y")
+theme_override_font_sizes/normal_font_size = 32
+text = "Good morning Insurgent City! This is Alexander Solzhenitsyn with the Clap of Revolution news, and today we have just received word that president Culmin has signed the long awaited Comp Bill. This new act on the government's part will see the uprising of our future businesses, and the overall future, of this great country! Today we take our first look at a newcomer that is one of the first to make an appearance, (Insert company/campaign name here) and its founder Dupli! Once a lowly street dweller, now a man with resources provided by our government and a plan, and let's hope that he has a really good plan."
+scroll_active = false
+autowrap_mode = 1
+
+[node name="Timer" type="Timer" parent="news_zoom"]
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_exited" from="news_zoom/TextureRect2" to="." method="_on_button_mouse_exited"]

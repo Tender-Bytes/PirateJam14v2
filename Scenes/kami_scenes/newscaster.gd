@@ -9,10 +9,13 @@ signal news_change( news:String)
 @onready var current_messages=0
 
 var produ: float
+var showing=false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$anchorboy.play("idle")
+	$news_zoom/anchorboy2.play("idle")
 	cycle()
+	Animate_news()
 	pass # Replace with function body.
 
 func cycle():
@@ -44,8 +47,19 @@ func change_status():
 
 func _on_button_pressed():
 	print("switch_news")
-	cycle()
+	$news_zoom.show()
+	showing=true
+	#cycle()
 		
+func Animate_news():
+	var tween= create_tween().set_trans(Tween.TRANS_LINEAR)
+	var x= $news_zoom/news.text.length()
+	#tween.tween_method(remove_letters,$news_zoom/news.text.length(),0,0.02)
+	#await tween.finished
+	tween.tween_property($news_zoom/news,"text","",500)
+
+func remove_letters(siz):
+	$news_zoom/news.text= $news_zoom/news.text.erase(0,1)
 
 
 func _on_progress_bar_converted_pop(pop):
@@ -60,3 +74,16 @@ func _on_progress_bar_converted_pop(pop):
 	cycle()
 	change_status()
 	 # Replace with function body.
+
+
+func _on_button_mouse_entered():
+	#$news_zoom.show()
+	pass
+
+
+
+
+
+func _on_button_mouse_exited():
+	$news_zoom.hide()
+	showing=false

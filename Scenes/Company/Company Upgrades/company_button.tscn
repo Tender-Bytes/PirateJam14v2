@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bhk03lbx4w278"]
+[gd_scene load_steps=9 format=3 uid="uid://bhk03lbx4w278"]
 
 [ext_resource type="Texture2D" uid="uid://dpn6njtg8op4e" path="res://Scenes/Assets/company-button-normal.png" id="1_4tiup"]
 [ext_resource type="Texture2D" uid="uid://bcbygbsssy53j" path="res://Scenes/Assets/company-button-pressed.png" id="2_f1ls0"]
@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://dkvtamnh7onpq" path="res://Scenes/Assets/company-button-disabled.png" id="4_dug01"]
 [ext_resource type="Script" path="res://Scenes/Company/Company Upgrades/company_button.gd" id="5_dg44s"]
 [ext_resource type="Texture2D" uid="uid://b8q2m22rg7hb0" path="res://Scenes/Assets/word_of_mouth.png" id="6_0mrsp"]
-[ext_resource type="Texture2D" uid="uid://dxd4wvamh4cy8" path="res://Scenes/kami_scenes/kami_assetss/hover_background.png" id="6_ipkjh"]
+[ext_resource type="Texture2D" uid="uid://ubidetemlkk5" path="res://Scenes/Assets/company hover.png" id="6_ijn37"]
+
+[sub_resource type="Curve2D" id="Curve2D_2g24q"]
 
 [node name="TextureButton" type="TextureButton"]
 offset_right = 313.0
@@ -24,16 +26,22 @@ visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("6_ipkjh")
+texture = ExtResource("6_ijn37")
 
 [node name="picture" type="Sprite2D" parent="."]
 position = Vector2(156, 64)
 texture = ExtResource("6_0mrsp")
 
 [node name="emitter" type="CPUParticles2D" parent="."]
-emitting = false
+gravity = Vector2(0, 0)
+orbit_velocity_min = 1000.0
+orbit_velocity_max = 1000.0
 
 [node name="sound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(82.6667, 76)
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_2g24q")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

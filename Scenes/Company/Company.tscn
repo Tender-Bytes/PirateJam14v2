@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dgcgdk2lyfhc3"]
+[gd_scene load_steps=11 format=3 uid="uid://vqsnqspiihy7"]
 
 [ext_resource type="Script" path="res://Scenes/Company/company.gd" id="1_spy8t"]
 [ext_resource type="Texture2D" uid="uid://c8a30o7nhnqs1" path="res://Graphics/Company_Menu/Buttons/expand _button.png" id="2_wn0vy"]
@@ -61,12 +61,12 @@ layout_mode = 2
 size_flags_vertical = 4
 texture = Array[Texture2D]([ExtResource("5_fvwsx"), ExtResource("6_cekul"), ExtResource("7_usxpj")])
 
-[node name="Room3" parent="VBoxContainer/Rooms" instance=ExtResource("3_bfqqr")]
+[node name="Room2" parent="VBoxContainer/Rooms" instance=ExtResource("3_bfqqr")]
 layout_mode = 2
 size_flags_vertical = 4
 texture = Array[Texture2D]([ExtResource("5_fvwsx"), ExtResource("6_cekul"), ExtResource("7_usxpj")])
 
-[node name="Room2" parent="VBoxContainer/Rooms" instance=ExtResource("3_bfqqr")]
+[node name="Room3" parent="VBoxContainer/Rooms" instance=ExtResource("3_bfqqr")]
 layout_mode = 2
 size_flags_vertical = 4
 texture = Array[Texture2D]([ExtResource("5_fvwsx"), ExtResource("6_cekul"), ExtResource("7_usxpj")])
@@ -82,3 +82,8 @@ offset_bottom = 309.0
 color = Color(0.458824, 0.25098, 0.219608, 1)
 
 [connection signal="pressed" from="top_button" to="." method="_on_texture_button_pressed"]
+[connection signal="switch_row" from="VBoxContainer/Rooms/Room" to="." method="_on_room_switch_row"]
+[connection signal="switch_row" from="VBoxContainer/Rooms/Room2" to="." method="_on_room_switch_row"]
+[connection signal="switch_row" from="VBoxContainer/Rooms/Room3" to="." method="_on_room_switch_row"]
+[connection signal="add_pc" from="company_upgrades" to="." method="_on_company_upgrades_add_pc"]
+[connection signal="upgrade_pc" from="company_upgrades" to="." method="_on_company_upgrades_upgrade_pc"]

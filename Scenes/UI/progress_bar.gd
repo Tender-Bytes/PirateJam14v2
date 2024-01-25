@@ -3,7 +3,7 @@ extends Control
 @onready var bar = get_node("ProgressBar")
 
 signal converted_pop(value: float)
-
+signal win
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	bar.value = 0

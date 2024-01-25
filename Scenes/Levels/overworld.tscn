@@ -27,7 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://bqm54p5irb51a" path="res://Scenes/Npc_Scenes/Police/police_1.tscn" id="22_6txvt"]
 [ext_resource type="PackedScene" uid="uid://rshh6lifvqam" path="res://Scenes/Npc_Scenes/Police/police_2.tscn" id="23_3otfl"]
 [ext_resource type="Texture2D" uid="uid://bq4ykeniq03ub" path="res://Graphics/Entity_Spr/Character_Spr/character.png" id="27_0db0t"]
-[ext_resource type="PackedScene" uid="uid://dgcgdk2lyfhc3" path="res://Scenes/Company/Company.tscn" id="28_rimdq"]
+[ext_resource type="PackedScene" uid="uid://vqsnqspiihy7" path="res://Scenes/Company/Company.tscn" id="28_rimdq"]
 
 [sub_resource type="Theme" id="Theme_jt47a"]
 

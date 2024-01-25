@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Pirate Jam 14"
-run/main_scene="res://Scenes/kami_scenes/Main menu.tscn"
+config/name="Insurgence"
+run/main_scene="res://Scenes/kami_scenes/pirate_game_spalsh.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Graphics/image.png"
 
 [autoload]
 
