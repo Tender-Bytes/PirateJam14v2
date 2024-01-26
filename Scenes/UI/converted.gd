@@ -5,6 +5,7 @@ extends Control
 @onready var WOM = get_node("../../../../Convert_WOM")
 @onready var Pamphlet = get_node("../../../../Convert_Pamphlet")
 @onready var Blimp = get_node("../../../../Convert_Blimp")
+var middle_cut
 
 signal WOM_production()
 signal pamphlet_production()
@@ -29,10 +30,20 @@ func _ready():
 	$WOM_Timer.start()
 	$Pamplet_Timer.start()
 	$Blimp_Timer.start()
+	bar.stop_convert.connect(_on_stop_convert)
 	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+
+func _on_stop_convert():
+	$WOM_Timer.stop()
+	$Pamplet_Timer.stop()
+	$Blimp_Timer.stop()
+	middle_cut = get_node("../../../../middle_exposition")
+	middle_cut.start_convert.connect(_on_start_convert)
+
+func _on_start_convert():
+	$WOM_Timer.start()
+	$Pamplet_Timer.start()
+	$Blimp_Timer.start()
 
 func change_WOM_owned(owned):
 	WOM_owned = owned

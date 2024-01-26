@@ -5,7 +5,7 @@ signal upgrade_pc(cost, multiplier)
 @onready var button = $TextureButton
 
 
-var cost = [50, 150]
+var cost = [50, 100]
 var type = ["CPU Based", "GPU Based", "ASIC Based"]
 var iteration : int = 0
 var upgrade_multiplier: int = 2

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dmfx08ljuq03g"]
+[gd_scene load_steps=11 format=3 uid="uid://dbmgf7n1xydlr"]
 
 [ext_resource type="Script" path="res://Scenes/kami_scenes/kami_middle.gd" id="1_n1man"]
 [ext_resource type="Texture2D" uid="uid://c3f5gk1idmvk8" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy3.png" id="4_erx58"]
@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bb6qeosbgcixl" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy4.png" id="5_kbuky"]
 [ext_resource type="Texture2D" uid="uid://qp41340bxwj7" path="res://Scenes/kami_scenes/kami_assetss/menu_art_background_2.png" id="7_eaci3"]
 [ext_resource type="Texture2D" uid="uid://bmlebe1c6ap3h" path="res://Scenes/kami_scenes/kami_assetss/menu_art_background_bottom.png" id="8_m7uiq"]
-[ext_resource type="PackedScene" uid="uid://b7lubwtb4ys3c" path="res://Scenes/kami_scenes/skip.tscn" id="9_mjh2a"]
+[ext_resource type="PackedScene" path="res://Scenes/kami_scenes/skip.tscn" id="9_mjh2a"]
 [ext_resource type="PackedScene" uid="uid://ckq1h803qp0h8" path="res://Scenes/kami_scenes/kami_cutscene.tscn" id="10_axgat"]
 [ext_resource type="Texture2D" uid="uid://iq8k84jie0bx" path="res://Graphics/Menu/menu_art.png" id="11_f0iap"]
 
@@ -46,7 +46,6 @@ offset_top = 197.0
 offset_right = 357.0
 offset_bottom = 197.0
 img = ExtResource("11_f0iap")
-music = false
 
 [node name="scenesss" type="Control" parent="."]
 layout_mode = 3

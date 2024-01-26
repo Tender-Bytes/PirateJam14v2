@@ -13,7 +13,7 @@ var produ: float
 func _ready():
 	$anchorboy.play("idle")
 	cycle()
-	pass # Replace with function body.
+	self.visible = false
 
 func cycle():
 	var x=messages[current_messages]

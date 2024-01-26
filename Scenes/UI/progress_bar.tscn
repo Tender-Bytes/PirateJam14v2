@@ -18,9 +18,10 @@ grow_vertical = 2
 script = ExtResource("1_rnvf2")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-custom_minimum_size = Vector2(408, 39)
+custom_minimum_size = Vector2(408, 46)
 layout_mode = 0
-offset_bottom = 23.0
+offset_right = 411.0
+offset_bottom = 39.0
 theme_override_styles/background = SubResource("StyleBoxFlat_vk70t")
 theme_override_styles/fill = SubResource("StyleBoxFlat_cti12")
 value = 50.0

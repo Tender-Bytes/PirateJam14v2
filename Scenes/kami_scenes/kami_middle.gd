@@ -9,6 +9,9 @@ extends Node2D
 @onready var positionsss= Vector2(357,197)
 @onready var current=0
 @onready var t
+
+signal start_music
+signal start_convert
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -32,12 +35,6 @@ func play_cutscene(i):
 	y.next.connect(_on_cut_scene_next)
 	t=y
 	current+=1
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
-
 
 
 func _on_skip_skip():
@@ -49,7 +46,10 @@ func _on_cut_scene_next():
 	t.queue_free()
 	if current>=number_of_slides:
 		print("onto game")
+		start_music.emit()
+		start_convert.emit()
 		queue_free()
+		#SCENE END CALL HERE
 		#get_tree().change_scene_to_file("res://Scenes/Levels/overworld.tscn")
 	else:
 		play_cutscene(current)

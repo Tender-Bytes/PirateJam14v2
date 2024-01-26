@@ -14,6 +14,7 @@ offset_bottom = -648.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xm0yy")
+music = false
 
 [node name="Image" type="TextureRect" parent="."]
 self_modulate = Color(0.203922, 0.203922, 0.203922, 0)
@@ -46,5 +47,6 @@ visible_ratio = 0.0
 
 [node name="background" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_00dx0")
+autoplay = true
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
