@@ -7,6 +7,8 @@ func _ready():
 	await $AnimationPlayer.animation_finished
 	$Timer.start()
 	await $Timer.timeout
+	$AnimationPlayer.play_backwards("appear")
+	await $AnimationPlayer.animation_finished
 	switch_scene()
 	pass # Replace with function body.
 

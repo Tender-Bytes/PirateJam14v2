@@ -1,6 +1,7 @@
 extends Control
 @export var words:String
 @export var img:Texture2D
+@export var music=true
 var tween
 signal next
 # Called when the node enters the scene tree for the first time.
@@ -9,6 +10,8 @@ func _ready():
 	$Image.texture=img
 	var x
 	var y
+	if music:
+		$background.play()
 	#$Image.self_modulate=Color("white",0)
 	pivot_offset=size/2
 	tween= create_tween().set_trans(Tween.TRANS_LINEAR).set_parallel()

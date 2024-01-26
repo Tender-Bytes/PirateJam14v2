@@ -46,6 +46,5 @@ visible_ratio = 0.0
 
 [node name="background" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_00dx0")
-autoplay = true
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

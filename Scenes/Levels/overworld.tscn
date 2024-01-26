@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://o74mvfbtc24e"]
+[gd_scene load_steps=37 format=3 uid="uid://o74mvfbtc24e"]
 
 [ext_resource type="Texture2D" uid="uid://by05wfpsjl3w8" path="res://Graphics/World/World_Test.png" id="1_bjb2e"]
 [ext_resource type="AudioStream" uid="uid://egx85eqd36jn" path="res://Musiccc/finished sounds/story track.mp3" id="1_e51vk"]
@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://rshh6lifvqam" path="res://Scenes/Npc_Scenes/Police/police_2.tscn" id="23_3otfl"]
 [ext_resource type="Texture2D" uid="uid://bq4ykeniq03ub" path="res://Graphics/Entity_Spr/Character_Spr/character.png" id="27_0db0t"]
 [ext_resource type="PackedScene" uid="uid://dgcgdk2lyfhc3" path="res://Scenes/Company/Company.tscn" id="28_rimdq"]
+[ext_resource type="PackedScene" uid="uid://dmfx08ljuq03g" path="res://Scenes/kami_scenes/kami_middle.tscn" id="33_2gptw"]
 
 [sub_resource type="Theme" id="Theme_jt47a"]
 
@@ -215,6 +216,9 @@ position = Vector2(1097, 563)
 position = Vector2(1064, 503)
 
 [node name="Company" parent="." instance=ExtResource("28_rimdq")]
+
+[node name="middle_exposition" parent="." instance=ExtResource("33_2gptw")]
+visible = false
 
 [connection signal="body_exited" from="NPCs/homeless/Area2D" to="NPCs/homeless" method="_on_homeless_area_2d_body_exited"]
 [connection signal="body_exited" from="NPCs/police+npcs/Area2D" to="NPCs/police+npcs" method="_on_police_npc_area_2d_body_exited"]
