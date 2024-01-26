@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://o74mvfbtc24e"]
+[gd_scene load_steps=57 format=3 uid="uid://o74mvfbtc24e"]
 
 [ext_resource type="Texture2D" uid="uid://by05wfpsjl3w8" path="res://Graphics/World/World_Test.png" id="1_bjb2e"]
 [ext_resource type="AudioStream" uid="uid://egx85eqd36jn" path="res://Musiccc/finished sounds/story track.mp3" id="1_e51vk"]
@@ -32,7 +32,11 @@
 [ext_resource type="Script" path="res://Scenes/Levels/buildings.gd" id="17_fe8od"]
 [ext_resource type="PackedScene" uid="uid://cgxd74xafkqhl" path="res://Scenes/Thief_Scene/thief_line.tscn" id="17_tckcq"]
 [ext_resource type="Script" path="res://Scenes/Levels/police+npcs.gd" id="18_6p5it"]
+[ext_resource type="Script" path="res://Scenes/Levels/Dupli.gd" id="18_a57lp"]
+[ext_resource type="Texture2D" uid="uid://bqml8enve13xw" path="res://Graphics/Entity_Spr/Character_Spr/speaking/Dupli_word_of_mouth1.png" id="18_gr8k5"]
 [ext_resource type="PackedScene" uid="uid://diq4srsps7jvx" path="res://Scenes/Npc_Scenes/Npc/npc_1.tscn" id="19_6dewn"]
+[ext_resource type="Texture2D" uid="uid://dvj358h707m3x" path="res://Graphics/Entity_Spr/Character_Spr/speaking/Dupli_word_of_mouth2.png" id="19_ahbq7"]
+[ext_resource type="Texture2D" uid="uid://bxv037xvb26jv" path="res://Graphics/Entity_Spr/Character_Spr/speaking/Dupli_word_of_mouth3.png" id="20_b8swo"]
 [ext_resource type="PackedScene" uid="uid://8gjc0i07wr5j" path="res://Scenes/Npc_Scenes/Npc/npc_2.tscn" id="20_mukab"]
 [ext_resource type="PackedScene" uid="uid://cpmnpb4tpgxqx" path="res://Scenes/Npc_Scenes/Npc/npc_3.tscn" id="21_iik4h"]
 [ext_resource type="PackedScene" uid="uid://bqm54p5irb51a" path="res://Scenes/Npc_Scenes/Police/police_1.tscn" id="22_6txvt"]
@@ -45,6 +49,7 @@
 [ext_resource type="Texture2D" uid="uid://ct3512la7x085" path="res://Graphics/Pamplet/Short_flyer/short_flyer4.png" id="32_rsagm"]
 [ext_resource type="Texture2D" uid="uid://2fn7wpvmmccy" path="res://Graphics/Pamplet/Short_flyer/short_flyer5.png" id="33_aoaf1"]
 [ext_resource type="Texture2D" uid="uid://c2y2ia6js8250" path="res://Graphics/Pamplet/Short_flyer/short_flyer6.png" id="34_8cvv8"]
+[ext_resource type="Texture2D" uid="uid://f7a650fsnfi" path="res://Scenes/Assets/exclamation.png" id="45_ccww1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6pk18"]
 animations = [{
@@ -67,6 +72,23 @@ animations = [{
 }]
 
 [sub_resource type="Theme" id="Theme_jt47a"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bsbta"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_gr8k5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ahbq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_b8swo")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xwygj"]
 animations = [{
@@ -188,9 +210,15 @@ offset_bottom = -291.0
 scale = Vector2(1.1, 1.1)
 max_population = 20000
 
-[node name="Character" type="Sprite2D" parent="."]
+[node name="Dupli" type="Sprite2D" parent="."]
 position = Vector2(129, 563)
 texture = ExtResource("27_0db0t")
+script = ExtResource("18_a57lp")
+
+[node name="speaking" type="AnimatedSprite2D" parent="Dupli"]
+sprite_frames = SubResource("SpriteFrames_bsbta")
+frame = 2
+frame_progress = 0.387631
 
 [node name="buildings" type="Node2D" parent="."]
 position = Vector2(575.5, 324.5)
@@ -279,11 +307,26 @@ shape = SubResource("RectangleShape2D_x1bhk")
 [node name="npc_1" parent="NPCs/police+npcs" instance=ExtResource("19_6dewn")]
 position = Vector2(856, 517)
 
+[node name="!" type="Sprite2D" parent="NPCs/police+npcs/npc_1"]
+visible = false
+position = Vector2(0, -30)
+texture = ExtResource("45_ccww1")
+
 [node name="npc_2" parent="NPCs/police+npcs" instance=ExtResource("20_mukab")]
 position = Vector2(820, 562)
 
+[node name="!" type="Sprite2D" parent="NPCs/police+npcs/npc_2"]
+visible = false
+position = Vector2(0, -30)
+texture = ExtResource("45_ccww1")
+
 [node name="npc_3" parent="NPCs/police+npcs" instance=ExtResource("21_iik4h")]
 position = Vector2(743, 523)
+
+[node name="!" type="Sprite2D" parent="NPCs/police+npcs/npc_3"]
+visible = false
+position = Vector2(0, -30)
+texture = ExtResource("45_ccww1")
 
 [node name="police_1" parent="NPCs/police+npcs" instance=ExtResource("22_6txvt")]
 position = Vector2(1097, 563)

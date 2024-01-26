@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dimr7bqv1rolm"
-path="res://.godot/imported/Npc_Word_of_mouth2.png-590e973cce2b01d62c7e4a911ef19bb2.ctex"
+uid="uid://f7a650fsnfi"
+path="res://.godot/imported/exclamation.png-c4759bccd92199e2659f50fa95ecc897.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/Entity_Spr/NPC_Spr/NPC_word_of_mouth/Npc_Word_of_mouth2.png"
-dest_files=["res://.godot/imported/Npc_Word_of_mouth2.png-590e973cce2b01d62c7e4a911ef19bb2.ctex"]
+source_file="res://Scenes/Assets/exclamation.png"
+dest_files=["res://.godot/imported/exclamation.png-c4759bccd92199e2659f50fa95ecc897.ctex"]
 
 [params]
 

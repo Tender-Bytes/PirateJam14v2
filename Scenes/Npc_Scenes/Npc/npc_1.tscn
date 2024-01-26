@@ -1,7 +1,24 @@
-[gd_scene load_steps=9 format=3 uid="uid://diq4srsps7jvx"]
+[gd_scene load_steps=14 format=3 uid="uid://diq4srsps7jvx"]
 
 [ext_resource type="Script" path="res://Scenes/Npc_Scenes/wander.gd" id="1_bhfhg"]
 [ext_resource type="Texture2D" uid="uid://bpa2apnsumkpa" path="res://Graphics/Entity_Spr/NPC_Spr/NPC/Npc_Left_1.png" id="1_ksa1g"]
+[ext_resource type="Texture2D" uid="uid://fnbw6ph32tes" path="res://Graphics/Entity_Spr/NPC_Spr/NPC_word_of_mouth/Npc_Word_of_mouth1.png" id="2_0mvqp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3c7w"]
+atlas = ExtResource("2_0mvqp")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpnui"]
+atlas = ExtResource("2_0mvqp")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7xyl"]
+atlas = ExtResource("2_0mvqp")
+region = Rect2(64, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y80ts"]
+atlas = ExtResource("2_0mvqp")
+region = Rect2(96, 0, 32, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2e1rq"]
 atlas = ExtResource("1_ksa1g")
@@ -21,6 +38,23 @@ region = Rect2(96, 18, 32, 46)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_be27b"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t3c7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpnui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i7xyl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y80ts")
+}],
+"loop": false,
+"name": &"WOM",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2e1rq")
@@ -48,8 +82,7 @@ script = ExtResource("1_bhfhg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_be27b")
-animation = &"Walk"
-frame_progress = 0.0188847
+animation = &"WOM"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_exi1n")

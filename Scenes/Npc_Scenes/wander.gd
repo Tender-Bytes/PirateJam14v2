@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var sprite = get_node("AnimatedSprite2D")
+@onready var sprite = $AnimatedSprite2D
 @onready var idleTimer = get_node("IdleTimer")
 @onready var wanderTimer = get_node("WanderTimer")
 
@@ -19,6 +19,7 @@ func _ready():
 	wander = randf_range(MIN_TIME, MAX_TIME)
 	wanderTimer.set_wait_time(wander)
 	direction = Vector2(x, y).normalized()
+	sprite.play("Walk")
 	wanderTimer.start()
 	sprite.play()
 	
@@ -38,6 +39,12 @@ func to_center(pos):
 	self.direction = (pos - self.position).normalized()
 	wanderTimer.start()
 
+func _on_WOM():
+	sprite.play("WOM")
+	await sprite.animation_finished
+	sprite.stop()
+	
+
 func _on_wander_timer_timeout():
 	direction = Vector2.ZERO
 	sprite.stop()
@@ -45,12 +52,11 @@ func _on_wander_timer_timeout():
 	idleTimer.set_wait_time(idle)
 	idleTimer.start()
 
-
 func _on_idle_timer_timeout():
 	wander = randf_range(MIN_TIME, MAX_TIME)
 	wanderTimer.set_wait_time(wander)
 	x = randf_range(-1, 1)
 	y = randf_range(-1, 1)
 	direction = Vector2(x, y).normalized()
-	sprite.play()
+	sprite.play("Walk")
 	wanderTimer.start()

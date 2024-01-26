@@ -5,6 +5,7 @@ extends Node2D
 @onready var money = get_node("../ColorRect/MarginContainer/HBoxContainer/Money")
 
 signal total_WOM(owned: int)
+signal WOM_clicked
 
 const BASE_COST = 2
 var cost : int
@@ -24,6 +25,7 @@ func _process(delta):
 
 func _on_button_pressed():
 	if Global.money_amount >= cost:
+		WOM_clicked.emit()
 		WOMs += 1
 		money.change_money(-cost)
 		WOM_UI.change_WOM(WOMs)
