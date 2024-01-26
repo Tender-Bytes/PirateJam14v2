@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://o74mvfbtc24e"]
+[gd_scene load_steps=36 format=3 uid="uid://o74mvfbtc24e"]
 
 [ext_resource type="Texture2D" uid="uid://by05wfpsjl3w8" path="res://Graphics/World/World_Test.png" id="1_bjb2e"]
 [ext_resource type="AudioStream" uid="uid://egx85eqd36jn" path="res://Musiccc/finished sounds/story track.mp3" id="1_e51vk"]
@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://bp723ry6nhhri" path="res://Scenes/Npc_Scenes/Homeless/homeless_1.tscn" id="11_mwea8"]
 [ext_resource type="PackedScene" uid="uid://cnju8kvnbcan7" path="res://Scenes/Npc_Scenes/Homeless/homeless_2.tscn" id="12_j1vch"]
 [ext_resource type="Texture2D" uid="uid://cy1rdw6gbnus8" path="res://Graphics/World/Police_station/Destroyed_police.png" id="13_v05oj"]
+[ext_resource type="PackedScene" uid="uid://cgxd74xafkqhl" path="res://Scenes/Thief_Scene/thief_line.tscn" id="17_tckcq"]
 [ext_resource type="Script" path="res://Scenes/Levels/police+npcs.gd" id="18_6p5it"]
 [ext_resource type="PackedScene" uid="uid://diq4srsps7jvx" path="res://Scenes/Npc_Scenes/Npc/npc_1.tscn" id="19_6dewn"]
 [ext_resource type="PackedScene" uid="uid://8gjc0i07wr5j" path="res://Scenes/Npc_Scenes/Npc/npc_2.tscn" id="20_mukab"]
@@ -150,6 +151,9 @@ position = Vector2(1163, 126)
 [node name="car_line_left" parent="." instance=ExtResource("3_xwy7y")]
 position = Vector2(65, 393)
 time = 20
+
+[node name="thief line" parent="." instance=ExtResource("17_tckcq")]
+position = Vector2(1165, 424)
 
 [node name="default gold gen" parent="." instance=ExtResource("2_neb7x")]
 position = Vector2(-2, 30)

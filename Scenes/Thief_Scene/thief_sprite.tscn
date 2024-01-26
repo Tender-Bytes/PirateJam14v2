@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dpbsqsmslh5fa"]
 
 [ext_resource type="Texture2D" uid="uid://cugjpawobwvut" path="res://Graphics/Entity_Spr/Theif_Spr/theif_right.png" id="1_4vjyg"]
-[ext_resource type="Script" path="res://thief_sprite.gd" id="2_kjfjd"]
+[ext_resource type="Script" path="res://Scenes/Thief_Scene/thief_sprite.gd" id="2_kjfjd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o578t"]
 atlas = ExtResource("1_4vjyg")

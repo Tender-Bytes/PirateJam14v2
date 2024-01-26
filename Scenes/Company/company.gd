@@ -8,6 +8,7 @@ extends Node2D
 
 @onready var money = get_node("../ColorRect/MarginContainer/HBoxContainer/Money")
 @onready var gold_gen = get_node("../default gold gen")
+@onready var thief_line = get_node("../thief line")
 @onready var og_pos= self.position
 @onready var company_upgrade = $company_upgrades
 @onready var thief_room = $thief_room
@@ -62,6 +63,7 @@ func _on_add_thieves(cost, value):
 	if not thief_room.visible:
 		thief_room.visible = true
 		thief_room.play()
+		thief_line.start_thief()
 	
 	money.change_money(cost)
 	gold_gen.start_steal_upgrade(value)
