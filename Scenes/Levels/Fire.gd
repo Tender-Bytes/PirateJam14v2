@@ -1,6 +1,7 @@
 extends AnimatedSprite2D
 
 @onready var progress = $"../Progress Bar UI/ProgressBar"
+@onready var fire_sound = $"Fire Sound"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,3 +13,4 @@ func city_on_fire():
 	self.visible = true
 	self.play("default")
 	self.sprite_frames.set_animation_loop("default",true)
+	fire_sound.play()

@@ -36,6 +36,7 @@ pivot_offset = Vector2(442, 104)
 texture = ExtResource("8_m7uiq")
 
 [node name="Skip" parent="." instance=ExtResource("9_mjh2a")]
+visible = false
 offset_left = 1104.0
 offset_right = 1145.0
 
