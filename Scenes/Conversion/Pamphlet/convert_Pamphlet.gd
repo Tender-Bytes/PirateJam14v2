@@ -29,6 +29,8 @@ func _on_button_pressed():
 		pamphlet_UI.change_pamphlet(pamphlets)
 		total_pamphlets.emit(pamphlets)
 		cost = round(BASE_COST * pow(1.2, pamphlets + 1))
-		button.set_tooltip_text("Pamphlet cost: $" + str(cost))
+		button.set_tooltip_text("Spread propaganda amongst the people!"
+			+ "\nPamphlet cost: $" + str(cost)
+		+ "\nConversion per tick: " + str(pamphlets*6))
 
 

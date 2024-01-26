@@ -11,7 +11,8 @@ script = ExtResource("1_td3o5")
 [node name="Button" parent="." instance=ExtResource("2_v0y5x")]
 offset_right = 210.0
 offset_bottom = 90.0
-tooltip_text = "Pamphlet cost: $10"
+tooltip_text = "Spread propaganda amongst the people!
+Pamphlet cost: $10"
 infographic = ExtResource("3_51r54")
 timed = false
 audio = ExtResource("4_a8o6o")

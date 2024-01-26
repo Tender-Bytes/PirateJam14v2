@@ -12,7 +12,8 @@ script = ExtResource("1_fgiql")
 texture_filter = 1
 offset_right = 210.0
 offset_bottom = 90.0
-tooltip_text = "Word of Mouth cost: $2"
+tooltip_text = "Speak rumors against the government!
+Word of Mouth cost: $2"
 infographic = ExtResource("3_n5bb3")
 timed = false
 audio = ExtResource("4_q56f2")

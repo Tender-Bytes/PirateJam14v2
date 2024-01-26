@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://dpbsqsmslh5fa"]
+
+[ext_resource type="Texture2D" uid="uid://cugjpawobwvut" path="res://Graphics/Entity_Spr/Theif_Spr/theif_right.png" id="1_4vjyg"]
+[ext_resource type="Script" path="res://thief_sprite.gd" id="2_kjfjd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o578t"]
+atlas = ExtResource("1_4vjyg")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_loj0r"]
+atlas = ExtResource("1_4vjyg")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqa4w"]
+atlas = ExtResource("1_4vjyg")
+region = Rect2(64, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjkg2"]
+atlas = ExtResource("1_4vjyg")
+region = Rect2(96, 0, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c170k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o578t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_loj0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqa4w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjkg2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="thief_sprite" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_c170k")
+script = ExtResource("2_kjfjd")

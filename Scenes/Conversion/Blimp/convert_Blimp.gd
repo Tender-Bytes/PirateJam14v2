@@ -30,7 +30,9 @@ func _on_button_pressed():
 		blimp_UI.change_blimp(blimps)
 		total_blimps.emit(blimps)
 		cost = round(BASE_COST * pow(1.2, blimps + 1))
-		button.set_tooltip_text("Blimp cost: $" + str(cost))
+		button.set_tooltip_text("Buy a giant blimp to incite the rebellion!"
+			+ "\nBlimp cost: $" + str(cost)
+			+ "\nConversion per tick: " + str(blimps*37))
 	if blimps == 1:
 		blimp_line.start_blimp()
 

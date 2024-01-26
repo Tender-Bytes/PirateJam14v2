@@ -6,26 +6,26 @@
 [ext_resource type="PackedScene" uid="uid://dy01y2q64ljg6" path="res://Scenes/kami_scenes/kami_bar.tscn" id="3_bfqqr"]
 [ext_resource type="Texture2D" uid="uid://bq4ykeniq03ub" path="res://Graphics/Entity_Spr/Character_Spr/character.png" id="4_ohsr1"]
 [ext_resource type="Texture2D" uid="uid://eete4alku8ia" path="res://Scenes/kami_scenes/kami_assetss/pc_stuff.png" id="5_fvwsx"]
-[ext_resource type="Texture2D" uid="uid://bcrjuucpcs1qx" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy1.png" id="5_qb3fg"]
-[ext_resource type="Texture2D" uid="uid://cbtldr18ob18l" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy2.png" id="6_am5il"]
 [ext_resource type="Texture2D" uid="uid://dlk8i0jufrbxk" path="res://Scenes/kami_scenes/kami_assetss/pc_stuff_2.png" id="6_cekul"]
+[ext_resource type="Texture2D" uid="uid://bcrjuucpcs1qx" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy1.png" id="6_ocd2l"]
 [ext_resource type="Texture2D" uid="uid://dkfrpe7s0gmem" path="res://Scenes/kami_scenes/kami_assetss/pc_stuff_3.png" id="7_usxpj"]
-[ext_resource type="Texture2D" uid="uid://c3f5gk1idmvk8" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy3.png" id="7_v3nin"]
-[ext_resource type="Texture2D" uid="uid://bb6qeosbgcixl" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy4.png" id="8_oytkx"]
-[ext_resource type="Texture2D" uid="uid://cesuwqjdveugx" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy5.png" id="9_e43d1"]
+[ext_resource type="Texture2D" uid="uid://cbtldr18ob18l" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy2.png" id="7_ysxje"]
+[ext_resource type="Texture2D" uid="uid://c3f5gk1idmvk8" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy3.png" id="8_x37ig"]
+[ext_resource type="Texture2D" uid="uid://bb6qeosbgcixl" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy4.png" id="9_ja4xk"]
+[ext_resource type="Texture2D" uid="uid://cesuwqjdveugx" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy5.png" id="10_esm7m"]
 [ext_resource type="PackedScene" uid="uid://dqki2hinaj5f" path="res://Scenes/Company/Company Upgrades/company_upgrades.tscn" id="10_qfqt5"]
-[ext_resource type="Texture2D" uid="uid://dpcay1c4t4vrl" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy6.png" id="10_y8kwe"]
 [ext_resource type="Texture2D" uid="uid://c4rvc2ql52kho" path="res://Graphics/Company_rooms/Theif_room/theif1.png" id="11_jpq0h"]
-[ext_resource type="Texture2D" uid="uid://cver4uuh0njxr" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy7.png" id="11_vymvf"]
-[ext_resource type="Texture2D" uid="uid://hte27m3wv1e8" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy8.png" id="12_4i1w2"]
+[ext_resource type="Texture2D" uid="uid://dpcay1c4t4vrl" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy6.png" id="11_t7ksu"]
+[ext_resource type="Texture2D" uid="uid://cver4uuh0njxr" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy7.png" id="12_fd2mc"]
 [ext_resource type="Texture2D" uid="uid://nj73ol41f7pb" path="res://Graphics/Company_rooms/Theif_room/theif2.png" id="12_t0wli"]
 [ext_resource type="Texture2D" uid="uid://c3wa184dxb4cp" path="res://Graphics/Company_rooms/Theif_room/theif3.png" id="13_jqw5g"]
-[ext_resource type="Texture2D" uid="uid://0s4p2osf3q38" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy9.png" id="13_ketaa"]
+[ext_resource type="Texture2D" uid="uid://hte27m3wv1e8" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy8.png" id="13_lqif8"]
 [ext_resource type="Texture2D" uid="uid://dvgbpma782nqw" path="res://Graphics/Company_rooms/Theif_room/theif4.png" id="14_8ljpv"]
-[ext_resource type="Texture2D" uid="uid://ccfet5hg7bfsp" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy10.png" id="14_g5pck"]
-[ext_resource type="Texture2D" uid="uid://ccx2vtsh27m0s" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy11.png" id="15_1rdvi"]
+[ext_resource type="Texture2D" uid="uid://0s4p2osf3q38" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy9.png" id="14_f3lu8"]
+[ext_resource type="Texture2D" uid="uid://ccfet5hg7bfsp" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy10.png" id="15_66ux4"]
 [ext_resource type="Texture2D" uid="uid://bspvvxdxvluls" path="res://Graphics/Company_rooms/Theif_room/theif5.png" id="15_uqbw3"]
 [ext_resource type="Texture2D" uid="uid://b0ui2xlcep4uy" path="res://Graphics/Company_rooms/Theif_room/theif6.png" id="16_ix5lb"]
+[ext_resource type="Texture2D" uid="uid://ccx2vtsh27m0s" path="res://Graphics/GUI/News_Anchor/News Anchor rework/news_guy11.png" id="16_x88f2"]
 [ext_resource type="Texture2D" uid="uid://c1vllc8qon3hb" path="res://Graphics/Company_rooms/Theif_room/theif7.png" id="17_yyk77"]
 [ext_resource type="Texture2D" uid="uid://c6bj8yxhsu2g5" path="res://Graphics/Company_rooms/Theif_room/theif8.png" id="18_pk0ui"]
 [ext_resource type="Texture2D" uid="uid://b07pdak2lq7sr" path="res://Graphics/Company_rooms/Theif_room/theif9.png" id="19_kvotr"]
@@ -40,41 +40,41 @@
 [ext_resource type="Texture2D" uid="uid://bnonrtpttro77" path="res://Graphics/Company_rooms/Theif_room/theif18.png" id="28_lxqkm"]
 [ext_resource type="Texture2D" uid="uid://vaxap3ksnf45" path="res://Graphics/Company_rooms/Theif_room/theif19.png" id="29_lye3i"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_41dnl"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_fb2ea"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_qb3fg")
+"texture": ExtResource("6_ocd2l")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_am5il")
+"texture": ExtResource("7_ysxje")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_v3nin")
+"texture": ExtResource("8_x37ig")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_oytkx")
+"texture": ExtResource("9_ja4xk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_e43d1")
+"texture": ExtResource("10_esm7m")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_y8kwe")
+"texture": ExtResource("11_t7ksu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_vymvf")
+"texture": ExtResource("12_fd2mc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_4i1w2")
+"texture": ExtResource("13_lqif8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_ketaa")
+"texture": ExtResource("14_f3lu8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_g5pck")
+"texture": ExtResource("15_66ux4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_1rdvi")
+"texture": ExtResource("16_x88f2")
 }],
 "loop": true,
 "name": &"default",
@@ -184,9 +184,8 @@ texture = ExtResource("4_ohsr1")
 layout_mode = 2
 
 [node name="alex" type="AnimatedSprite2D" parent="VBoxContainer/HBoxContainer/Control"]
-position = Vector2(175, 134)
-sprite_frames = SubResource("SpriteFrames_41dnl")
-frame_progress = 0.624957
+position = Vector2(155, 136)
+sprite_frames = SubResource("SpriteFrames_fb2ea")
 
 [node name="Rooms" type="VBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -224,8 +223,5 @@ sprite_frames = SubResource("SpriteFrames_t3tdu")
 frame_progress = 0.0140053
 
 [connection signal="pressed" from="top_button" to="." method="_on_texture_button_pressed"]
-[connection signal="change_row" from="VBoxContainer/Rooms/Room" to="." method="_on_room_change_row"]
-[connection signal="change_row" from="VBoxContainer/Rooms/Room3" to="." method="_on_room_change_row"]
-[connection signal="change_row" from="VBoxContainer/Rooms/Room2" to="." method="_on_room_change_row"]
 [connection signal="add_pc" from="company_upgrades" to="." method="_on_company_upgrades_add_pc"]
 [connection signal="upgrade_pc" from="company_upgrades" to="." method="_on_company_upgrades_upgrade_pc"]

@@ -10,6 +10,8 @@ signal upgrade_pc(cost, multiplier)
 signal add_thieves(cost, value)
 
 func _ready():
+	#for the demo:
+	$side_button.visible = false
 	pc_extra.add_pc.connect(_on_add_pc)
 	pc_upgrade.upgrade_pc.connect(_on_upgrade_pc)
 	steal_upgrade.add_thieves.connect(_on_add_thieves)

@@ -29,4 +29,6 @@ func _on_button_pressed():
 		WOM_UI.change_WOM(WOMs)
 		total_WOM.emit(WOMs)
 		cost = round(BASE_COST * pow(1.2, WOMs + 1))
-		button.set_tooltip_text("Word of Mouth cost: $" + str(cost))
+		button.set_tooltip_text("Speak rumors against the government!"
+			+ "\nWord of Mouth cost: $" + str(cost)
+		+ "\nConversion per tick: " + str(WOMs))

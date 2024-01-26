@@ -2,9 +2,9 @@ extends Node2D
 
 @export var scroll_time: float =0.1
 @export var max_length: int = 1000
-@export var max_width:int=300
+@export var max_width:int = 250
 @export var popped_up=false
-@export var popped_up_2=false
+#@export var popped_up_2=false
 
 @onready var money = get_node("../ColorRect/MarginContainer/HBoxContainer/Money")
 @onready var gold_gen = get_node("../default gold gen")
@@ -20,7 +20,9 @@ signal closed
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	company_upgrade.side_menu_button.connect(_on_side_button_pressed)
+	#demo
+	#company_upgrade.side_menu_button.connect(_on_side_button_pressed)
+	self._on_side_button_pressed()
 	company_upgrade.add_pc.connect(_on_add_pc)
 	company_upgrade.upgrade_pc.connect(_on_upgrade_pc)
 	company_upgrade.add_thieves.connect(_on_add_thieves)
@@ -39,11 +41,11 @@ func _on_texture_button_pressed():
 
 
 func _on_side_button_pressed():
-	if popped_up_2:
-		move_upgrades(-max_width)
-	else:
-		move_upgrades(max_width)
-	popped_up_2 = not(popped_up_2)
+	#if popped_up_2:
+		#move_upgrades(-max_width)
+	#else:
+	move_upgrades(max_width)
+	#popped_up_2 = not(popped_up_2)
 
 
 func _on_add_pc(cost, pc_owned):

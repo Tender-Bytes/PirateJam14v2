@@ -11,7 +11,8 @@ script = ExtResource("1_jqwfb")
 [node name="Button" parent="." instance=ExtResource("2_vs72q")]
 offset_right = 210.0
 offset_bottom = 90.0
-tooltip_text = "Blimp cost: $75"
+tooltip_text = "Buy a giant blimp to incite the rebellion!
+Blimp cost: $75"
 infographic = ExtResource("3_o3n5s")
 timed = false
 audio = ExtResource("4_0hvcj")
